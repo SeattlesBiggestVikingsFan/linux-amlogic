@@ -73,7 +73,7 @@
 #include "sierra_ms.h"
 #include "option_ms.h"
 
-#if IS_ENABLED(CONFIG_USB_UAS)
+#if IS_MODULE(CONFIG_USB_UAS)
 #include "uas-detect.h"
 #endif
 
@@ -1113,6 +1113,15 @@ EXPORT_SYMBOL_GPL(usb_stor_disconnect);
 
 static struct scsi_host_template usb_stor_host_template;
 
+#if IS_BUILTIN(CONFIG_USB_UAS)
+static ssize_t p3i_uas_eligible_show(struct device *dev,
+				     struct device_attribute *attr, char *buf)
+{
+	return sprintf(buf, "%d\n", p3i_uas_eligible(to_usb_interface(dev)));
+}
+static DEVICE_ATTR_RO(p3i_uas_eligible);
+#endif
+
 /* The main probe routine for standard devices */
 static int storage_probe(struct usb_interface *intf,
 			 const struct usb_device_id *id)
@@ -1122,8 +1131,8 @@ static int storage_probe(struct usb_interface *intf,
 	int result;
 	int size;
 
-	/* If uas is enabled and this device can do uas then ignore it. */
-#if IS_ENABLED(CONFIG_USB_UAS)
+	/* Built-in UAS probes first, so BOT can handle a declined probe. */
+#if IS_MODULE(CONFIG_USB_UAS)
 	if (uas_use_uas_driver(intf, id, NULL))
 		return -ENXIO;
 #endif
@@ -1161,13 +1170,25 @@ static int storage_probe(struct usb_interface *intf,
 	/* No special transport or protocol settings in the main module */
 
 	result = usb_stor_probe2(us);
+#if IS_BUILTIN(CONFIG_USB_UAS)
+	if (!result && device_create_file(&intf->dev, &dev_attr_p3i_uas_eligible))
+		dev_dbg(&intf->dev, "Unable to expose UAS eligibility\n");
+#endif
 	return result;
+}
+
+static void storage_disconnect(struct usb_interface *intf)
+{
+#if IS_BUILTIN(CONFIG_USB_UAS)
+	device_remove_file(&intf->dev, &dev_attr_p3i_uas_eligible);
+#endif
+	usb_stor_disconnect(intf);
 }
 
 static struct usb_driver usb_storage_driver = {
 	.name =		DRV_NAME,
 	.probe =	storage_probe,
-	.disconnect =	usb_stor_disconnect,
+	.disconnect =	storage_disconnect,
 	.suspend =	usb_stor_suspend,
 	.resume =	usb_stor_resume,
 	.reset_resume =	usb_stor_reset_resume,

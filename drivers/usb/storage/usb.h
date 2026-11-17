@@ -184,6 +184,10 @@ extern void fill_inquiry_response(struct us_data *us,
 #define scsi_unlock(host)	spin_unlock_irq(host->host_lock)
 #define scsi_lock(host)		spin_lock_irq(host->host_lock)
 
+#if IS_BUILTIN(CONFIG_USB_UAS)
+extern bool p3i_uas_eligible(struct usb_interface *intf);
+#endif
+
 /* General routines provided by the usb-storage standard core */
 #ifdef CONFIG_PM
 extern int usb_stor_suspend(struct usb_interface *iface, pm_message_t message);

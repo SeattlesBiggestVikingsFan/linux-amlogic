@@ -4131,8 +4131,7 @@ uint32_t sink_hdr_support(const struct vinfo_s *vinfo)
 
 	/* when policy == follow sink(0) or force output (2) */
 	/* use force_output */
-	if ((get_force_output() != 0)
-	&& (get_hdr_policy() != 1)) {
+	if ((get_force_output() != 0)) {
 		switch (get_force_output()) {
 		case BT709:
 		case BT_BYPASS:
@@ -8435,6 +8434,8 @@ static int vpp_matrix_update(
 	int hdmi_scs_type_changed = 0;
 	bool hdr10p_meta_updated = false;
 	bool cuva_meta_updated = false;
+	bool unforced_csc = false;
+	bool unforced_path = false;
 	enum hdr_type_e source_format[VD_PATH_MAX];
 	static int signal_change_latch;
 
@@ -8471,6 +8472,7 @@ static int vpp_matrix_update(
 	if (force_csc_type != 0xff)
 		csc_type = force_csc_type;
 	else {
+		unforced_csc = !debug_csc && !disable_flush_flag;
 		if (signal_change_flag & SIG_CS_CHG){
 			csc_type = get_csc_type(1);
 			pr_info("signal type changed\n");
@@ -8582,11 +8584,13 @@ static int vpp_matrix_update(
 		SIG_SRC_CHG | SIG_HDR_OOTF_CHG | SIG_FORCE_CHG | SIG_RANGE_CHG |
 		SIG_CUVA_HDR_MODE))) {
 		if (cpu_after_eq(MESON_CPU_MAJOR_ID_G12A) &&
-		(get_cpu_type() != MESON_CPU_MAJOR_ID_TL1))
+		(get_cpu_type() != MESON_CPU_MAJOR_ID_TL1)) {
 			video_post_process(
 				vf, csc_type, vinfo,
 				vd_path, p, source_format);
-		else
+			unforced_path = unforced_csc &&
+				!debug_csc && !disable_flush_flag;
+		} else
 			video_process(
 				vf, csc_type, signal_change_flag,
 				vinfo, p, vd_path, source_format);
@@ -8609,7 +8613,7 @@ static int vpp_matrix_update(
 				&hdmitx_vsif_params[vd_path] : NULL,
 				cuva_meta_updated ?
 				&hdmitx_edms_params[vd_path] : NULL,
-				vd_path, source_format);
+				vd_path, source_format, unforced_path);
 	} else {
 		if ((vd_path == VD1_PATH)
 		|| ((vd_path == VD2_PATH) && !is_video_layer_on(VD1_PATH)))

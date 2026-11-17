@@ -659,6 +659,8 @@ static irqreturn_t intr_handler(int irq, void *dev)
 	unsigned int dat_dwc = hdmitx_rd_reg(HDMITX_DWC_HDCP22REG_STAT);
 	struct hdmitx_dev *hdev = (struct hdmitx_dev *)dev;
 
+	if (dat_top & 0x6)
+		hdmitx_hdr_link_changed(hdev);
 	/* ack INTERNAL_INTR or else we stuck with no interrupts at all */
 	hdmitx_wr_reg(HDMITX_TOP_INTR_STAT_CLR, ~0);
 	hdmitx_wr_reg(HDMITX_DWC_HDCP22REG_STAT, 0xff);
@@ -2229,6 +2231,7 @@ void hdmitx_set_enc_hw(struct hdmitx_dev *hdev)
 
 static int hdmitx_set_dispmode(struct hdmitx_dev *hdev)
 {
+	hdmitx_hdr_transport_changed(hdev);
 	if (hdev->cur_video_param == NULL) /* disable HDMI */
 		return 0;
 	if (!hdmitx_edid_VIC_support(hdev->cur_video_param->VIC))
@@ -2356,6 +2359,10 @@ static void hdmitx_set_packet(int type, unsigned char *DB, unsigned char *HB)
 	int pkt_data_len = 0;
 	unsigned int ieee_code = 0;
 
+	if (type == HDMI_PACKET_VEND && DB && HB &&
+	    !(HB[2] >= 4 && DB[0] == 0x03 && DB[1] == 0x0c &&
+	      DB[2] == 0x00 && (DB[3] == 0 || DB[3] == 0x20)))
+		hdmitx_hdr_transport_untrusted(get_hdmitx_device());
 	switch (type) {
 	case HDMI_PACKET_AVI:
 		break;
@@ -2967,6 +2974,9 @@ static void hw_reset_dbg(void)
 static int hdmitx_cntl(struct hdmitx_dev *hdev, unsigned int cmd,
 	unsigned int argv)
 {
+	if (cmd == HDMITX_EARLY_SUSPEND_RESUME_CNTL ||
+	    cmd == HDMITX_HWCMD_TURNOFF_HDMIHW)
+		hdmitx_hdr_transport_untrusted(hdev);
 	if (cmd == HDMITX_AVMUTE_CNTL) {
 		return 0;
 	} else if (cmd == HDMITX_EARLY_SUSPEND_RESUME_CNTL) {
@@ -3123,6 +3133,12 @@ static void hdmitx_set_fake_vic(struct hdmitx_dev *hdev)
 #undef pr_fmt
 #define pr_fmt(fmt) "hdmitx: " fmt
 
+/* Interrupt dumps only read registers, so they keep the HDR transport trusted. */
+static bool hdmitx_debug_read_only(const char *cmd)
+{
+	return strncmp(cmd, "dumpintr", 8) == 0;
+}
+
 static void hdmitx_debug(struct hdmitx_dev *hdev, const char *buf)
 {
 	char tmpbuf[128];
@@ -3136,6 +3152,8 @@ static void hdmitx_debug(struct hdmitx_dev *hdev, const char *buf)
 		i++;
 	}
 	tmpbuf[i] = 0;
+	if (!hdmitx_debug_read_only(tmpbuf))
+		hdmitx_hdr_transport_untrusted(hdev);
 
 	if (strncmp(tmpbuf, "testhpll", 8) == 0) {
 		ret = kstrtoul(tmpbuf + 8, 10, &value);
@@ -3884,6 +3902,11 @@ static int hdmitx_cntl_ddc(struct hdmitx_dev *hdev, unsigned int cmd,
 	unsigned int val;
 	unsigned char tmp[5];
 
+	if (cmd == DDC_RESET_EDID || cmd == DDC_EDID_READ_DATA ||
+	    cmd == DDC_EDID_GET_DATA)
+		hdmitx_hdr_link_changed(hdev);
+	if (cmd == DDC_SCDC_DIV40_SCRAMB)
+		hdmitx_hdr_transport_untrusted(hdev);
 	if ((cmd & CMD_DDC_OFFSET) != CMD_DDC_OFFSET) {
 		pr_err(HW "ddc: invalid cmd 0x%x\n", cmd);
 		return -1;
@@ -4181,6 +4204,12 @@ static int hdmitx_cntl_config(struct hdmitx_dev *hdev, unsigned int cmd,
 	int ret = 0;
 	unsigned int ieee_code = 0;
 
+	if (cmd == CONF_AVI_RGBYCC_INDIC || cmd == CONF_AVI_Q01 ||
+	    cmd == CONF_AVI_YQ01 || cmd == CONF_EMP_NUMBER ||
+	    cmd == CONF_EMP_PHY_ADDR)
+		hdmitx_hdr_transport_untrusted(hdev);
+	if (cmd == CONF_HDMI_DVI_MODE || cmd == CONF_CLR_AVI_PACKET)
+		hdmitx_hdr_transport_changed(hdev);
 	if ((cmd & CMD_CONF_OFFSET) != CMD_CONF_OFFSET) {
 		pr_err(HW "config: invalid cmd 0x%x\n", cmd);
 		return -1;
@@ -4373,6 +4402,11 @@ static int hdmitx_cntl_misc(struct hdmitx_dev *hdev, unsigned int cmd,
 {
 	static int st;
 
+	if (cmd == MISC_HPLL_FAKE || cmd == MISC_TMDS_CLK_DIV40 ||
+	    cmd == MISC_TMDS_RXSENSE)
+		hdmitx_hdr_transport_untrusted(hdev);
+	if (cmd == MISC_TMDS_PHY_OP || cmd == MISC_TRIGGER_HPD)
+		hdmitx_hdr_link_changed(hdev);
 	if ((cmd & CMD_MISC_OFFSET) != CMD_MISC_OFFSET) {
 		pr_err(HW "misc: w: invalid cmd 0x%x\n", cmd);
 		return -1;
