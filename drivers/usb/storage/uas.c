@@ -934,6 +934,89 @@ MODULE_DEVICE_TABLE(usb, uas_usb_ids);
 
 #undef UNUSUAL_DEV
 
+#if IS_BUILTIN(CONFIG_USB_UAS)
+enum p3i_uas_state {
+	P3I_UAS_PENDING,
+	P3I_UAS_OFF,
+	P3I_UAS_ON,
+};
+
+static int p3i_uas_state;
+static DEFINE_MUTEX(p3i_policy_lock);
+/* Comma-separated USB port names and lowercase VID:PID pairs. */
+static char p3i_exclusions[4096];
+
+static ssize_t p3i_policy_show(struct device_driver *driver, char *buf)
+{
+	static const char * const states[] = { "pending", "off", "on" };
+
+	return sprintf(buf, "%s\n", states[smp_load_acquire(&p3i_uas_state)]);
+}
+
+static ssize_t p3i_policy_store(struct device_driver *driver, const char *buf,
+				size_t count)
+{
+	ssize_t ret = count;
+	size_t len;
+
+	mutex_lock(&p3i_policy_lock);
+	if (p3i_uas_state != P3I_UAS_PENDING) {
+		ret = -EBUSY;
+	} else if (sysfs_streq(buf, "off")) {
+		smp_store_release(&p3i_uas_state, P3I_UAS_OFF);
+	} else if (!strncmp(buf, "on ", 3)) {
+		len = strcspn(buf + 3, "\n");
+		if (len >= sizeof(p3i_exclusions)) {
+			ret = -E2BIG;
+		} else {
+			memcpy(p3i_exclusions, buf + 3, len);
+			p3i_exclusions[len] = '\0';
+			smp_store_release(&p3i_uas_state, P3I_UAS_ON);
+		}
+	} else {
+		ret = -EINVAL;
+	}
+	mutex_unlock(&p3i_policy_lock);
+	return ret;
+}
+static DRIVER_ATTR_RW(p3i_policy);
+
+static bool p3i_uas_allowed(struct usb_interface *intf)
+{
+	struct usb_device *udev = interface_to_usbdev(intf);
+	const char *port = dev_name(&udev->dev);
+	const char *entry = p3i_exclusions;
+	char id[10];
+	size_t len;
+
+	if (smp_load_acquire(&p3i_uas_state) != P3I_UAS_ON)
+		return true;
+
+	snprintf(id, sizeof(id), "%04x:%04x",
+		 le16_to_cpu(udev->descriptor.idVendor),
+		 le16_to_cpu(udev->descriptor.idProduct));
+
+	while (*entry) {
+		len = strcspn(entry, ",");
+		if ((len == strlen(port) && !strncmp(entry, port, len)) ||
+		    (len == sizeof(id) - 1 && !strncmp(entry, id, len)))
+			return false;
+		entry += len;
+		if (*entry)
+			entry++;
+	}
+	return true;
+}
+
+bool p3i_uas_eligible(struct usb_interface *intf)
+{
+	const struct usb_device_id *id = usb_match_id(intf, uas_usb_ids);
+
+	return id && p3i_uas_allowed(intf) &&
+		uas_use_uas_driver(intf, id, NULL);
+}
+#endif
+
 static int uas_switch_interface(struct usb_device *udev,
 				struct usb_interface *intf)
 {
@@ -998,6 +1081,12 @@ static int uas_probe(struct usb_interface *intf, const struct usb_device_id *id)
 	struct uas_dev_info *devinfo;
 	struct usb_device *udev = interface_to_usbdev(intf);
 	unsigned long dev_flags;
+
+#if IS_BUILTIN(CONFIG_USB_UAS)
+	if (smp_load_acquire(&p3i_uas_state) != P3I_UAS_ON ||
+	    !p3i_uas_allowed(intf))
+		return -ENODEV;
+#endif
 
 	if (!uas_use_uas_driver(intf, id, &dev_flags))
 		return -ENODEV;
@@ -1273,11 +1362,22 @@ static int __init uas_init(void)
 		return -ENOMEM;
 	}
 
+#if IS_BUILTIN(CONFIG_USB_UAS)
+	rv = driver_create_file(&uas_driver.drvwrap.driver, &driver_attr_p3i_policy);
+	if (rv) {
+		usb_deregister(&uas_driver);
+		destroy_workqueue(workqueue);
+		return rv;
+	}
+#endif
 	return 0;
 }
 
 static void __exit uas_exit(void)
 {
+#if IS_BUILTIN(CONFIG_USB_UAS)
+	driver_remove_file(&uas_driver.drvwrap.driver, &driver_attr_p3i_policy);
+#endif
 	usb_deregister(&uas_driver);
 	destroy_workqueue(workqueue);
 }
