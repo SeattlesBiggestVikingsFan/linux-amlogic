@@ -4131,8 +4131,7 @@ uint32_t sink_hdr_support(const struct vinfo_s *vinfo)
 
 	/* when policy == follow sink(0) or force output (2) */
 	/* use force_output */
-	if ((get_force_output() != 0)
-	&& (get_hdr_policy() != 1)) {
+	if ((get_force_output() != 0)) {
 		switch (get_force_output()) {
 		case BT709:
 		case BT_BYPASS:
