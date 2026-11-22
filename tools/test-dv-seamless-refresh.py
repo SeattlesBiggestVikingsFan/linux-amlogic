@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check the default-off hdmitx same-transport refresh for attr "now"."""
+"""Check the default-on hdmitx same-transport refresh for attr "now"."""
 import argparse
 import importlib.util
 from pathlib import Path
@@ -65,7 +65,7 @@ assert "hdmitx_hdr_transport_rebuilt" not in fast
 # Refresh AVI/packet RMWs are serialised with the vsync DRM writer.
 assert "spin_lock_irqsave(&hdev->edid_spinlock, flags);\n\t\t\thdmitx_hw_same_mode_refresh(hdev);\n\t\t\thdmitx_refresh_display_pkts(hdev, vic);\n\t\t\tspin_unlock_irqrestore(&hdev->edid_spinlock, flags);" in dvblock
 assert auto.index("hdmitx_hdr_commit(hdev, ret, link);") < auto.rindex("hdmitx_same_mode_record(")
-assert "static bool seamless_mode_refresh;" in main, "default off"
+assert "static bool seamless_mode_refresh = true;" in main, "default on"
 # HPD plugin: modeset is recordable only inside the locked handler, before hpd_state publish.
 plug = helpers.function(main, "hdmitx_hpd_plugin_handler")
 assert plug.index("mutex_lock(&setclk_mutex);") < \
@@ -108,7 +108,7 @@ disp = helpers.function(video, "hdmitx_set_display")
 assert "hdmitx_set_display_pkts(hdev, VideoCode);" in disp and "hdmi_set_vend_spec_infofram" not in disp
 assert "hdmitx_set_display_pkts(hdev, vic);\n\thdmitx_set_spd_info(hdev);" in \
     helpers.function(video, "hdmitx_refresh_display_pkts")
-print("PASS: attr-now/vout same-mode only, DV-off EOTF gate, default off, no PHY/timing/AVMUTE/audio on refresh, shared packet code, hw_gen accounting")
+print("PASS: attr-now/vout same-mode only, DV-off EOTF gate, default on with explicit off, no PHY/timing/AVMUTE/audio on refresh, shared packet code, hw_gen accounting")
 
 PRELUDE = r"""
 #include <assert.h>
@@ -157,6 +157,7 @@ static unsigned int check(bool ok, bool ready, enum hdmi_vic vic)
 
 int main(void)
 {
+	assert(seamless_mode_refresh);
 	reset();
 	assert(hdmitx_same_mode.valid && !check(true, true, 32));
 	assert(check(false, true, 32) == 1u << 1);
@@ -204,7 +205,7 @@ int main(void)
 
 def model(source):
     struct = between(source, "struct hdmitx_same_mode {", "};") + "};\n"
-    statics = between(source, "static bool seamless_mode_refresh;",
+    statics = between(source, "static bool seamless_mode_refresh = true;",
                       "static unsigned int hdmitx_same_mode_mismatch(")
     return (PRELUDE + struct + statics +
             helpers.function(source, "hdmitx_same_mode_mismatch") + "\n" +

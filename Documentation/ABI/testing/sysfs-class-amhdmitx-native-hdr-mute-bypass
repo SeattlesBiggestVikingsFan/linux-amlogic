@@ -52,3 +52,18 @@ Description:
 		PENDING-clear-before-callback order, not real SMP execution.
 		Hardware qualification, correct HDR pixels and sink lock continuity
 		require separate approved device/display validation.
+
+What:		/sys/class/amhdmitx/amhdmitx0/seamless_mode_refresh
+Description:
+		Same-transport packet refresh for an attribute "now" request.
+		The consolidated kernel defaults this independent control to 1.
+		Write 0 to disable or 1 to enable future refresh admissions;
+		the value is volatile and the sysfs writer serializes changes
+		with the display-mode mutex. Explicit 0 retains full modesets.
+		All existing transport, link, packet-trust and DV policy gates
+		remain unchanged. A default of 1 does not make rate/resolution
+		changes or TV-led DV entry/exit seamless, nor certify sink safety.
+		Kodi startup or a saved profile may override the kernel default.
+
+		Off-device regression:
+		  python3 tools/test-dv-seamless-refresh.py --negative-controls
