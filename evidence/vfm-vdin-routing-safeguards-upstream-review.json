@@ -1,0 +1,23 @@
+{
+  "archive_head": "4d182eabe7eaee0e287027c91e2de1ae127a6a26",
+  "archive_ref": "refs/archive/published/pr-33",
+  "exact_path_mode_blob_equality": true,
+  "id": "vfm-vdin-routing-safeguards",
+  "original_commits": [
+    "4d182eabe7eaee0e287027c91e2de1ae127a6a26"
+  ],
+  "original_patch_ids": {
+    "4d182eabe7eaee0e287027c91e2de1ae127a6a26": "5973e593d064a0c4b1bdb9deea0b5734ab2fdb8c"
+  },
+  "paths": {
+    "drivers/amlogic/media/common/codec_mm/configs/configs.c": "893fb58df85cfa05779cec99f6918d1d75d22e53",
+    "drivers/amlogic/media/common/vfm/vfm.c": "892ec9b44fdb7b8880cc711ab46de17a9d221ff9",
+    "drivers/amlogic/media/common/vfm/vfm.h": "1b9a0f8ad56347b84b65c6e91bf6fd97e7bebbd0",
+    "drivers/amlogic/media/common/vfm/vframe_provider.c": "988fd746fc8915639e4543650af48d0a5f9e7cb9",
+    "drivers/amlogic/media/common/vfm/vframe_receiver.c": "878230f3a32e26d6dc063917f8ffb5cb8bd90e6b",
+    "drivers/amlogic/media/deinterlace/deinterlace.c": "66eda506e96e23be76cf9f92998d5ac483ca5225",
+    "drivers/amlogic/media/vin/tvin/vdin/vdin_ctl.c": "0d9aeebc0e10db00727d6b8456c9320319337cc4"
+  },
+  "reason": "Seven accepted refreshed VFM/VDIN routing and log-safeguard paths are byte/mode equal to archived PR33 and validated upstream; final release imported that exact delta. No duplicate replay.",
+  "upstream_commit": "58c06bb03fba0d4136115b828a3924394130c15d"
+}

@@ -1,0 +1,18 @@
+{
+  "archive_head": "3a5991353f33e67bf9ddfe2735b3d3133b042974",
+  "archive_ref": "refs/archive/published/hdr-sink-modeset",
+  "exact_path_mode_blob_equality": true,
+  "id": "hdr-sink-vsvdb-recovery",
+  "original_commits": [
+    "3a5991353f33e67bf9ddfe2735b3d3133b042974"
+  ],
+  "original_patch_ids": {
+    "3a5991353f33e67bf9ddfe2735b3d3133b042974": "0671fe98ea43df6bc030e1c8ec1c21e284dac72a"
+  },
+  "paths": {
+    "drivers/amlogic/media/enhancement/amdolby_vision/amdolby_vision.c": "3de61b105302ed895d017e23bdcc4d4f33d73454",
+    "tools/test-dv-sink-modeset.py": "bfe022fd3f4796fd8f720c0c0391a4453c98a944"
+  },
+  "reason": "Upstream sink-VSVDB modeset deferral, recovery and production regression are byte/mode identical to the archived accepted source, validated upstream and release; no duplicate replay.",
+  "upstream_commit": "58c06bb03fba0d4136115b828a3924394130c15d"
+}

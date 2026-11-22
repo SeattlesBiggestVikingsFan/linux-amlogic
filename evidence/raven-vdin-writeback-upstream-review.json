@@ -1,0 +1,17 @@
+{
+  "archive_head": "1f9baf7026d8fb0e8fc578bf337e0b23166e67e6",
+  "archive_ref": "refs/archive/published/pr-31",
+  "exact_path_mode_blob_equality": true,
+  "id": "raven-vdin-writeback",
+  "original_commits": [
+    "1f9baf7026d8fb0e8fc578bf337e0b23166e67e6"
+  ],
+  "original_patch_ids": {
+    "1f9baf7026d8fb0e8fc578bf337e0b23166e67e6": "12a8b87542ebbfd9d5aa46f42b182784fd629c6b"
+  },
+  "paths": {
+    "arch/arm64/boot/dts/amlogic/g12b_s922z_amazon_2nd_gen_cube.dts": "0afbdbb830e01866cd17891c2b4eaada85ecfe12"
+  },
+  "reason": "Published Raven/Fire TV Cube 2 VDIN1 write-back DTS is exactly retained in archived PR31, validated upstream and release; do not replay it or change other board/revision policy.",
+  "upstream_commit": "58c06bb03fba0d4136115b828a3924394130c15d"
+}

@@ -1,0 +1,143 @@
+{
+  "all_default_tree": "2de60b436acf0c6289449c53eee6f842d176d4d2",
+  "excluded_ethernet_changed_paths": [
+    "drivers/net/ethernet/stmicro/stmmac/dwmac-meson.c",
+    "drivers/net/ethernet/stmicro/stmmac/stmmac_main.c",
+    "include/linux/stmmac.h"
+  ],
+  "passed": true,
+  "rejected_invalid_catalogs": [
+    "missing",
+    "cycle",
+    "duplicate",
+    "unreviewed-skip"
+  ],
+  "scope": "Offline assembly and source-tree validation, no build or device evidence.",
+  "standalone_cases": [
+    {
+      "feature": "boot-mode-timeout",
+      "standalone_with_dependencies": true,
+      "tree": "a8f6c59b3cc78a6a5a88b042802706a9b48740c1"
+    },
+    {
+      "feature": "disable-floppy-probe",
+      "standalone_with_dependencies": true,
+      "tree": "7c9b9e7ad69239fe83b2d32c2f508edd9dba4e88"
+    },
+    {
+      "feature": "apple-i8042",
+      "standalone_with_dependencies": true,
+      "tree": "5a1ed75c5551246a8fe8cb1033684a6fac87ea44"
+    },
+    {
+      "feature": "bluetooth-reconnect",
+      "standalone_with_dependencies": true,
+      "tree": "cec6e63220d1b885824ec366b4d424b2954914c5"
+    },
+    {
+      "feature": "xbox-special-driver",
+      "standalone_with_dependencies": true,
+      "tree": "c3b302b85af2390360dbb58701ae81f4678d36e3"
+    },
+    {
+      "feature": "xpadneo",
+      "standalone_with_dependencies": true,
+      "tree": "d4cda605b28d1361b556b6cd922374443c42b8da"
+    },
+    {
+      "feature": "input-event-compat",
+      "standalone_with_dependencies": true,
+      "tree": "ab807e14fa6e29cdbfd44fcca356e7cb829ad439"
+    },
+    {
+      "feature": "ax88179-rx-bounds",
+      "standalone_with_dependencies": true,
+      "tree": "395798238678f8f83d08a341282f7233b9bf9e2c"
+    },
+    {
+      "feature": "ax88179-rx-packets",
+      "standalone_with_dependencies": true,
+      "tree": "b6a157ecdf74ec90ba0462aec490a84c2c638b0c"
+    },
+    {
+      "feature": "usb-nested-reset",
+      "standalone_with_dependencies": true,
+      "tree": "59e1f0c70ad2912b87b1c855e45e6e88cd233f09"
+    },
+    {
+      "feature": "usb-boot-uas-policy",
+      "standalone_with_dependencies": true,
+      "tree": "f6812973b3eeb185e2b57c048e85397c121805cb"
+    },
+    {
+      "feature": "vl817-disable-uas",
+      "standalone_with_dependencies": true,
+      "tree": "1a337b818a51d874ebc72662b0dbf92e5cd28313"
+    },
+    {
+      "feature": "force-output-source-policy",
+      "standalone_with_dependencies": true,
+      "tree": "c83fe6280d8f845d698130d451526ce9eb1e4a47"
+    },
+    {
+      "feature": "network-uapi-compat",
+      "standalone_with_dependencies": true,
+      "tree": "a10dcb111025d4c8da4ef660e5344032eae64560"
+    },
+    {
+      "feature": "powerpc-test-symlink",
+      "standalone_with_dependencies": true,
+      "tree": "9fc4a440061a6660114da61264ba24076de96759"
+    },
+    {
+      "feature": "afbc-scanout-retention",
+      "standalone_with_dependencies": true,
+      "tree": "8ee7fdd4635f70b5a7530586393a526a72b8b71d"
+    },
+    {
+      "feature": "seamless-hdr-v20",
+      "standalone_with_dependencies": true,
+      "tree": "03e8072d986f3f63b4a2986a9db1f0ee79022f16"
+    },
+    {
+      "feature": "hdmi-c2-clock-serialization",
+      "standalone_with_dependencies": true,
+      "tree": "a5898defb3e56b95ebda9324dd242845c7a3462b"
+    },
+    {
+      "feature": "ethernet-calibration-8a",
+      "standalone_with_dependencies": true,
+      "tree": "8d2d8d8511817338f449462cdf9ceb102934a073"
+    },
+    {
+      "feature": "seamless-default-on",
+      "standalone_with_dependencies": true,
+      "tree": "3d9b1a08e4ad89f64bf15eec77176f8a56b44078"
+    },
+    {
+      "feature": "osd-afbc-queued-flips",
+      "standalone_with_dependencies": true,
+      "tree": "5fe783d42b2aea198eb7c4f44854bfee4a492b0c"
+    },
+    {
+      "feature": "vfm-vdin-routing-safeguards",
+      "standalone_with_dependencies": true,
+      "tree": "5fe783d42b2aea198eb7c4f44854bfee4a492b0c"
+    },
+    {
+      "feature": "raven-vdin-writeback",
+      "standalone_with_dependencies": true,
+      "tree": "5fe783d42b2aea198eb7c4f44854bfee4a492b0c"
+    },
+    {
+      "feature": "hdr-sink-vsvdb-recovery",
+      "standalone_with_dependencies": true,
+      "tree": "5fe783d42b2aea198eb7c4f44854bfee4a492b0c"
+    },
+    {
+      "feature": "native-p81-live-l5-default",
+      "standalone_with_dependencies": true,
+      "tree": "5fe783d42b2aea198eb7c4f44854bfee4a492b0c"
+    }
+  ]
+}
