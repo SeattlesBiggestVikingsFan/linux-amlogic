@@ -7,6 +7,7 @@
 
 ccflags-y := -Idrivers/scsi
 
+# Probe built-in UAS before usb-storage, which provides the BOT fallback.
 obj-$(CONFIG_USB_UAS)		+= uas.o
 obj-$(CONFIG_USB_STORAGE)	+= usb-storage.o
 
