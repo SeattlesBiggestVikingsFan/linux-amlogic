@@ -1,0 +1,153 @@
+{
+  "assembly_base": {
+    "commit": "605cf2407df57a850fc7db29e514c2de41b5ebc7",
+    "previous_validated_commit": "58c06bb03fba0d4136115b828a3924394130c15d",
+    "published_ref": "amlogic-4.9-20",
+    "ref": "upstream-dev-20261123",
+    "ref_repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+    "refresh": {
+      "commit": "605cf2407df57a850fc7db29e514c2de41b5ebc7",
+      "observation": "Live head independently fetched; identical to previously tracked head. Not yet built or hardware-validated.",
+      "status": "source-reconciled-offline-only"
+    },
+    "repository": "https://github.com/pannal/linux-amlogic"
+  },
+  "changed_source_paths": [
+    "drivers/amlogic/media/common/vfm/vframe_aux.h",
+    "drivers/amlogic/media/enhancement/amdolby_vision/amdolby_vision.c",
+    "drivers/amlogic/media/enhancement/amvecm/amcsc.c",
+    "drivers/amlogic/media/enhancement/amvecm/amvecm.c",
+    "drivers/amlogic/media/enhancement/amvecm/hdr/am_hdr10_plus.c",
+    "drivers/amlogic/media/enhancement/amvecm/hdr/am_hdr10_plus.h",
+    "drivers/amlogic/media/enhancement/amvecm/hdr/am_hdr10_plus_ootf.c",
+    "drivers/amlogic/media/enhancement/amvecm/hdr/am_hdr10_plus_ootf.h",
+    "drivers/amlogic/media/video_sink/video.c",
+    "drivers/amlogic/media/vout/hdmitx/hdmi_tx_20/hdmi_tx_scdc.c"
+  ],
+  "defaults": {
+    "lldv_vsif_suppress": false,
+    "seamless_mode_refresh": true
+  },
+  "export_or_module_param_declaration_changes": [],
+  "framework_public_review_sha256": "0bd5b2a04f1bf3cb6ddec3d9f2200ada87351e2aedba9b22b7d5aacf71fb47b1",
+  "framework_recipe_config_compiler_contracts": {
+    "packages/devel/binutils/package.mk": {
+      "sha256": "586d8d8b097fb08aaaa5b44e5da0b188de204f48180c6c27034083d983531c61",
+      "unchanged_since_sealed_source": true
+    },
+    "packages/lang/Python3/package.mk": {
+      "sha256": "6adfff8167bceaf716c8c7c3635f5fd9718c520b87c4a8cf89c6e30940946046",
+      "unchanged_since_sealed_source": true
+    },
+    "packages/lang/gcc/package.mk": {
+      "sha256": "a7fad13dc5ae8b6eb34cf63db5f29a18aed916ef01ff56782ae90376eb8e934f",
+      "unchanged_since_sealed_source": true
+    },
+    "projects/Amlogic-ce/devices/Amlogic-ng/linux/linux.aarch64.conf": {
+      "sha256": "c0216828c25352984c8b287227e51ab85dfd9b186d633c7644aed2d98cb145af",
+      "unchanged_since_sealed_source": true
+    },
+    "projects/Amlogic-ce/devices/Amlogic-ng/options": {
+      "sha256": "96e52e07ec38e8b07f2b2347649d038b10faf09e5b6f8942bddd77df625c642f",
+      "unchanged_since_sealed_source": true
+    },
+    "projects/Amlogic-ce/packages/linux-drivers/amlogic/ap6275s-aml/package.mk": {
+      "sha256": "94a795a2d4748cd46d2b0f871c9f64e803de8eedeca8ad2426a17dcaa185f242",
+      "unchanged_since_sealed_source": true
+    },
+    "projects/Amlogic-ce/packages/linux-drivers/amlogic/media_modules-aml/package.mk": {
+      "sha256": "a05583286fa09698d1451d5001dd7ab1ac78238be7ad50b6c6105db8e083297b",
+      "unchanged_since_sealed_source": true
+    },
+    "projects/Amlogic-ce/packages/linux/package.mk": {
+      "sha256": "51e466191176f4abea81dcc01224766c1565edac2a0ac86a779b3dbe527cd433",
+      "unchanged_since_sealed_source": true
+    },
+    "projects/Amlogic-ce/packages/mediacenter/CoreELEC-settings/package.mk": {
+      "sha256": "528d54e32258affe58b95c022afbd7b2e7e1bb68e527f54666ffa484a153a394",
+      "unchanged_since_sealed_source": true
+    },
+    "projects/Amlogic-ce/packages/mediacenter/kodi/package.mk": {
+      "sha256": "5912c4fb1e8406deeede3e4e8ce631fea4b0c30d6475628a87695ef6a2103db6",
+      "unchanged_since_sealed_source": true
+    },
+    "projects/Amlogic-ce/packages/mediacenter/skin.p3i.estuary/package.mk": {
+      "sha256": "a6adfa8a36bd0dc1d71eb590c246f43ae5382154fb0791089ac939f5600f59ab",
+      "unchanged_since_sealed_source": true
+    }
+  },
+  "framework_tool_versions": {
+    "GCC": "13.3.0",
+    "Python": "3.13.18",
+    "Python_upgrade_already_in_previous_sealed_baseline": true,
+    "binutils": "2.41",
+    "new_Kodi_kernel_coherent_build_required": "owned and qualified separately by build owner; no old ABI/Module.symvers/binary substitution",
+    "new_compiler_dependency_or_config_required_by_this_Core_delta": false,
+    "release_Python": "3.13.14"
+  },
+  "framework_upstream": {
+    "commit": "473c9808dea2a9aa9ba1b42a09adb26b4e601f5d",
+    "commit_count": 1,
+    "parent_verified": "7a36d3e71d20014db093d5dfc613fe21fe654902",
+    "previous_base": "7a36d3e71d20014db093d5dfc613fe21fe654902",
+    "ref": "refs/heads/coreelec-21_local",
+    "repository": "https://github.com/pannal/CoreELEC.git"
+  },
+  "kconfig_makefile_config_changes": [],
+  "kernel_build_or_device_actions_performed": false,
+  "mandatory_new_config_or_compiler_dependencies": false,
+  "matching_build_requirements": [
+    "Fresh isolated target source/output and coherent kernel relink; no stale kernel object or Module.symvers reuse.",
+    "Record actual build warnings/errors, complete config hash, Image.lzo/KERNEL/source mapping and new Module.symvers.",
+    "Regenerate matching provider/module/DOVI5/shim import/export and version-adapter audits; no generic vendor ABI certification.",
+    "Retain inherited legacy declaration limits and two known DOVI exceptions explicitly; no unreviewed module/version-policy changes.",
+    "Hardware playback/HDMI/Dolby-sink and Ethernet fault-injection acceptance remains separate; host checks do not replace it."
+  ],
+  "new_header": "drivers/amlogic/media/common/vfm/vframe_aux.h",
+  "public_internal_API_changes": [
+    "parser_dynmic_metadata returns bool; both metadata-update callers and the declaration are updated together.",
+    "HDR10+ OOTF percentile storage expands from nine/ten entries to fifteen, with supplied-count and Bezier bounds.",
+    "No removed hdr_plus_bits_s, sei_md_bits, parser_hdr10_plus_medata or PERCENTILE_ORDER references remain in kernel include/Amlogic sources."
+  ],
+  "rebuild_units": [
+    "drivers/amlogic/media/enhancement/amdolby_vision/amdolby_vision.o",
+    "drivers/amlogic/media/enhancement/amvecm/amcsc.o",
+    "drivers/amlogic/media/enhancement/amvecm/amvecm.o",
+    "drivers/amlogic/media/enhancement/amvecm/hdr/am_hdr10_plus.o",
+    "drivers/amlogic/media/enhancement/amvecm/hdr/am_hdr10_plus_ootf.o",
+    "drivers/amlogic/media/video_sink/video.o",
+    "drivers/amlogic/media/vout/hdmitx/hdmi_tx_20/hdmi_tx_scdc.o"
+  ],
+  "resolved_config_policy": {
+    "checked_in_config_is_not_resolved_config": true,
+    "new_resolved_config_sha256": null,
+    "previous_parent_resolved_config_sha256": "f9681e51a088f79e5868142da4cd20232820d355d037100e4305355bab8c70d0",
+    "requirement": "Preserve the complete parent-resolved target configuration; record actual fresh .config after preparation. No source-selected option changes are required or silently allowed."
+  },
+  "source": {
+    "head": "087830e1a90a3a62e82339e23793f5d630df9168",
+    "ref": "integration/all-fixes-upstream-20261123",
+    "repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+    "tree": "eaaadfa0a70a4a5e5487a607549b9c2167bcaf53"
+  },
+  "source_materialization": {
+    "PKG_SKIP_PATCHES": "yes",
+    "PKG_VERSION": "amlogic-4.9-20",
+    "patch_policy": "Use complete sealed maintained source; disable distribution patch replay because the selected fourteen patches are already included.",
+    "recipe_source": "file://${COMBINED_KERNEL_SOURCE}",
+    "repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+    "source_commit": "087830e1a90a3a62e82339e23793f5d630df9168",
+    "source_tree": "eaaadfa0a70a4a5e5487a607549b9c2167bcaf53"
+  },
+  "source_path_count": 59132,
+  "source_ready_for_parent_build_only": true,
+  "target": {
+    "ARCH": "arm",
+    "DEVICE": "Amlogic-ng",
+    "KERNEL_MAKE_EXTRACMD": "dtbs",
+    "KERNEL_TARGET": "Image.lzo",
+    "LINUX": "amlogic-4.9",
+    "PROJECT": "Amlogic-ce",
+    "TARGET_KERNEL_ARCH": "arm64"
+  }
+}

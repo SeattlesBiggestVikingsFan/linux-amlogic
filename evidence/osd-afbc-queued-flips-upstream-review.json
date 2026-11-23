@@ -1,0 +1,23 @@
+{
+  "archive_head": "eebe87aede345899623f576ce5bf65d6d75774d6",
+  "archive_ref": "refs/archive/published/pr-30",
+  "exact_path_mode_blob_equality": true,
+  "id": "osd-afbc-queued-flips",
+  "original_commits": [
+    "0855e6aa6b41f5207959f48c5bc78c683af15c46",
+    "eebe87aede345899623f576ce5bf65d6d75774d6"
+  ],
+  "original_patch_ids": {
+    "0855e6aa6b41f5207959f48c5bc78c683af15c46": "b3ca054eafda5354738bce0d00a5afdfb2d84093",
+    "eebe87aede345899623f576ce5bf65d6d75774d6": "e184a6caed7926af99bf3081215ce19a9e4ea322"
+  },
+  "paths": {
+    "drivers/amlogic/media/osd/osd_afbc_scanout.h": "0dff5463b7cad14430ec827f32bedca9622df4b0",
+    "drivers/amlogic/media/osd/osd_hw.c": "476faad9ca1173e1c727a148418d5247ca267f64",
+    "drivers/amlogic/media/osd/osd_rdma.c": "34322f57d9857c31e9412d9ca243ef5a4038011a",
+    "drivers/amlogic/media/osd/osd_rdma.h": "0f2f0856592dd7e57f345bcbce6d2dd697a20e85",
+    "tools/test-osd-afbc-queued-flips.py": "76a685bfa594a05284c8c9db08a18b1b7a630d07"
+  },
+  "reason": "Original queued-flip and reset-disabled replay commits are already merged; retained production/test blobs equal archived PR30, validated upstream and accepted release. Do not replay or confuse with PR29 deferred scanout retention.",
+  "upstream_commit": "58c06bb03fba0d4136115b828a3924394130c15d"
+}

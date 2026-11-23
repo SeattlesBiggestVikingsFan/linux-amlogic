@@ -1,0 +1,183 @@
+{
+  "cases": [
+    {
+      "exit": 0,
+      "id": "test-lldv-vsif-suppress.py",
+      "log_sha256": "b5ca09de1b5c4d7af30f079fc9ed8830d33c532eac86f1ff0386766dd77207e9",
+      "passed": true
+    },
+    {
+      "exit": 0,
+      "id": "test-native-hdr-mute-bypass.py",
+      "log_sha256": "cb486cf5caee390a5eafac21c3a8d7aad9cd53a02a54d5fcd03ab79b1cc036bb",
+      "passed": true
+    },
+    {
+      "exit": 0,
+      "id": "test-sdr-bt2020-out.py",
+      "log_sha256": "fb2cfe7725cdfb295d2f01f44bee297afa0674bd740057a0c610fd3e008e6d67",
+      "passed": true
+    },
+    {
+      "exit": 0,
+      "id": "test-hdr-prearm.py",
+      "log_sha256": "1e408682e49256fa70dca4282460c412bb74e50b42977733bb1499dd64b0a86b",
+      "passed": true
+    },
+    {
+      "exit": 0,
+      "id": "test-dv-seamless-refresh.py",
+      "log_sha256": "0a9cf3516053f51bb6cfcdc3ead1e3863d0bf3fcd67635f9ae445d21c9232a84",
+      "passed": true
+    },
+    {
+      "exit": 0,
+      "id": "test-dv-sink-modeset.py",
+      "log_sha256": "0be995ae14fe980fb7be5a7706b75d6f746492694743894549706d7c986f9135",
+      "passed": true
+    },
+    {
+      "exit": 0,
+      "id": "test-osd-afbc-queued-flips.py",
+      "log_sha256": "981821ca748ab683db9fb557aa920e4306d46eee8b9b90bb15975b81d017fbfe",
+      "passed": true
+    },
+    {
+      "exit": 0,
+      "id": "test_afbc_scanout.py",
+      "log_sha256": "b8691b22793dfda9ced8657e0e7cf0ed48b1b255bbeeff678a1d5d6e545e9477",
+      "passed": true
+    },
+    {
+      "exit": 0,
+      "id": "run_all.py",
+      "log_sha256": "300db222692e09c9ab8d8edb4becb705ccf1d1636d10b962245268d27a3b6cee",
+      "passed": true
+    },
+    {
+      "exit": 0,
+      "id": "test_ethernet_lease.py",
+      "log_sha256": "bdd68c5976a407f3ed4f99d19af3981996e0d58ed063fb0cbb13155e92089c1d",
+      "passed": true
+    },
+    {
+      "exit": 0,
+      "id": "test_upstream_metadata.py",
+      "log_sha256": "3d75dfba4f49ffb15abd919ce0ff134e2bce3c589e9fedd2a4ac236eaf350e42",
+      "passed": true
+    },
+    {
+      "exit": 0,
+      "id": "test_upstream_controls.py",
+      "log_sha256": "c7b4f245647972b0f0a16b5aa1b23b84b8545a639c43724c505da0f482383a9b",
+      "passed": true
+    },
+    {
+      "exit": 0,
+      "id": "test_workflow.py",
+      "log_sha256": "1185332eba24369ecb17399053bc784c820069f681ae559e0545f7f7e1392636",
+      "passed": true
+    },
+    {
+      "expected_failure": true,
+      "id": "lldv-default-on",
+      "passed": true
+    },
+    {
+      "expected_failure": true,
+      "id": "lldv-avi-gate-removed",
+      "passed": true
+    }
+  ],
+  "changed_paths_only_published_upstream": {
+    "drivers/amlogic/media/common/vfm/vframe_aux.h": {
+      "candidate_sha256": "f9d6efb4012a9b74b8187c4f6e0520e475dceef9249c13cf01a363dbfaacf17a",
+      "equals_live": true,
+      "live_sha256": "f9d6efb4012a9b74b8187c4f6e0520e475dceef9249c13cf01a363dbfaacf17a"
+    },
+    "drivers/amlogic/media/enhancement/amdolby_vision/amdolby_vision.c": {
+      "candidate_sha256": "5c8eee94d3f3331e782f8be932c7c0ad772208cbf837d0e92df5d0829dd80c6a",
+      "equals_live": true,
+      "live_sha256": "5c8eee94d3f3331e782f8be932c7c0ad772208cbf837d0e92df5d0829dd80c6a"
+    },
+    "drivers/amlogic/media/enhancement/amvecm/amcsc.c": {
+      "candidate_sha256": "c696779a17ea83de110aa19af7893f70dea3c378e7b4c1706bd64f9eed4c4a99",
+      "equals_live": false,
+      "live_sha256": "05459aaf19dd6f4395bb8e3e305e912acb8944fc0da89e98f00e05b91dbd60c9"
+    },
+    "drivers/amlogic/media/enhancement/amvecm/amvecm.c": {
+      "candidate_sha256": "9201e7dbf8d5c196fd589d36eff02e5bfee28c88f284e49e74679b3f7942bbb7",
+      "equals_live": true,
+      "live_sha256": "9201e7dbf8d5c196fd589d36eff02e5bfee28c88f284e49e74679b3f7942bbb7"
+    },
+    "drivers/amlogic/media/enhancement/amvecm/hdr/am_hdr10_plus.c": {
+      "candidate_sha256": "a4c6f5e7db7cafd07d83cc396afb1d58af18cac186222c8fbf4b20af1e2e9a97",
+      "equals_live": true,
+      "live_sha256": "a4c6f5e7db7cafd07d83cc396afb1d58af18cac186222c8fbf4b20af1e2e9a97"
+    },
+    "drivers/amlogic/media/enhancement/amvecm/hdr/am_hdr10_plus.h": {
+      "candidate_sha256": "4c6c31915b0b2ed812524f8c4474690fbcb67c4b458fd9f12960d252af6195c4",
+      "equals_live": true,
+      "live_sha256": "4c6c31915b0b2ed812524f8c4474690fbcb67c4b458fd9f12960d252af6195c4"
+    },
+    "drivers/amlogic/media/enhancement/amvecm/hdr/am_hdr10_plus_ootf.c": {
+      "candidate_sha256": "05f7c9f127c629dbce133c7c765774d310bb2490ed12ab40a53ee87de1c036da",
+      "equals_live": true,
+      "live_sha256": "05f7c9f127c629dbce133c7c765774d310bb2490ed12ab40a53ee87de1c036da"
+    },
+    "drivers/amlogic/media/enhancement/amvecm/hdr/am_hdr10_plus_ootf.h": {
+      "candidate_sha256": "094b3988ec7b8c870c5526b6de3f5ee6a514986013e1dfed3a7cf74d0aa534f1",
+      "equals_live": true,
+      "live_sha256": "094b3988ec7b8c870c5526b6de3f5ee6a514986013e1dfed3a7cf74d0aa534f1"
+    },
+    "drivers/amlogic/media/video_sink/video.c": {
+      "candidate_sha256": "6fe64c23742390e85ec0b83a42e4516afb855dc9c9fbfb316ee7fb790a167ff3",
+      "equals_live": false,
+      "live_sha256": "cbb6a0d2a77b64103e77f2cce60413fb354f9209e3c941a033a34b195a4151cb"
+    },
+    "drivers/amlogic/media/vout/hdmitx/hdmi_tx_20/hdmi_tx_scdc.c": {
+      "candidate_sha256": "78ccfc67bc5554cc552cdc1b758a706330ea8b187c2114f4a10088babae13c31",
+      "equals_live": true,
+      "live_sha256": "78ccfc67bc5554cc552cdc1b758a706330ea8b187c2114f4a10088babae13c31"
+    }
+  },
+  "defaults": {
+    "lldv_vsif_suppress": false,
+    "seamless_mode_refresh": true
+  },
+  "export_or_module_param_declaration_changes": [],
+  "kconfig_makefile_config_changes": [],
+  "parser_api_reference_review": [
+    "087830e1a90a3a62e82339e23793f5d630df9168:drivers/amlogic/media/enhancement/amvecm/amcsc.c:7365:\tif (!parser_dynmic_metadata(vf))",
+    "087830e1a90a3a62e82339e23793f5d630df9168:drivers/amlogic/media/enhancement/amvecm/amcsc.c:7422:\tif (!parser_dynmic_metadata(vf))",
+    "087830e1a90a3a62e82339e23793f5d630df9168:drivers/amlogic/media/enhancement/amvecm/hdr/am_hdr10_plus.c:770:bool parser_dynmic_metadata(struct vframe_s *vf)",
+    "087830e1a90a3a62e82339e23793f5d630df9168:drivers/amlogic/media/enhancement/amvecm/hdr/am_hdr10_plus.h:114:bool parser_dynmic_metadata(struct vframe_s *vf);"
+  ],
+  "passed": true,
+  "path_count": 59132,
+  "published_delta_commutes_with_all_accepted_topics": true,
+  "retained_C2_JVC_Ethernet_files_byte_equal_to_prior": {
+    "drivers/amlogic/media/vout/hdmitx/hdmi_tx_20/hdmi_tx_main.c": "9e4afd84681cc859f2e5c747f8fefa530929ef53359747f50b59e6bd18a20af8",
+    "drivers/amlogic/media/vout/hdmitx/hdmi_tx_20/hdmi_tx_main_drm.c": "223f41fa3cf3e988e29b56c2d0c2a3aff91935a6c7a805c84e5aecb812d4510e",
+    "drivers/amlogic/media/vout/hdmitx/hdmi_tx_20/hdmi_tx_video.c": "d239c263d408a3508f93db01d562d2fa71c63cc8fe8a66ce459acd9c75f3bb01",
+    "drivers/amlogic/media/vout/hdmitx/hdmi_tx_20/hw/hdmi_tx_hw.c": "9d89c826e667af548fdea95bb6c24741301e243eb24051a2fe7ce2e688f83063",
+    "drivers/amlogic/media/vout/hdmitx/hdmi_tx_20/hw/reg_ops.c": "6c7323fb174a2cb4a1040e5caefba8b9b385798c05b624f8d361c1971063ee5d",
+    "drivers/net/ethernet/stmicro/stmmac/dwmac-meson.c": "e57c4cac7a1a8dd59deedc6be91afb267506a82ec61fa4c3580a6b95c387c521",
+    "drivers/net/ethernet/stmicro/stmmac/stmmac_main.c": "d11af416b717e7100f8c172f5c5a48f19322881f6900ef0c31dfb0bf1100818c",
+    "include/linux/amlogic/media/vout/hdmi_tx/hdmi_tx_module.h": "054d577b1e12d2c49ae08d018b940ec0bf4b55528339c2637ed352ddd9f8f70c",
+    "include/linux/stmmac.h": "3f9b69ed609a34216a1b4f37bb9c800766602d61aaa3b6d79abdac270bbcb32b"
+  },
+  "reverse_published_delta_reproduces_exact_prior_tree": "a2921b265a9ea43517b6036cc2dde95418545af0",
+  "scope": "Offline source and actual-C-body host checks; no firmware/toolchain build, new binary ABI claim or hardware acceptance.",
+  "sink_policy_unchanged_function_sha256": {
+    "load_dolby_vsvdb": "3755089d9c0ac9fe6e0e5c7d07d1446a952bcc5e467c2e2c9b10e4bcb92c36ca",
+    "sink_dv_info": "8fd83e6dbe53256878d4b2d852ae7e6292eafcbd23553b45e912baa1e0362371",
+    "sink_support_dolby_vision": "3ac08db00db4c16652b68fe85dab27481de71755755a1bbd701a5324c5379f3d"
+  },
+  "source": {
+    "head": "087830e1a90a3a62e82339e23793f5d630df9168",
+    "ref": "integration/all-fixes-upstream-20261123",
+    "repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+    "tree": "eaaadfa0a70a4a5e5487a607549b9c2167bcaf53"
+  }
+}

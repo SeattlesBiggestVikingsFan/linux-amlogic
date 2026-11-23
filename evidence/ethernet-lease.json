@@ -1,0 +1,7 @@
+{
+  "actual_body_sha256": "ca1de13883aaadc7b971f6f1c6cb1d148645f6fff82b587660977d434fcaa8d6",
+  "passed": true,
+  "scope": "Actual store/expiry/restore source bodies with deterministic host stubs; no networking, PHY calibration, MMIO or hardware acceptance.",
+  "source_sha256": "e57c4cac7a1a8dd59deedc6be91afb267506a82ec61fa4c3580a6b95c387c521",
+  "stdout": "PASS ABI1 lease admission, ranges, profile exclusion, accept guards, renewal, stale expiry, rollback, rebegin, suspend and default\n"
+}

@@ -1,0 +1,102 @@
+{
+  "candidate_changed_paths": [
+    "drivers/amlogic/media/vout/hdmitx/hdmi_tx_20/hdmi_tx_main.c",
+    "drivers/amlogic/media/vout/hdmitx/hdmi_tx_20/hdmi_tx_video.c",
+    "drivers/amlogic/media/vout/hdmitx/hdmi_tx_20/hw/hdmi_tx_hw.c",
+    "include/linux/amlogic/media/vout/hdmi_tx/hdmi_tx_module.h",
+    "tools/test-lldv-vsif-suppress.py"
+  ],
+  "candidate_path_count": 59131,
+  "cases": [
+    {
+      "exit": 0,
+      "id": "test-lldv-vsif-suppress.py",
+      "log_sha256": "b5ca09de1b5c4d7af30f079fc9ed8830d33c532eac86f1ff0386766dd77207e9",
+      "passed": true
+    },
+    {
+      "exit": 0,
+      "id": "test-native-hdr-mute-bypass.py",
+      "log_sha256": "cb486cf5caee390a5eafac21c3a8d7aad9cd53a02a54d5fcd03ab79b1cc036bb",
+      "passed": true
+    },
+    {
+      "exit": 0,
+      "id": "test-sdr-bt2020-out.py",
+      "log_sha256": "954e05f430e1adcee46dc83994f4d5fd71ea5d3656e4783e67cd7ca47bdd0576",
+      "passed": true
+    },
+    {
+      "exit": 0,
+      "id": "test-hdr-prearm.py",
+      "log_sha256": "b59dea6597c6b6211f69d48d17fc538d0200b8d2b6d4f58b3a8bebf1a90c31e1",
+      "passed": true
+    },
+    {
+      "exit": 0,
+      "id": "test-dv-seamless-refresh.py",
+      "log_sha256": "0a9cf3516053f51bb6cfcdc3ead1e3863d0bf3fcd67635f9ae445d21c9232a84",
+      "passed": true
+    },
+    {
+      "exit": 0,
+      "id": "test-dv-sink-modeset.py",
+      "log_sha256": "0be995ae14fe980fb7be5a7706b75d6f746492694743894549706d7c986f9135",
+      "passed": true
+    },
+    {
+      "exit": 0,
+      "id": "test-osd-afbc-queued-flips.py",
+      "log_sha256": "981821ca748ab683db9fb557aa920e4306d46eee8b9b90bb15975b81d017fbfe",
+      "passed": true
+    },
+    {
+      "exit": 0,
+      "id": "test_afbc_scanout.py",
+      "log_sha256": "b8691b22793dfda9ced8657e0e7cf0ed48b1b255bbeeff678a1d5d6e545e9477",
+      "passed": true
+    },
+    {
+      "exit": 0,
+      "id": "run_all.py",
+      "log_sha256": "300db222692e09c9ab8d8edb4becb705ccf1d1636d10b962245268d27a3b6cee",
+      "passed": true
+    },
+    {
+      "exit": 0,
+      "id": "test_ethernet_lease.py",
+      "log_sha256": "bdd68c5976a407f3ed4f99d19af3981996e0d58ed063fb0cbb13155e92089c1d",
+      "passed": true
+    },
+    {
+      "exit": 0,
+      "id": "test_workflow.py",
+      "log_sha256": "1185332eba24369ecb17399053bc784c820069f681ae559e0545f7f7e1392636",
+      "passed": true
+    },
+    {
+      "expected_failure": true,
+      "id": "default-on",
+      "log_sha256": "650b1259b1c82a484098d9d586017fd3d8dd0a774de6fdac557152715500f8eb",
+      "passed": true
+    },
+    {
+      "expected_failure": true,
+      "id": "missing-modern-avi-gate",
+      "log_sha256": "06fede74a191489d622f382ec0577efd41c9641aa123a97cd8b8503ca9bfcfbc",
+      "passed": true
+    }
+  ],
+  "ethernet_source_files_unchanged_and_owner_hash_matched": {
+    "drivers/net/ethernet/stmicro/stmmac/dwmac-meson.c": "e57c4cac7a1a8dd59deedc6be91afb267506a82ec61fa4c3580a6b95c387c521",
+    "drivers/net/ethernet/stmicro/stmmac/stmmac_main.c": "d11af416b717e7100f8c172f5c5a48f19322881f6900ef0c31dfb0bf1100818c",
+    "include/linux/stmmac.h": "3f9b69ed609a34216a1b4f37bb9c800766602d61aaa3b6d79abdac270bbcb32b"
+  },
+  "exact_default_replay_verified": true,
+  "passed": true,
+  "runtime_defaults": {
+    "lldv_vsif_suppress": false,
+    "seamless_mode_refresh": true
+  },
+  "scope": "Source and compiled host regressions only; no firmware build/device acceptance."
+}

@@ -1,0 +1,100 @@
+{
+  "actual_program_sha256": {
+    "00/borrow-c2/actual-body.c": "90706589ef0158631fa146347ff1fec5aaa83072c6810e13d8c48dd6448efd5d",
+    "01/borrow-serialization/actual-body.c": "a2d5361a2377c208fd4c6a51b46235ae6af44b9c8197130a9cb037b151003a91",
+    "02/borrow-original/actual-body.c": "d45b49cf6b57c546b8aa654b0a1da63e52b5ae900a51c77cf3795dbecf12a7d6",
+    "03/state-candidate/actual-body.c": "7822a68523d442cc4931fe0a514795823b80660680ef733f9e386cac160b6a78",
+    "04/state-candidate-drm/actual-body.c": "b47e761e941dac3076dbdbf967223972b5ae61578903cbbf85ff37763fa0b412",
+    "05/state-original/actual-body.c": "302580e7846a88366569bb7e3be7849c1739928fed2feedfa4980d19e8fdb7ce",
+    "06/state-original-drm/actual-body.c": "8e18fefd5dcd1fd644a5812214d3cd231a2cfe2bd8fdb059a1b57b3d9658db05",
+    "07/candidate/actual-body.c": "05c98175f92330066af55253eecdcb9bb88ad91a85ea09e869b0dc5d32c9b8ec",
+    "08/original/actual-body.c": "7731a45e12e1d60f8edb51b6c3befc98cecab31f8fd7736cc01c2cf5a542bc63",
+    "09/candidate-original-register/actual-body.c": "bbfb8ff6c9049d2517400af910e3eb9fb66ccfb5e18bae25ec94542917fadb7c",
+    "10/candidate-original-mute/actual-body.c": "491d57ba1db51d85b1877b3484f46321d5bdec44dfd6b3cb48b1d2cae77689c9",
+    "11/smp-candidate/actual-body.c": "42e79c4d58bb8e071bc1266af264537cc9a41d2977630d7ab52c21815743e6a2",
+    "12/smp-original/actual-body.c": "a65015c3e5c63ad9cd0353b0a3d29a2491fe0b3259b9d972d2798ca1a4589ca5"
+  },
+  "all_met_expectation": true,
+  "cases": [
+    {
+      "id": "borrow C2",
+      "met_expectation": true,
+      "stderr": "",
+      "stdout": "T1 muted reset runs with sampler clocks, re-gated, packets untouched: PASS (reset_clk=c delay_clk=c end_clk=20f3 end_pkt=16 cache=0 warns=0)\nT2 unmuted reset unchanged: PASS (reset_clk=c delay_clk=c end_clk=20ff end_pkt=1f cache=1 warns=0)\nT3 mute inside window keeps clocks until window ends, then gates: PASS (reset_clk=c delay_clk=c end_clk=20f3 end_pkt=16 cache=0 warns=0)\nT4 unmute inside muted window leaves clocks/packets on: PASS (reset_clk=c delay_clk=c end_clk=20ff end_pkt=1f cache=1 warns=0)\nT5 nested borrowers: last out re-gates: PASS (reset_clk=dead delay_clk=dead end_clk=20f3 end_pkt=16 cache=0 warns=0)\nT6 unbalanced release warns without register change: PASS (reset_clk=dead delay_clk=dead end_clk=20f3 end_pkt=16 cache=0 warns=1)\n"
+    },
+    {
+      "id": "borrow serialization-only negative",
+      "met_expectation": true,
+      "stderr": "",
+      "stdout": "T1 muted reset runs with sampler clocks, re-gated, packets untouched: FAIL (reset_clk=0 delay_clk=0 end_clk=20f3 end_pkt=16 cache=0 warns=0)\nT2 unmuted reset unchanged: PASS (reset_clk=c delay_clk=c end_clk=20ff end_pkt=1f cache=1 warns=0)\nT3 mute inside window keeps clocks until window ends, then gates: FAIL (reset_clk=c delay_clk=0 end_clk=20f3 end_pkt=16 cache=0 warns=0)\nT4 unmute inside muted window leaves clocks/packets on: FAIL (reset_clk=0 delay_clk=c end_clk=20ff end_pkt=1f cache=1 warns=0)\nT5/T6 borrow-counter cases: N/A (no audio_cfg_clk_borrow)\n"
+    },
+    {
+      "id": "borrow original negative",
+      "met_expectation": true,
+      "stderr": "",
+      "stdout": "T1 muted reset runs with sampler clocks, re-gated, packets untouched: FAIL (reset_clk=0 delay_clk=0 end_clk=20f3 end_pkt=16 cache=0 warns=0)\nT2 unmuted reset unchanged: PASS (reset_clk=c delay_clk=c end_clk=20ff end_pkt=1f cache=1 warns=0)\nT3 mute inside window keeps clocks until window ends, then gates: FAIL (reset_clk=c delay_clk=0 end_clk=20f3 end_pkt=16 cache=0 warns=0)\nT4 unmute inside muted window leaves clocks/packets on: FAIL (reset_clk=0 delay_clk=c end_clk=20ff end_pkt=1f cache=1 warns=0)\nT5/T6 borrow-counter cases: N/A (no audio_cfg_clk_borrow)\n"
+    },
+    {
+      "id": "state C2 normal",
+      "met_expectation": true,
+      "stderr": "",
+      "stdout": "Public mute publication/backend: PASS (desired=0 cache=0 clocks=0 packets=0)\nMode reapply captured desired state: PASS (desired=1 cache=1 clocks=c packets=9)\nLate ACR confirmation versus mute: PASS (cache=0 clocks=0 packets=0)\nStates 0/1/2, repeated requests, transient mute and current reapply: PASS\n\n"
+    },
+    {
+      "id": "state C2 DRM",
+      "met_expectation": true,
+      "stderr": "",
+      "stdout": "Public mute publication/backend: PASS (desired=0 cache=0 clocks=0 packets=0)\nMode reapply captured desired state: PASS (desired=1 cache=1 clocks=c packets=9)\nLate ACR confirmation versus mute: PASS (cache=0 clocks=0 packets=0)\nStates 0/1/2, repeated requests, transient mute and current reapply: PASS\n\n"
+    },
+    {
+      "id": "state original normal negative",
+      "met_expectation": true,
+      "stderr": "",
+      "stdout": "Public mute publication/backend: FAIL (desired=1 cache=0 clocks=0 packets=0)\nMode reapply captured desired state: FAIL (desired=1 cache=0 clocks=0 packets=0)\nLate ACR confirmation versus mute: FAIL (cache=0 clocks=0 packets=1)\nStates 0/1/2, repeated requests, transient mute and current reapply: PASS\n\n"
+    },
+    {
+      "id": "state original DRM negative",
+      "met_expectation": true,
+      "stderr": "",
+      "stdout": "Public mute publication/backend: FAIL (desired=1 cache=0 clocks=0 packets=0)\nMode reapply captured desired state: FAIL (desired=1 cache=0 clocks=0 packets=0)\nLate ACR confirmation versus mute: FAIL (cache=0 clocks=0 packets=1)\nStates 0/1/2, repeated requests, transient mute and current reapply: PASS\n\n"
+    },
+    {
+      "id": "IRQ C2",
+      "met_expectation": true,
+      "stderr": "",
+      "stdout": "packet read/modify/write vs HDR mute: PASS (cache=0 packets=96)\nmute sequence vs unmute IRQ: PASS (cache=1 clocks=20ff packets=1f)\nserial mute/unmute and unrelated-bit preservation: PASS\nIRQ/FIQ entry-mask preservation: PASS\n\n"
+    },
+    {
+      "id": "IRQ original negative",
+      "met_expectation": true,
+      "stderr": "",
+      "stdout": "packet read/modify/write vs HDR mute: FAIL (cache=0 packets=9f)\nmute sequence vs unmute IRQ: FAIL (cache=1 clocks=20ff packets=16)\nserial mute/unmute and unrelated-bit preservation: PASS\nIRQ/FIQ entry-mask preservation: PASS\n\n"
+    },
+    {
+      "id": "IRQ original register partial control",
+      "met_expectation": true,
+      "stderr": "",
+      "stdout": "packet read/modify/write vs HDR mute: FAIL (cache=0 packets=9f)\nmute sequence vs unmute IRQ: PASS (cache=1 clocks=20ff packets=1f)\nserial mute/unmute and unrelated-bit preservation: PASS\nIRQ/FIQ entry-mask preservation: PASS\n\n"
+    },
+    {
+      "id": "IRQ original mute partial control",
+      "met_expectation": true,
+      "stderr": "",
+      "stdout": "packet read/modify/write vs HDR mute: PASS (cache=0 packets=96)\nmute sequence vs unmute IRQ: FAIL (cache=1 clocks=20ff packets=16)\nserial mute/unmute and unrelated-bit preservation: PASS\nIRQ/FIQ entry-mask preservation: PASS\n\n"
+    },
+    {
+      "id": "SMP C2",
+      "met_expectation": true,
+      "stderr": "",
+      "stdout": "SMP independent-field update: PASS (register=3, expected=3)\n\n"
+    },
+    {
+      "id": "SMP original negative",
+      "met_expectation": true,
+      "stderr": "",
+      "stdout": "SMP independent-field update: FAIL (register=1, expected=3)\n\n"
+    }
+  ],
+  "negative_control": "Serialization-only mutant preserves accepted mute/register synchronization but uses immutable pre-C2 FIFO reset window.",
+  "scope": "Host ASan/UBSan production-body models, not hardware or HDMI-wire evidence."
+}

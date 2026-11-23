@@ -1,0 +1,38 @@
+{
+  "cases": [
+    {
+      "actual_body_sha256": "6667fa94831cd592d8e05d8e3253e97a4c95c7758b96163b5a412ca64c330d08",
+      "exit": 0,
+      "expected_pass": true,
+      "id": "accepted",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "met_expectation": true
+    },
+    {
+      "actual_body_sha256": "2e4a0a5620c2a235e184a0ba09d2487edd752dcbd7323ced0f960d3b58588c42",
+      "exit": 1,
+      "expected_pass": false,
+      "id": "no-bit-length-check",
+      "log_sha256": "1efee4f222b28904ba5d60be6ad9eec90e8b26a4e29d3fe507a855f519e0fa5c",
+      "met_expectation": true
+    },
+    {
+      "actual_body_sha256": "25b0875166ac259958cbf958c77e3e41699b1c8fbc15defed4f80ee30b107fd8",
+      "exit": -6,
+      "expected_pass": false,
+      "id": "commit-invalid-frame",
+      "log_sha256": "b15d282a3342a025410d7d8b1ad593fbad318bab6b8729b44d8ebe42efbb3da6",
+      "met_expectation": true
+    },
+    {
+      "actual_body_sha256": "7a2ec9a086cd8d2f124ea61574bfaaa57215f2b83bd95495bf222a1c2bdfb7fa",
+      "exit": -6,
+      "expected_pass": false,
+      "id": "truncate-percentiles",
+      "log_sha256": "f758f8a1912213855271c880a870bcc6465b7c1102dd69b5c732060825b378df",
+      "met_expectation": true
+    }
+  ],
+  "passed": true,
+  "scope": "Extracted actual upstream C bodies under host ASan/UBSan, not kernel compilation, concurrency or hardware certification."
+}

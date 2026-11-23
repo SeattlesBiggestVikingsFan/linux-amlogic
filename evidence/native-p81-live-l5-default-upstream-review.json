@@ -1,0 +1,17 @@
+{
+  "archive_head": "3a5991353f33e67bf9ddfe2735b3d3133b042974",
+  "archive_ref": "refs/archive/published/hdr-sink-modeset",
+  "exact_path_mode_blob_equality": true,
+  "id": "native-p81-live-l5-default",
+  "original_commits": [
+    "5710229b488aae905e14ecb386c77eceda552500"
+  ],
+  "original_patch_ids": {
+    "5710229b488aae905e14ecb386c77eceda552500": "0886f6685a6e210b34b78fb53920115d49821364"
+  },
+  "paths": {
+    "drivers/amlogic/media/enhancement/amdolby_vision/amdolby_vision.c": "3de61b105302ed895d017e23bdcc4d4f33d73454"
+  },
+  "reason": "Original native P8.1 same-picture L5 default-on commit is retained beneath the later archived sink-safeguard commit; complete resulting production file equals validated upstream and release. Native module/version policy is unchanged.",
+  "upstream_commit": "58c06bb03fba0d4136115b828a3924394130c15d"
+}

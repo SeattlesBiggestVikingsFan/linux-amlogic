@@ -1,0 +1,588 @@
+{
+  "accepted_topic_overlaps": {
+    "afbc-scanout-retention": [
+      "drivers/amlogic/media/video_sink/video.c"
+    ],
+    "apple-i8042": [],
+    "ax88179-rx-bounds": [],
+    "ax88179-rx-packets": [],
+    "bluetooth-reconnect": [],
+    "boot-mode-timeout": [],
+    "disable-floppy-probe": [],
+    "ethernet-calibration-8a": [],
+    "force-output-source-policy": [
+      "drivers/amlogic/media/enhancement/amvecm/amcsc.c"
+    ],
+    "hdmi-c2-clock-serialization": [],
+    "hdr-sink-vsvdb-recovery": [
+      "drivers/amlogic/media/enhancement/amdolby_vision/amdolby_vision.c"
+    ],
+    "input-event-compat": [],
+    "lldv-vsif-suppression-v3": [],
+    "native-p81-live-l5-default": [
+      "drivers/amlogic/media/enhancement/amdolby_vision/amdolby_vision.c"
+    ],
+    "network-uapi-compat": [],
+    "osd-afbc-queued-flips": [],
+    "powerpc-test-symlink": [],
+    "raven-vdin-writeback": [],
+    "seamless-default-on": [],
+    "seamless-hdr-v20": [
+      "drivers/amlogic/media/enhancement/amvecm/amcsc.c"
+    ],
+    "usb-boot-uas-policy": [],
+    "usb-nested-reset": [],
+    "vfm-vdin-routing-safeguards": [],
+    "vl817-disable-uas": [],
+    "xbox-special-driver": [],
+    "xpadneo": []
+  },
+  "aggregate_patch_sha256": "edfab54185ed4bbf6680d6c239a0bc9bb7fff9093bcfa91da6ee3a8bb02d8a5f",
+  "all_topic_patches_applied_unchanged": true,
+  "changed_paths": [
+    "drivers/amlogic/media/common/vfm/vframe_aux.h",
+    "drivers/amlogic/media/enhancement/amdolby_vision/amdolby_vision.c",
+    "drivers/amlogic/media/enhancement/amvecm/amcsc.c",
+    "drivers/amlogic/media/enhancement/amvecm/amvecm.c",
+    "drivers/amlogic/media/enhancement/amvecm/hdr/am_hdr10_plus.c",
+    "drivers/amlogic/media/enhancement/amvecm/hdr/am_hdr10_plus.h",
+    "drivers/amlogic/media/enhancement/amvecm/hdr/am_hdr10_plus_ootf.c",
+    "drivers/amlogic/media/enhancement/amvecm/hdr/am_hdr10_plus_ootf.h",
+    "drivers/amlogic/media/video_sink/video.c",
+    "drivers/amlogic/media/vout/hdmitx/hdmi_tx_20/hdmi_tx_scdc.c"
+  ],
+  "commit_count": 4,
+  "excluded": "No unpublished VFM/parser/decoder/stress experiments, UX12, pre-roll or pending visibility patches.",
+  "live_equals_previously_tracked": true,
+  "ordered_upstream_commits": [
+    "b3de64c8441d273b2145dcfea20f750029d6d58c",
+    "cfaa444ad6aab5798bf98fe050f27904064b98a9",
+    "214e2f1a8b5bd9dc27eeb1fb2cbfb92091971355",
+    "605cf2407df57a850fc7db29e514c2de41b5ebc7"
+  ],
+  "path_count": 10,
+  "previous_validated_commit": "58c06bb03fba0d4136115b828a3924394130c15d",
+  "scope": {
+    "dolby": "CVM and graphics luminance indexing bounds, null-safe diagnostics; sink/VSVDB and native P8.1 policy retained.",
+    "hdmi": "SCDC channel2 lock uses bit3; no JVC/C2/AVMUTE/VSIF policy replacement.",
+    "metadata": "Length-checked aux/AV1/ATSC/HDR10+ readers; last complete HDR10+ frame retained on invalid input.",
+    "ootf": "Fifteen percentile capacity, supplied-count iteration and Bezier bounds; public internal structs/callers change together.",
+    "pq": "Bounded sysfs token count, LUT lifetime and histogram validation, initialized pointer-free PQ descriptor."
+  },
+  "topics": [
+    {
+      "base": "605cf2407df57a850fc7db29e514c2de41b5ebc7",
+      "head": "732a027fc728bde4fac2f674e9a0fa883b6b6538",
+      "id": "boot-mode-timeout",
+      "original_patch_id": "833779b6e2fbee5efd8674fc3f1af06d3af1a717",
+      "ref": "fix/boot-mode-timeout-upstream-20261123",
+      "refreshed_patch_id": "833779b6e2fbee5efd8674fc3f1af06d3af1a717",
+      "replay": [
+        {
+          "adaptation": "None; exact accepted patch applied without conflict.",
+          "new_commit": "732a027fc728bde4fac2f674e9a0fa883b6b6538",
+          "old_commit": "1a608ee33cb0d69aeb278ef1cac83f1856d4fdae",
+          "patch_sha256": "57c5f983a4dd31647f41c3bee8f1b864df332c37eb84420b504ea5039e90f2b4"
+        }
+      ],
+      "upstream_changed_paths_overlap": []
+    },
+    {
+      "base": "605cf2407df57a850fc7db29e514c2de41b5ebc7",
+      "head": "d4ae69e0e4302200e95899ca416e86af9825bba1",
+      "id": "disable-floppy-probe",
+      "original_patch_id": "6288ca03fc5df8701a3a80ca0ad50318a33bf272",
+      "ref": "fix/disable-floppy-probe-upstream-20261123",
+      "refreshed_patch_id": "6288ca03fc5df8701a3a80ca0ad50318a33bf272",
+      "replay": [
+        {
+          "adaptation": "None; exact accepted patch applied without conflict.",
+          "new_commit": "d4ae69e0e4302200e95899ca416e86af9825bba1",
+          "old_commit": "708a20d5f75ef903759efc72f20eb89b9ebdf94c",
+          "patch_sha256": "e0b5293d0d66e5785b17c168eda2348c811a32cadc72f0ecabe44452587cbbd9"
+        }
+      ],
+      "upstream_changed_paths_overlap": []
+    },
+    {
+      "base": "605cf2407df57a850fc7db29e514c2de41b5ebc7",
+      "head": "a9a447e4713cfa86983d094d6613aadd91399e5e",
+      "id": "apple-i8042",
+      "original_patch_id": "51db53cd5b4bb53a7bee906db8259a98334c6e39",
+      "ref": "fix/apple-i8042-upstream-20261123",
+      "refreshed_patch_id": "51db53cd5b4bb53a7bee906db8259a98334c6e39",
+      "replay": [
+        {
+          "adaptation": "None; exact accepted patch applied without conflict.",
+          "new_commit": "a9a447e4713cfa86983d094d6613aadd91399e5e",
+          "old_commit": "2d903eeb3b4e63ccb2af1df56b34a5153e3279a8",
+          "patch_sha256": "def7cf6d4bca795d79d55c75742b99635c9b3e4f3d3203be8b04685126948ea6"
+        }
+      ],
+      "upstream_changed_paths_overlap": []
+    },
+    {
+      "base": "605cf2407df57a850fc7db29e514c2de41b5ebc7",
+      "head": "9cf339af4aadcec8d7e413c311b917a160bbe3ad",
+      "id": "bluetooth-reconnect",
+      "original_patch_id": "db65809ae30b6068bbc862069aaf629cbaebf2ba",
+      "ref": "fix/bluetooth-reconnect-upstream-20261123",
+      "refreshed_patch_id": "db65809ae30b6068bbc862069aaf629cbaebf2ba",
+      "replay": [
+        {
+          "adaptation": "None; exact accepted patch applied without conflict.",
+          "new_commit": "9cf339af4aadcec8d7e413c311b917a160bbe3ad",
+          "old_commit": "2234fcea9ddcde87c6f49bce72759ce78a32b135",
+          "patch_sha256": "9cbe7c9e88895dfade68de5f384cde877805bd18e258d9665d7c975ac8ee3a4e"
+        }
+      ],
+      "upstream_changed_paths_overlap": []
+    },
+    {
+      "base": "605cf2407df57a850fc7db29e514c2de41b5ebc7",
+      "head": "8e83ae7cd979d9066e84fb92a18c467613ca9e44",
+      "id": "xbox-special-driver",
+      "original_patch_id": "6951c4a56928e3e3878fed1db0560587190aa56a",
+      "ref": "fix/xbox-special-driver-upstream-20261123",
+      "refreshed_patch_id": "6951c4a56928e3e3878fed1db0560587190aa56a",
+      "replay": [
+        {
+          "adaptation": "None; exact accepted patch applied without conflict.",
+          "new_commit": "8e83ae7cd979d9066e84fb92a18c467613ca9e44",
+          "old_commit": "05ce3a97cbda3c675d2e23524e322bb8f9a2cb7d",
+          "patch_sha256": "eca8c7bc037442da954d6b5604bc6db14c86aea175fdb179642f02e9d9b76607"
+        }
+      ],
+      "upstream_changed_paths_overlap": []
+    },
+    {
+      "base": "8e83ae7cd979d9066e84fb92a18c467613ca9e44",
+      "head": "04a50d54f83ba7921c4bb5379cc21a7be606511f",
+      "id": "xpadneo",
+      "original_patch_id": "68634b7ef11f8f5ef5218785e2d553fc57adf584",
+      "ref": "fix/xpadneo-upstream-20261123",
+      "refreshed_patch_id": "68634b7ef11f8f5ef5218785e2d553fc57adf584",
+      "replay": [
+        {
+          "adaptation": "None; exact accepted patch applied without conflict.",
+          "new_commit": "04a50d54f83ba7921c4bb5379cc21a7be606511f",
+          "old_commit": "302616e3db836de3075adc6e8564ee89d881abcd",
+          "patch_sha256": "fa7e274ab3af19f170be98a41e00cd8607376a98c49f5c3a0a9acadfd6c4b8e6"
+        }
+      ],
+      "upstream_changed_paths_overlap": []
+    },
+    {
+      "base": "605cf2407df57a850fc7db29e514c2de41b5ebc7",
+      "head": "635f683d58b2a45c191abf1d66c24a798d4aca62",
+      "id": "input-event-compat",
+      "original_patch_id": "82d4e90e391cc3d6b5ffbd2af6eb8b074c4b9b40",
+      "ref": "fix/input-event-compat-upstream-20261123",
+      "refreshed_patch_id": "82d4e90e391cc3d6b5ffbd2af6eb8b074c4b9b40",
+      "replay": [
+        {
+          "adaptation": "None; exact accepted patch applied without conflict.",
+          "new_commit": "635f683d58b2a45c191abf1d66c24a798d4aca62",
+          "old_commit": "c7a2233ceb0598f34180bec2e96cd27e18df598a",
+          "patch_sha256": "18092ed589677f1a3149be0703d4c93c48f11c864558e2eec0dfc3e50c268f50"
+        }
+      ],
+      "upstream_changed_paths_overlap": []
+    },
+    {
+      "base": "605cf2407df57a850fc7db29e514c2de41b5ebc7",
+      "head": "19cbda3c8b1251c5a7f764cad88c3609b8516d3d",
+      "id": "ax88179-rx-bounds",
+      "original_patch_id": "0ad546c9b69a580d9360c69c81913356ff3f6277",
+      "ref": "fix/ax88179-rx-bounds-upstream-20261123",
+      "refreshed_patch_id": "0ad546c9b69a580d9360c69c81913356ff3f6277",
+      "replay": [
+        {
+          "adaptation": "None; exact accepted patch applied without conflict.",
+          "new_commit": "19cbda3c8b1251c5a7f764cad88c3609b8516d3d",
+          "old_commit": "23fa829590b1b51c5d908e0f69772f58221254cf",
+          "patch_sha256": "36c4a6b0dc347e69baab856efc2493dc7c05947ee407970d1ed389569bb703f2"
+        }
+      ],
+      "upstream_changed_paths_overlap": []
+    },
+    {
+      "base": "19cbda3c8b1251c5a7f764cad88c3609b8516d3d",
+      "head": "e1c699a825da570a9f044540c2e97573d6080560",
+      "id": "ax88179-rx-packets",
+      "original_patch_id": "02fe31899c8ba76a7edb0a634ead6070a70853ed",
+      "ref": "fix/ax88179-rx-packets-upstream-20261123",
+      "refreshed_patch_id": "02fe31899c8ba76a7edb0a634ead6070a70853ed",
+      "replay": [
+        {
+          "adaptation": "None; exact accepted patch applied without conflict.",
+          "new_commit": "e1c699a825da570a9f044540c2e97573d6080560",
+          "old_commit": "0991b31902b2b4eddb10bfc8762232c51af1388e",
+          "patch_sha256": "625d3f9c31f27027f553663181b046f2256eb0b78f5d27c827f1402172cd3ee4"
+        }
+      ],
+      "upstream_changed_paths_overlap": []
+    },
+    {
+      "base": "605cf2407df57a850fc7db29e514c2de41b5ebc7",
+      "head": "9ff37f88191c39e127809d4c24b4a512262899ea",
+      "id": "usb-nested-reset",
+      "original_patch_id": "c09f7fceef4ce3815dc1af40f0cc9a89cac47aa7",
+      "ref": "fix/usb-nested-reset-upstream-20261123",
+      "refreshed_patch_id": "c09f7fceef4ce3815dc1af40f0cc9a89cac47aa7",
+      "replay": [
+        {
+          "adaptation": "None; exact accepted patch applied without conflict.",
+          "new_commit": "9ff37f88191c39e127809d4c24b4a512262899ea",
+          "old_commit": "fd2d00fa3ff4e0a2c10f86d37f87c7de1fa3087f",
+          "patch_sha256": "8d265c1d640393527c79d248c322d4002b40af2da97086b919396677dc68889c"
+        }
+      ],
+      "upstream_changed_paths_overlap": []
+    },
+    {
+      "base": "605cf2407df57a850fc7db29e514c2de41b5ebc7",
+      "head": "79fc50e1f2f3c7a4831645a2818bab4e84ca1551",
+      "id": "usb-boot-uas-policy",
+      "original_patch_id": "9ff8e42d382f32349e08f17c6f9000a7486932f0",
+      "ref": "fix/usb-boot-uas-policy-upstream-20261123",
+      "refreshed_patch_id": "9ff8e42d382f32349e08f17c6f9000a7486932f0",
+      "replay": [
+        {
+          "adaptation": "None; exact accepted patch applied without conflict.",
+          "new_commit": "79fc50e1f2f3c7a4831645a2818bab4e84ca1551",
+          "old_commit": "80061fe5429002d60bac11fe263a8769e8f6683c",
+          "patch_sha256": "53a8a76c7f9a4420747d1c3ce77f7b9f4b002e1e59217c5811838e024c636986"
+        }
+      ],
+      "upstream_changed_paths_overlap": []
+    },
+    {
+      "base": "79fc50e1f2f3c7a4831645a2818bab4e84ca1551",
+      "head": "4e615210047ad2bd868df04950bd8c731475e832",
+      "id": "vl817-disable-uas",
+      "original_patch_id": "e13344d28a9ab4c5ca8dfc60937f2caa8637febf",
+      "ref": "fix/vl817-disable-uas-upstream-20261123",
+      "refreshed_patch_id": "e13344d28a9ab4c5ca8dfc60937f2caa8637febf",
+      "replay": [
+        {
+          "adaptation": "None; exact accepted patch applied without conflict.",
+          "new_commit": "4e615210047ad2bd868df04950bd8c731475e832",
+          "old_commit": "7b35e23c35bdcb3865d591737578695c8920c8a4",
+          "patch_sha256": "56c88d750c6b5c5e0a19003d60551b3552b20291de91cfa4bdc84f279f617d65"
+        }
+      ],
+      "upstream_changed_paths_overlap": []
+    },
+    {
+      "base": "605cf2407df57a850fc7db29e514c2de41b5ebc7",
+      "head": "69a525190d77c46660e55d85a0ad8cb2a9b8a5c9",
+      "id": "force-output-source-policy",
+      "original_patch_id": "dc3a03f24bf022906ac3c189be908e3225eb988f",
+      "ref": "fix/force-output-source-policy-upstream-20261123",
+      "refreshed_patch_id": "dc3a03f24bf022906ac3c189be908e3225eb988f",
+      "replay": [
+        {
+          "adaptation": "None; exact accepted patch applied without conflict.",
+          "new_commit": "69a525190d77c46660e55d85a0ad8cb2a9b8a5c9",
+          "old_commit": "c1aedcc3fefd4e7608fa8683be6dcc9f5afca71a",
+          "patch_sha256": "d6b29a9cf6aa4030fc597d8349a922ace0847bf7573b3771f879948f8606f075"
+        }
+      ],
+      "upstream_changed_paths_overlap": [
+        "drivers/amlogic/media/enhancement/amvecm/amcsc.c"
+      ]
+    },
+    {
+      "base": "605cf2407df57a850fc7db29e514c2de41b5ebc7",
+      "head": "40a1e4ccb2c6ba095eb1c8ef0c62d425cdf86d98",
+      "id": "network-uapi-compat",
+      "original_patch_id": "18bcb4213784111549f5cc557c496d4080f9c9cb",
+      "ref": "fix/network-uapi-compat-upstream-20261123",
+      "refreshed_patch_id": "18bcb4213784111549f5cc557c496d4080f9c9cb",
+      "replay": [
+        {
+          "adaptation": "None; exact accepted patch applied without conflict.",
+          "new_commit": "40a1e4ccb2c6ba095eb1c8ef0c62d425cdf86d98",
+          "old_commit": "bcd093047049599f696fd20b8b9267861a2a95db",
+          "patch_sha256": "6a3c795591c723ada142e38e883b3a812e9149fb3e0ccb9c263108059fd86b1b"
+        }
+      ],
+      "upstream_changed_paths_overlap": []
+    },
+    {
+      "base": "605cf2407df57a850fc7db29e514c2de41b5ebc7",
+      "head": "de47b10264fe99d433fca95757413fbb463ab9c7",
+      "id": "powerpc-test-symlink",
+      "original_patch_id": "dc3011967dda83af0f83c474f32ff2045ed6fdc7",
+      "ref": "fix/powerpc-test-symlink-upstream-20261123",
+      "refreshed_patch_id": "dc3011967dda83af0f83c474f32ff2045ed6fdc7",
+      "replay": [
+        {
+          "adaptation": "None; exact accepted patch applied without conflict.",
+          "new_commit": "de47b10264fe99d433fca95757413fbb463ab9c7",
+          "old_commit": "8d03b6639e0c3c22c22362a383ae8b07831dde71",
+          "patch_sha256": "53479e3937b75d979e057a82df29f17942c9115c1fb01a3261850602edd5f733"
+        }
+      ],
+      "upstream_changed_paths_overlap": []
+    },
+    {
+      "base": "605cf2407df57a850fc7db29e514c2de41b5ebc7",
+      "head": "4ce853654370aeb49477b85daa9bc9c9159cc26f",
+      "id": "afbc-scanout-retention",
+      "original_patch_id": "1289b28398abc95a95530054b6faae1286838f8f",
+      "ref": "fix/afbc-scanout-retention-upstream-20261123",
+      "refreshed_patch_id": "1289b28398abc95a95530054b6faae1286838f8f",
+      "replay": [
+        {
+          "adaptation": "None; exact accepted patch applied without conflict.",
+          "new_commit": "4ce853654370aeb49477b85daa9bc9c9159cc26f",
+          "old_commit": "fb8df55d68c91d98049ce977dc3c942ff7900b8d",
+          "patch_sha256": "855f543c25501fd93c1958c9c6f3897a9bd029771d99f7d727812f63bbbf1dfd"
+        }
+      ],
+      "upstream_changed_paths_overlap": [
+        "drivers/amlogic/media/video_sink/video.c"
+      ]
+    },
+    {
+      "base": "69a525190d77c46660e55d85a0ad8cb2a9b8a5c9",
+      "head": "1f4e6889628a1cc0a2a3090f4f22a08edf63f7cc",
+      "id": "seamless-hdr-v20",
+      "original_patch_id": "ec5b9e8a2936cb2f4349b7086f00940a5efdbc18",
+      "ref": "feature/seamless-hdr-v20-upstream-20261123",
+      "refreshed_patch_id": "ec5b9e8a2936cb2f4349b7086f00940a5efdbc18",
+      "replay": [
+        {
+          "adaptation": "None; exact accepted patch applied without conflict.",
+          "new_commit": "1f4e6889628a1cc0a2a3090f4f22a08edf63f7cc",
+          "old_commit": "5a4eaf46237b12a6c1c5c951262fa2d5cbcbdfbb",
+          "patch_sha256": "c722c3c44c9aae80a28f253d278ab45b3f4684c6863b8f94a3955a8700ff4840"
+        }
+      ],
+      "upstream_changed_paths_overlap": [
+        "drivers/amlogic/media/enhancement/amvecm/amcsc.c"
+      ]
+    },
+    {
+      "base": "1f4e6889628a1cc0a2a3090f4f22a08edf63f7cc",
+      "head": "99200a078979f45b028a228d8d5d14ba90651711",
+      "id": "hdmi-c2-clock-serialization",
+      "original_patch_id": "ebce9363198ff462526a78e786bec98a0d1d3659",
+      "ref": "fix/hdmi-c2-clock-serialization-upstream-20261123",
+      "refreshed_patch_id": "ebce9363198ff462526a78e786bec98a0d1d3659",
+      "replay": [
+        {
+          "adaptation": "None; exact accepted patch applied without conflict.",
+          "new_commit": "99200a078979f45b028a228d8d5d14ba90651711",
+          "old_commit": "56298eb1cb81e270876b454dcbd7290b1dfea25f",
+          "patch_sha256": "f8690d703d833e7b822164d6e20a743a033f8ae224d084270e4fc69607c062d2"
+        }
+      ],
+      "upstream_changed_paths_overlap": []
+    },
+    {
+      "base": "605cf2407df57a850fc7db29e514c2de41b5ebc7",
+      "head": "dd454ce39f989c065fd1410a7d7f14f9002cd9d9",
+      "id": "ethernet-calibration-8a",
+      "original_patch_id": "aef2b64aaca9d468e4b50eab85d43c9e76697e4e",
+      "ref": "feature/ethernet-calibration-8a-upstream-20261123",
+      "refreshed_patch_id": "aef2b64aaca9d468e4b50eab85d43c9e76697e4e",
+      "replay": [
+        {
+          "adaptation": "None; exact accepted patch applied without conflict.",
+          "new_commit": "dd454ce39f989c065fd1410a7d7f14f9002cd9d9",
+          "old_commit": "7793a9acfeafd6185de0076142ca1775182eda30",
+          "patch_sha256": "4491ac43730e6059a97c1c4645c3ea72b8913d053456ec958c4ba6ecaadc84ad"
+        }
+      ],
+      "upstream_changed_paths_overlap": []
+    },
+    {
+      "base": "1f4e6889628a1cc0a2a3090f4f22a08edf63f7cc",
+      "head": "1ba3323aea0af04ba1b6fc93e74ece6031a72e78",
+      "id": "seamless-default-on",
+      "original_patch_id": "8a97bd86528a79f24251a1cff384bbf4a662a34b",
+      "ref": "feature/seamless-default-on-upstream-20261123",
+      "refreshed_patch_id": "8a97bd86528a79f24251a1cff384bbf4a662a34b",
+      "replay": [
+        {
+          "adaptation": "None; exact accepted patch applied without conflict.",
+          "new_commit": "1ba3323aea0af04ba1b6fc93e74ece6031a72e78",
+          "old_commit": "3fa59259ae206111b6ec8b24d2e94068e44fbd32",
+          "patch_sha256": "edcc87759feea77b009b94a90ba7616588f972d4de5d412d3495da514b6e8a07"
+        }
+      ],
+      "upstream_changed_paths_overlap": []
+    },
+    {
+      "base": "605cf2407df57a850fc7db29e514c2de41b5ebc7",
+      "head": "605cf2407df57a850fc7db29e514c2de41b5ebc7",
+      "id": "osd-afbc-queued-flips",
+      "path_review": {
+        "drivers/amlogic/media/osd/osd_afbc_scanout.h": {
+          "byte_equal": true,
+          "live_sha256": "50799b48d47591a3078fcdb06703460332d545f91fed6c36d299b50a1b71566e",
+          "mode": "100644",
+          "previous_sha256": "50799b48d47591a3078fcdb06703460332d545f91fed6c36d299b50a1b71566e"
+        },
+        "drivers/amlogic/media/osd/osd_hw.c": {
+          "byte_equal": true,
+          "live_sha256": "a013c77b58a0cf927bb18c224cb956b51ab2df001cd79e2e811db51a730a9a72",
+          "mode": "100644",
+          "previous_sha256": "a013c77b58a0cf927bb18c224cb956b51ab2df001cd79e2e811db51a730a9a72"
+        },
+        "drivers/amlogic/media/osd/osd_rdma.c": {
+          "byte_equal": true,
+          "live_sha256": "b276f36449c06ef826fdcd05bd4318c56c5dbf5f473b535bc20e5b11fc9fffc2",
+          "mode": "100644",
+          "previous_sha256": "b276f36449c06ef826fdcd05bd4318c56c5dbf5f473b535bc20e5b11fc9fffc2"
+        },
+        "drivers/amlogic/media/osd/osd_rdma.h": {
+          "byte_equal": true,
+          "live_sha256": "f69711097bb3e32e57be6eea9aa81422669ebeb9931b5bd005cd68c118b7ec85",
+          "mode": "100644",
+          "previous_sha256": "f69711097bb3e32e57be6eea9aa81422669ebeb9931b5bd005cd68c118b7ec85"
+        },
+        "tools/test-osd-afbc-queued-flips.py": {
+          "byte_equal": true,
+          "live_sha256": "797585b8a37ae1baed5777ea73cc8c0bd17a22c292a59642e23b803d9f78b322",
+          "mode": "100644",
+          "previous_sha256": "797585b8a37ae1baed5777ea73cc8c0bd17a22c292a59642e23b803d9f78b322"
+        }
+      },
+      "ref": "fix/osd-afbc-queued-flips-upstream-20261123",
+      "replay": [],
+      "upstream_changed_paths_overlap": []
+    },
+    {
+      "base": "605cf2407df57a850fc7db29e514c2de41b5ebc7",
+      "head": "605cf2407df57a850fc7db29e514c2de41b5ebc7",
+      "id": "vfm-vdin-routing-safeguards",
+      "path_review": {
+        "drivers/amlogic/media/common/codec_mm/configs/configs.c": {
+          "byte_equal": true,
+          "live_sha256": "1f3931c9ddc8416025976eb0e2d7c18b6e41d5c61a36ea2ec8f9ff2fdd95e59d",
+          "mode": "100644",
+          "previous_sha256": "1f3931c9ddc8416025976eb0e2d7c18b6e41d5c61a36ea2ec8f9ff2fdd95e59d"
+        },
+        "drivers/amlogic/media/common/vfm/vfm.c": {
+          "byte_equal": true,
+          "live_sha256": "5c68d80dda77bd639c189846ad0bf2119cc08043667df664c4e2b83038658e93",
+          "mode": "100644",
+          "previous_sha256": "5c68d80dda77bd639c189846ad0bf2119cc08043667df664c4e2b83038658e93"
+        },
+        "drivers/amlogic/media/common/vfm/vfm.h": {
+          "byte_equal": true,
+          "live_sha256": "d845aa196359ef57bb5874a7ae313d903055a2aed0d8577e9b889a7cf69ae794",
+          "mode": "100644",
+          "previous_sha256": "d845aa196359ef57bb5874a7ae313d903055a2aed0d8577e9b889a7cf69ae794"
+        },
+        "drivers/amlogic/media/common/vfm/vframe_provider.c": {
+          "byte_equal": true,
+          "live_sha256": "09fd78777492794922d31d6d51a8261275d085dcc4e655dd1ee0fb891814c50c",
+          "mode": "100644",
+          "previous_sha256": "09fd78777492794922d31d6d51a8261275d085dcc4e655dd1ee0fb891814c50c"
+        },
+        "drivers/amlogic/media/common/vfm/vframe_receiver.c": {
+          "byte_equal": true,
+          "live_sha256": "c495ef81b07bb9e24dff1a3fa652ea50ad9e9df6dbff3604fa645f7133925e0f",
+          "mode": "100644",
+          "previous_sha256": "c495ef81b07bb9e24dff1a3fa652ea50ad9e9df6dbff3604fa645f7133925e0f"
+        },
+        "drivers/amlogic/media/deinterlace/deinterlace.c": {
+          "byte_equal": true,
+          "live_sha256": "5b3d80e8f1115684ad9db64e29c92840507abd7975105d84614ac05d7ae36226",
+          "mode": "100644",
+          "previous_sha256": "5b3d80e8f1115684ad9db64e29c92840507abd7975105d84614ac05d7ae36226"
+        },
+        "drivers/amlogic/media/vin/tvin/vdin/vdin_ctl.c": {
+          "byte_equal": true,
+          "live_sha256": "dbe6264a6ec51bfdeeb72becc686ab0104c9e5e4311e322e841df80168654853",
+          "mode": "100644",
+          "previous_sha256": "dbe6264a6ec51bfdeeb72becc686ab0104c9e5e4311e322e841df80168654853"
+        }
+      },
+      "ref": "fix/vfm-vdin-routing-safeguards-upstream-20261123",
+      "replay": [],
+      "upstream_changed_paths_overlap": []
+    },
+    {
+      "base": "605cf2407df57a850fc7db29e514c2de41b5ebc7",
+      "head": "605cf2407df57a850fc7db29e514c2de41b5ebc7",
+      "id": "raven-vdin-writeback",
+      "path_review": {
+        "arch/arm64/boot/dts/amlogic/g12b_s922z_amazon_2nd_gen_cube.dts": {
+          "byte_equal": true,
+          "live_sha256": "945bdb55ffec3f021747c5e0197f86e01b8fe40ca8a9f4df6c40df43d3d26f7b",
+          "mode": "100644",
+          "previous_sha256": "945bdb55ffec3f021747c5e0197f86e01b8fe40ca8a9f4df6c40df43d3d26f7b"
+        }
+      },
+      "ref": "feature/raven-vdin-writeback-upstream-20261123",
+      "replay": [],
+      "upstream_changed_paths_overlap": []
+    },
+    {
+      "base": "605cf2407df57a850fc7db29e514c2de41b5ebc7",
+      "head": "605cf2407df57a850fc7db29e514c2de41b5ebc7",
+      "id": "hdr-sink-vsvdb-recovery",
+      "path_review": {
+        "drivers/amlogic/media/enhancement/amdolby_vision/amdolby_vision.c": {
+          "byte_equal": false,
+          "live_sha256": "5c8eee94d3f3331e782f8be932c7c0ad772208cbf837d0e92df5d0829dd80c6a",
+          "mode": "100644",
+          "previous_sha256": "bb7d9b28cb133e043120947b6ad01dd73c34c492c7977b2d22c79dd8f20d38a1"
+        },
+        "tools/test-dv-sink-modeset.py": {
+          "byte_equal": true,
+          "live_sha256": "e6919674dde1c4cbc9c75def81923ee0d85a519b9a73f3b66b92aadcbdcb0892",
+          "mode": "100644",
+          "previous_sha256": "e6919674dde1c4cbc9c75def81923ee0d85a519b9a73f3b66b92aadcbdcb0892"
+        }
+      },
+      "ref": "fix/hdr-sink-vsvdb-recovery-upstream-20261123",
+      "replay": [],
+      "upstream_changed_paths_overlap": [
+        "drivers/amlogic/media/enhancement/amdolby_vision/amdolby_vision.c"
+      ]
+    },
+    {
+      "base": "605cf2407df57a850fc7db29e514c2de41b5ebc7",
+      "head": "605cf2407df57a850fc7db29e514c2de41b5ebc7",
+      "id": "native-p81-live-l5-default",
+      "path_review": {
+        "drivers/amlogic/media/enhancement/amdolby_vision/amdolby_vision.c": {
+          "byte_equal": false,
+          "live_sha256": "5c8eee94d3f3331e782f8be932c7c0ad772208cbf837d0e92df5d0829dd80c6a",
+          "mode": "100644",
+          "previous_sha256": "bb7d9b28cb133e043120947b6ad01dd73c34c492c7977b2d22c79dd8f20d38a1"
+        }
+      },
+      "ref": "feature/native-p81-live-l5-default-upstream-20261123",
+      "replay": [],
+      "upstream_changed_paths_overlap": [
+        "drivers/amlogic/media/enhancement/amdolby_vision/amdolby_vision.c"
+      ]
+    },
+    {
+      "base": "99200a078979f45b028a228d8d5d14ba90651711",
+      "head": "afdd14d17cd7d866c44639da6cf5afe6d8fa0359",
+      "id": "lldv-vsif-suppression-v3",
+      "original_patch_id": "781d4d84cdf866156edf5607e4c5bfa0252e7540",
+      "ref": "feature/lldv-vsif-suppression-v3-upstream-20261123",
+      "refreshed_patch_id": "781d4d84cdf866156edf5607e4c5bfa0252e7540",
+      "replay": [
+        {
+          "adaptation": "None; exact accepted patch applied without conflict.",
+          "new_commit": "afdd14d17cd7d866c44639da6cf5afe6d8fa0359",
+          "old_commit": "5b9376a38cf4b0e4fb39aca74e2c1e889cf32281",
+          "patch_sha256": "afdd4408addf31ed21ce12441cbd5edc4756f903c73f69b93b4c063bcedc1c80"
+        }
+      ],
+      "upstream_changed_paths_overlap": []
+    }
+  ],
+  "upstream_commit": "605cf2407df57a850fc7db29e514c2de41b5ebc7"
+}

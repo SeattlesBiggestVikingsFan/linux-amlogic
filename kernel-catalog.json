@@ -1,0 +1,2900 @@
+{
+  "build_impact": {
+    "evidence": "evidence/upstream-20261123-build-impact.json",
+    "sha256": "c9418cc3e4df02e281d49dd835c6f4316a465f81799938b487c908c28b83c9a7"
+  },
+  "build_policy": "No binary was built or relabeled for this source candidate; original/older kernel hashes remain provenance only.",
+  "candidate_status": "Published development refresh, preserving all accepted source capabilities; source and host checks only.",
+  "component": "kernel",
+  "excluded_updates": [
+    {
+      "id": "unpublished-stress-vfm-parser-decoder-experiments",
+      "reason": "Only actual published upstream plus the accepted 26 topics is included; no private experimental payloads.",
+      "status": "excluded"
+    },
+    {
+      "id": "hdr10plus-visibility-diagnosis",
+      "reason": "No extra diagnosis patch or new conversion visibility acceptance is inferred from upstream parser changes.",
+      "status": "pending"
+    }
+  ],
+  "expected_tree": "eaaadfa0a70a4a5e5487a607549b9c2167bcaf53",
+  "features": [
+    {
+      "base": "605cf2407df57a850fc7db29e514c2de41b5ebc7",
+      "commit_repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+      "default": true,
+      "defaults": {},
+      "depends_on": [],
+      "evidence": [
+        {
+          "id": "evidence/parity.json",
+          "sha256": "b0d1a015fc5b6567feb9a7a199da524fb362b31d376267002d54a6b588a96a36"
+        },
+        {
+          "id": "evidence/workflow-tests.json",
+          "sha256": "ed76cce9581d2e496e0d6c6655ae4b720ce11d7870b51811747dbd4e9d475c36"
+        },
+        {
+          "id": "evidence/today-workflow-tests.json",
+          "sha256": "944b51f64dbcc5d7aa217a864d7df550196534dc8f9c1f7f2345f59b4ff4044e"
+        },
+        {
+          "id": "evidence/upstream-20261123-regressions.json",
+          "sha256": "628d9d7ba8fb87cfd8c7d070461d3dc1cef297d542928b87163aa932c2dade85"
+        },
+        {
+          "id": "evidence/upstream-20261123-build-impact.json",
+          "sha256": "c9418cc3e4df02e281d49dd835c6f4316a465f81799938b487c908c28b83c9a7"
+        },
+        {
+          "id": "evidence/upstream-20261123-c2-results.json",
+          "sha256": "0e420dc63b2d8c4af908a50d15fb5c41b0a031f9ab5e4acf998db5b81089d5df"
+        },
+        {
+          "id": "evidence/upstream-20261123-ethernet-results.json",
+          "sha256": "f247bde663f0695cdcf6d169c628d19a3e013bae5b72248ca2a8f68afa7c2ca6"
+        },
+        {
+          "id": "evidence/upstream-20261123-metadata-tests.json",
+          "sha256": "d6dde419cbbdc62069091f098f60c7ba33a6f208cb39756d14bba1a84f0f6490"
+        },
+        {
+          "id": "evidence/upstream-20261123-control-tests.json",
+          "sha256": "4d0cb61315e0e71813d5f7bc2cd5fbc622204275e358d120abd893f3216eb885"
+        },
+        {
+          "id": "evidence/upstream-20261123-workflow-tests.json",
+          "sha256": "58c7099612f13b1b6aa8f59bf6f2ddeb2682a7d29e7a283409201e483276ea71"
+        },
+        {
+          "id": "evidence/upstream-20261123-review.json",
+          "sha256": "75e27e58530bb693ab87506f70d24c74a9b90f9e2a52a08d71c51b9bc37f5adb"
+        }
+      ],
+      "evidence_scope": {
+        "current": [
+          "evidence/upstream-20261123-regressions.json",
+          "evidence/upstream-20261123-build-impact.json",
+          "evidence/upstream-20261123-c2-results.json",
+          "evidence/upstream-20261123-ethernet-results.json",
+          "evidence/upstream-20261123-metadata-tests.json",
+          "evidence/upstream-20261123-control-tests.json",
+          "evidence/upstream-20261123-workflow-tests.json",
+          "evidence/upstream-20261123-review.json"
+        ],
+        "historical": [
+          "evidence/parity.json",
+          "evidence/workflow-tests.json",
+          "evidence/today-workflow-tests.json"
+        ]
+      },
+      "experimental": false,
+      "head": "732a027fc728bde4fac2f674e9a0fa883b6b6538",
+      "id": "boot-mode-timeout",
+      "ordered_commits": [
+        "732a027fc728bde4fac2f674e9a0fa883b6b6538"
+      ],
+      "patch_sha256": "57c5f983a4dd31647f41c3bee8f1b864df332c37eb84420b504ea5039e90f2b4",
+      "paths": [
+        "arch/x86/boot/tty.c",
+        "arch/x86/boot/video.c"
+      ],
+      "provenance": {
+        "adaptation": "Exact accepted donor blobs for i8042/HID context drift; exact force-output condition; other patches applied unchanged.",
+        "kind": "selected-distribution-patch",
+        "original_source": "b3fdef79fcf04d602849315f70edae9583138b72",
+        "patch": "linux-004_lower_undefined_mode_timeout.patch",
+        "prior_maintained_base": "58c06bb03fba0d4136115b828a3924394130c15d",
+        "prior_maintained_head": "1a608ee33cb0d69aeb278ef1cac83f1856d4fdae",
+        "prior_maintained_ref": "fix/boot-mode-timeout",
+        "prior_ordered_commits": [
+          "1a608ee33cb0d69aeb278ef1cac83f1856d4fdae"
+        ],
+        "sha256": "837fe5e88c2b006337456af4dc8ad281f523ddf372f33bd567edd7c9aef12d66"
+      },
+      "ref": "fix/boot-mode-timeout-upstream-20261123",
+      "repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+      "settings_defaults": {},
+      "status": "included",
+      "upstream_equivalence_reason": "Exact accepted topic patch remains absent from live upstream; replayed once, unchanged, on live upstream plus declared dependencies."
+    },
+    {
+      "base": "605cf2407df57a850fc7db29e514c2de41b5ebc7",
+      "commit_repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+      "default": true,
+      "defaults": {},
+      "depends_on": [],
+      "evidence": [
+        {
+          "id": "evidence/parity.json",
+          "sha256": "b0d1a015fc5b6567feb9a7a199da524fb362b31d376267002d54a6b588a96a36"
+        },
+        {
+          "id": "evidence/workflow-tests.json",
+          "sha256": "ed76cce9581d2e496e0d6c6655ae4b720ce11d7870b51811747dbd4e9d475c36"
+        },
+        {
+          "id": "evidence/today-workflow-tests.json",
+          "sha256": "944b51f64dbcc5d7aa217a864d7df550196534dc8f9c1f7f2345f59b4ff4044e"
+        },
+        {
+          "id": "evidence/upstream-20261123-regressions.json",
+          "sha256": "628d9d7ba8fb87cfd8c7d070461d3dc1cef297d542928b87163aa932c2dade85"
+        },
+        {
+          "id": "evidence/upstream-20261123-build-impact.json",
+          "sha256": "c9418cc3e4df02e281d49dd835c6f4316a465f81799938b487c908c28b83c9a7"
+        },
+        {
+          "id": "evidence/upstream-20261123-c2-results.json",
+          "sha256": "0e420dc63b2d8c4af908a50d15fb5c41b0a031f9ab5e4acf998db5b81089d5df"
+        },
+        {
+          "id": "evidence/upstream-20261123-ethernet-results.json",
+          "sha256": "f247bde663f0695cdcf6d169c628d19a3e013bae5b72248ca2a8f68afa7c2ca6"
+        },
+        {
+          "id": "evidence/upstream-20261123-metadata-tests.json",
+          "sha256": "d6dde419cbbdc62069091f098f60c7ba33a6f208cb39756d14bba1a84f0f6490"
+        },
+        {
+          "id": "evidence/upstream-20261123-control-tests.json",
+          "sha256": "4d0cb61315e0e71813d5f7bc2cd5fbc622204275e358d120abd893f3216eb885"
+        },
+        {
+          "id": "evidence/upstream-20261123-workflow-tests.json",
+          "sha256": "58c7099612f13b1b6aa8f59bf6f2ddeb2682a7d29e7a283409201e483276ea71"
+        },
+        {
+          "id": "evidence/upstream-20261123-review.json",
+          "sha256": "75e27e58530bb693ab87506f70d24c74a9b90f9e2a52a08d71c51b9bc37f5adb"
+        }
+      ],
+      "evidence_scope": {
+        "current": [
+          "evidence/upstream-20261123-regressions.json",
+          "evidence/upstream-20261123-build-impact.json",
+          "evidence/upstream-20261123-c2-results.json",
+          "evidence/upstream-20261123-ethernet-results.json",
+          "evidence/upstream-20261123-metadata-tests.json",
+          "evidence/upstream-20261123-control-tests.json",
+          "evidence/upstream-20261123-workflow-tests.json",
+          "evidence/upstream-20261123-review.json"
+        ],
+        "historical": [
+          "evidence/parity.json",
+          "evidence/workflow-tests.json",
+          "evidence/today-workflow-tests.json"
+        ]
+      },
+      "experimental": false,
+      "head": "d4ae69e0e4302200e95899ca416e86af9825bba1",
+      "id": "disable-floppy-probe",
+      "ordered_commits": [
+        "d4ae69e0e4302200e95899ca416e86af9825bba1"
+      ],
+      "patch_sha256": "e0b5293d0d66e5785b17c168eda2348c811a32cadc72f0ecabe44452587cbbd9",
+      "paths": [
+        "drivers/block/floppy.c"
+      ],
+      "provenance": {
+        "adaptation": "Exact accepted donor blobs for i8042/HID context drift; exact force-output condition; other patches applied unchanged.",
+        "kind": "selected-distribution-patch",
+        "original_source": "b3fdef79fcf04d602849315f70edae9583138b72",
+        "patch": "linux-007_die_floppy_die.patch",
+        "prior_maintained_base": "58c06bb03fba0d4136115b828a3924394130c15d",
+        "prior_maintained_head": "708a20d5f75ef903759efc72f20eb89b9ebdf94c",
+        "prior_maintained_ref": "fix/disable-floppy-probe",
+        "prior_ordered_commits": [
+          "708a20d5f75ef903759efc72f20eb89b9ebdf94c"
+        ],
+        "sha256": "8c4db095ecf5f0a5f66790fd2afdeac1fa8eb999dfc442fb8f3aec4be02cd623"
+      },
+      "ref": "fix/disable-floppy-probe-upstream-20261123",
+      "repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+      "settings_defaults": {},
+      "status": "included",
+      "upstream_equivalence_reason": "Exact accepted topic patch remains absent from live upstream; replayed once, unchanged, on live upstream plus declared dependencies."
+    },
+    {
+      "base": "605cf2407df57a850fc7db29e514c2de41b5ebc7",
+      "commit_repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+      "default": true,
+      "defaults": {},
+      "depends_on": [],
+      "evidence": [
+        {
+          "id": "evidence/parity.json",
+          "sha256": "b0d1a015fc5b6567feb9a7a199da524fb362b31d376267002d54a6b588a96a36"
+        },
+        {
+          "id": "evidence/workflow-tests.json",
+          "sha256": "ed76cce9581d2e496e0d6c6655ae4b720ce11d7870b51811747dbd4e9d475c36"
+        },
+        {
+          "id": "evidence/today-workflow-tests.json",
+          "sha256": "944b51f64dbcc5d7aa217a864d7df550196534dc8f9c1f7f2345f59b4ff4044e"
+        },
+        {
+          "id": "evidence/upstream-20261123-regressions.json",
+          "sha256": "628d9d7ba8fb87cfd8c7d070461d3dc1cef297d542928b87163aa932c2dade85"
+        },
+        {
+          "id": "evidence/upstream-20261123-build-impact.json",
+          "sha256": "c9418cc3e4df02e281d49dd835c6f4316a465f81799938b487c908c28b83c9a7"
+        },
+        {
+          "id": "evidence/upstream-20261123-c2-results.json",
+          "sha256": "0e420dc63b2d8c4af908a50d15fb5c41b0a031f9ab5e4acf998db5b81089d5df"
+        },
+        {
+          "id": "evidence/upstream-20261123-ethernet-results.json",
+          "sha256": "f247bde663f0695cdcf6d169c628d19a3e013bae5b72248ca2a8f68afa7c2ca6"
+        },
+        {
+          "id": "evidence/upstream-20261123-metadata-tests.json",
+          "sha256": "d6dde419cbbdc62069091f098f60c7ba33a6f208cb39756d14bba1a84f0f6490"
+        },
+        {
+          "id": "evidence/upstream-20261123-control-tests.json",
+          "sha256": "4d0cb61315e0e71813d5f7bc2cd5fbc622204275e358d120abd893f3216eb885"
+        },
+        {
+          "id": "evidence/upstream-20261123-workflow-tests.json",
+          "sha256": "58c7099612f13b1b6aa8f59bf6f2ddeb2682a7d29e7a283409201e483276ea71"
+        },
+        {
+          "id": "evidence/upstream-20261123-review.json",
+          "sha256": "75e27e58530bb693ab87506f70d24c74a9b90f9e2a52a08d71c51b9bc37f5adb"
+        }
+      ],
+      "evidence_scope": {
+        "current": [
+          "evidence/upstream-20261123-regressions.json",
+          "evidence/upstream-20261123-build-impact.json",
+          "evidence/upstream-20261123-c2-results.json",
+          "evidence/upstream-20261123-ethernet-results.json",
+          "evidence/upstream-20261123-metadata-tests.json",
+          "evidence/upstream-20261123-control-tests.json",
+          "evidence/upstream-20261123-workflow-tests.json",
+          "evidence/upstream-20261123-review.json"
+        ],
+        "historical": [
+          "evidence/parity.json",
+          "evidence/workflow-tests.json",
+          "evidence/today-workflow-tests.json"
+        ]
+      },
+      "experimental": false,
+      "head": "a9a447e4713cfa86983d094d6613aadd91399e5e",
+      "id": "apple-i8042",
+      "ordered_commits": [
+        "a9a447e4713cfa86983d094d6613aadd91399e5e"
+      ],
+      "patch_sha256": "def7cf6d4bca795d79d55c75742b99635c9b3e4f3d3203be8b04685126948ea6",
+      "paths": [
+        "drivers/input/serio/i8042.c"
+      ],
+      "provenance": {
+        "adaptation": "Exact accepted donor blobs for i8042/HID context drift; exact force-output condition; other patches applied unchanged.",
+        "kind": "selected-distribution-patch",
+        "original_source": "b3fdef79fcf04d602849315f70edae9583138b72",
+        "patch": "linux-009_disable_i8042_check_on_apple_mac.patch",
+        "prior_maintained_base": "58c06bb03fba0d4136115b828a3924394130c15d",
+        "prior_maintained_head": "2d903eeb3b4e63ccb2af1df56b34a5153e3279a8",
+        "prior_maintained_ref": "fix/apple-i8042",
+        "prior_ordered_commits": [
+          "2d903eeb3b4e63ccb2af1df56b34a5153e3279a8"
+        ],
+        "sha256": "06967b05cdbad10c7fb87106bed1987863b5525a805331cb4f6fa16c75e8203f"
+      },
+      "ref": "fix/apple-i8042-upstream-20261123",
+      "repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+      "settings_defaults": {},
+      "status": "included",
+      "upstream_equivalence_reason": "Exact accepted topic patch remains absent from live upstream; replayed once, unchanged, on live upstream plus declared dependencies."
+    },
+    {
+      "base": "605cf2407df57a850fc7db29e514c2de41b5ebc7",
+      "commit_repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+      "default": true,
+      "defaults": {},
+      "depends_on": [],
+      "evidence": [
+        {
+          "id": "evidence/parity.json",
+          "sha256": "b0d1a015fc5b6567feb9a7a199da524fb362b31d376267002d54a6b588a96a36"
+        },
+        {
+          "id": "evidence/workflow-tests.json",
+          "sha256": "ed76cce9581d2e496e0d6c6655ae4b720ce11d7870b51811747dbd4e9d475c36"
+        },
+        {
+          "id": "evidence/today-workflow-tests.json",
+          "sha256": "944b51f64dbcc5d7aa217a864d7df550196534dc8f9c1f7f2345f59b4ff4044e"
+        },
+        {
+          "id": "evidence/upstream-20261123-regressions.json",
+          "sha256": "628d9d7ba8fb87cfd8c7d070461d3dc1cef297d542928b87163aa932c2dade85"
+        },
+        {
+          "id": "evidence/upstream-20261123-build-impact.json",
+          "sha256": "c9418cc3e4df02e281d49dd835c6f4316a465f81799938b487c908c28b83c9a7"
+        },
+        {
+          "id": "evidence/upstream-20261123-c2-results.json",
+          "sha256": "0e420dc63b2d8c4af908a50d15fb5c41b0a031f9ab5e4acf998db5b81089d5df"
+        },
+        {
+          "id": "evidence/upstream-20261123-ethernet-results.json",
+          "sha256": "f247bde663f0695cdcf6d169c628d19a3e013bae5b72248ca2a8f68afa7c2ca6"
+        },
+        {
+          "id": "evidence/upstream-20261123-metadata-tests.json",
+          "sha256": "d6dde419cbbdc62069091f098f60c7ba33a6f208cb39756d14bba1a84f0f6490"
+        },
+        {
+          "id": "evidence/upstream-20261123-control-tests.json",
+          "sha256": "4d0cb61315e0e71813d5f7bc2cd5fbc622204275e358d120abd893f3216eb885"
+        },
+        {
+          "id": "evidence/upstream-20261123-workflow-tests.json",
+          "sha256": "58c7099612f13b1b6aa8f59bf6f2ddeb2682a7d29e7a283409201e483276ea71"
+        },
+        {
+          "id": "evidence/upstream-20261123-review.json",
+          "sha256": "75e27e58530bb693ab87506f70d24c74a9b90f9e2a52a08d71c51b9bc37f5adb"
+        }
+      ],
+      "evidence_scope": {
+        "current": [
+          "evidence/upstream-20261123-regressions.json",
+          "evidence/upstream-20261123-build-impact.json",
+          "evidence/upstream-20261123-c2-results.json",
+          "evidence/upstream-20261123-ethernet-results.json",
+          "evidence/upstream-20261123-metadata-tests.json",
+          "evidence/upstream-20261123-control-tests.json",
+          "evidence/upstream-20261123-workflow-tests.json",
+          "evidence/upstream-20261123-review.json"
+        ],
+        "historical": [
+          "evidence/parity.json",
+          "evidence/workflow-tests.json",
+          "evidence/today-workflow-tests.json"
+        ]
+      },
+      "experimental": false,
+      "head": "9cf339af4aadcec8d7e413c311b917a160bbe3ad",
+      "id": "bluetooth-reconnect",
+      "ordered_commits": [
+        "9cf339af4aadcec8d7e413c311b917a160bbe3ad"
+      ],
+      "patch_sha256": "9cbe7c9e88895dfade68de5f384cde877805bd18e258d9665d7c975ac8ee3a4e",
+      "paths": [
+        "net/bluetooth/l2cap_core.c"
+      ],
+      "provenance": {
+        "adaptation": "Exact accepted donor blobs for i8042/HID context drift; exact force-output condition; other patches applied unchanged.",
+        "kind": "selected-distribution-patch",
+        "original_source": "b3fdef79fcf04d602849315f70edae9583138b72",
+        "patch": "linux-02-fix_bluetooth_reconnect.patch",
+        "prior_maintained_base": "58c06bb03fba0d4136115b828a3924394130c15d",
+        "prior_maintained_head": "2234fcea9ddcde87c6f49bce72759ce78a32b135",
+        "prior_maintained_ref": "fix/bluetooth-reconnect",
+        "prior_ordered_commits": [
+          "2234fcea9ddcde87c6f49bce72759ce78a32b135"
+        ],
+        "sha256": "204a4445350aab48905b06efb6ae174ccbfab0afe3e8dd82c189ff3a19bcd063"
+      },
+      "ref": "fix/bluetooth-reconnect-upstream-20261123",
+      "repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+      "settings_defaults": {},
+      "status": "included",
+      "upstream_equivalence_reason": "Exact accepted topic patch remains absent from live upstream; replayed once, unchanged, on live upstream plus declared dependencies."
+    },
+    {
+      "base": "605cf2407df57a850fc7db29e514c2de41b5ebc7",
+      "commit_repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+      "default": true,
+      "defaults": {},
+      "depends_on": [],
+      "evidence": [
+        {
+          "id": "evidence/parity.json",
+          "sha256": "b0d1a015fc5b6567feb9a7a199da524fb362b31d376267002d54a6b588a96a36"
+        },
+        {
+          "id": "evidence/workflow-tests.json",
+          "sha256": "ed76cce9581d2e496e0d6c6655ae4b720ce11d7870b51811747dbd4e9d475c36"
+        },
+        {
+          "id": "evidence/today-workflow-tests.json",
+          "sha256": "944b51f64dbcc5d7aa217a864d7df550196534dc8f9c1f7f2345f59b4ff4044e"
+        },
+        {
+          "id": "evidence/upstream-20261123-regressions.json",
+          "sha256": "628d9d7ba8fb87cfd8c7d070461d3dc1cef297d542928b87163aa932c2dade85"
+        },
+        {
+          "id": "evidence/upstream-20261123-build-impact.json",
+          "sha256": "c9418cc3e4df02e281d49dd835c6f4316a465f81799938b487c908c28b83c9a7"
+        },
+        {
+          "id": "evidence/upstream-20261123-c2-results.json",
+          "sha256": "0e420dc63b2d8c4af908a50d15fb5c41b0a031f9ab5e4acf998db5b81089d5df"
+        },
+        {
+          "id": "evidence/upstream-20261123-ethernet-results.json",
+          "sha256": "f247bde663f0695cdcf6d169c628d19a3e013bae5b72248ca2a8f68afa7c2ca6"
+        },
+        {
+          "id": "evidence/upstream-20261123-metadata-tests.json",
+          "sha256": "d6dde419cbbdc62069091f098f60c7ba33a6f208cb39756d14bba1a84f0f6490"
+        },
+        {
+          "id": "evidence/upstream-20261123-control-tests.json",
+          "sha256": "4d0cb61315e0e71813d5f7bc2cd5fbc622204275e358d120abd893f3216eb885"
+        },
+        {
+          "id": "evidence/upstream-20261123-workflow-tests.json",
+          "sha256": "58c7099612f13b1b6aa8f59bf6f2ddeb2682a7d29e7a283409201e483276ea71"
+        },
+        {
+          "id": "evidence/upstream-20261123-review.json",
+          "sha256": "75e27e58530bb693ab87506f70d24c74a9b90f9e2a52a08d71c51b9bc37f5adb"
+        }
+      ],
+      "evidence_scope": {
+        "current": [
+          "evidence/upstream-20261123-regressions.json",
+          "evidence/upstream-20261123-build-impact.json",
+          "evidence/upstream-20261123-c2-results.json",
+          "evidence/upstream-20261123-ethernet-results.json",
+          "evidence/upstream-20261123-metadata-tests.json",
+          "evidence/upstream-20261123-control-tests.json",
+          "evidence/upstream-20261123-workflow-tests.json",
+          "evidence/upstream-20261123-review.json"
+        ],
+        "historical": [
+          "evidence/parity.json",
+          "evidence/workflow-tests.json",
+          "evidence/today-workflow-tests.json"
+        ]
+      },
+      "experimental": false,
+      "head": "8e83ae7cd979d9066e84fb92a18c467613ca9e44",
+      "id": "xbox-special-driver",
+      "ordered_commits": [
+        "8e83ae7cd979d9066e84fb92a18c467613ca9e44"
+      ],
+      "patch_sha256": "eca8c7bc037442da954d6b5604bc6db14c86aea175fdb179642f02e9d9b76607",
+      "paths": [
+        "drivers/hid/hid-core.c",
+        "drivers/hid/hid-ids.h"
+      ],
+      "provenance": {
+        "adaptation": "Exact accepted donor blobs for i8042/HID context drift; exact force-output condition; other patches applied unchanged.",
+        "kind": "selected-distribution-patch",
+        "original_source": "b3fdef79fcf04d602849315f70edae9583138b72",
+        "patch": "linux-03-stop-hid-generic-from-grabing-xbone.patch",
+        "prior_maintained_base": "58c06bb03fba0d4136115b828a3924394130c15d",
+        "prior_maintained_head": "05ce3a97cbda3c675d2e23524e322bb8f9a2cb7d",
+        "prior_maintained_ref": "fix/xbox-special-driver",
+        "prior_ordered_commits": [
+          "05ce3a97cbda3c675d2e23524e322bb8f9a2cb7d"
+        ],
+        "sha256": "fceceb760b4ed9bd0c6b321f7bef0d377c3e9c2c6bfffa8cf7e4b957ef351a41"
+      },
+      "ref": "fix/xbox-special-driver-upstream-20261123",
+      "repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+      "settings_defaults": {},
+      "status": "included",
+      "upstream_equivalence_reason": "Exact accepted topic patch remains absent from live upstream; replayed once, unchanged, on live upstream plus declared dependencies."
+    },
+    {
+      "base": "8e83ae7cd979d9066e84fb92a18c467613ca9e44",
+      "commit_repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+      "default": true,
+      "defaults": {},
+      "depends_on": [
+        "xbox-special-driver"
+      ],
+      "evidence": [
+        {
+          "id": "evidence/parity.json",
+          "sha256": "b0d1a015fc5b6567feb9a7a199da524fb362b31d376267002d54a6b588a96a36"
+        },
+        {
+          "id": "evidence/workflow-tests.json",
+          "sha256": "ed76cce9581d2e496e0d6c6655ae4b720ce11d7870b51811747dbd4e9d475c36"
+        },
+        {
+          "id": "evidence/today-workflow-tests.json",
+          "sha256": "944b51f64dbcc5d7aa217a864d7df550196534dc8f9c1f7f2345f59b4ff4044e"
+        },
+        {
+          "id": "evidence/upstream-20261123-regressions.json",
+          "sha256": "628d9d7ba8fb87cfd8c7d070461d3dc1cef297d542928b87163aa932c2dade85"
+        },
+        {
+          "id": "evidence/upstream-20261123-build-impact.json",
+          "sha256": "c9418cc3e4df02e281d49dd835c6f4316a465f81799938b487c908c28b83c9a7"
+        },
+        {
+          "id": "evidence/upstream-20261123-c2-results.json",
+          "sha256": "0e420dc63b2d8c4af908a50d15fb5c41b0a031f9ab5e4acf998db5b81089d5df"
+        },
+        {
+          "id": "evidence/upstream-20261123-ethernet-results.json",
+          "sha256": "f247bde663f0695cdcf6d169c628d19a3e013bae5b72248ca2a8f68afa7c2ca6"
+        },
+        {
+          "id": "evidence/upstream-20261123-metadata-tests.json",
+          "sha256": "d6dde419cbbdc62069091f098f60c7ba33a6f208cb39756d14bba1a84f0f6490"
+        },
+        {
+          "id": "evidence/upstream-20261123-control-tests.json",
+          "sha256": "4d0cb61315e0e71813d5f7bc2cd5fbc622204275e358d120abd893f3216eb885"
+        },
+        {
+          "id": "evidence/upstream-20261123-workflow-tests.json",
+          "sha256": "58c7099612f13b1b6aa8f59bf6f2ddeb2682a7d29e7a283409201e483276ea71"
+        },
+        {
+          "id": "evidence/upstream-20261123-review.json",
+          "sha256": "75e27e58530bb693ab87506f70d24c74a9b90f9e2a52a08d71c51b9bc37f5adb"
+        }
+      ],
+      "evidence_scope": {
+        "current": [
+          "evidence/upstream-20261123-regressions.json",
+          "evidence/upstream-20261123-build-impact.json",
+          "evidence/upstream-20261123-c2-results.json",
+          "evidence/upstream-20261123-ethernet-results.json",
+          "evidence/upstream-20261123-metadata-tests.json",
+          "evidence/upstream-20261123-control-tests.json",
+          "evidence/upstream-20261123-workflow-tests.json",
+          "evidence/upstream-20261123-review.json"
+        ],
+        "historical": [
+          "evidence/parity.json",
+          "evidence/workflow-tests.json",
+          "evidence/today-workflow-tests.json"
+        ]
+      },
+      "experimental": false,
+      "head": "04a50d54f83ba7921c4bb5379cc21a7be606511f",
+      "id": "xpadneo",
+      "ordered_commits": [
+        "04a50d54f83ba7921c4bb5379cc21a7be606511f"
+      ],
+      "patch_sha256": "fa7e274ab3af19f170be98a41e00cd8607376a98c49f5c3a0a9acadfd6c4b8e6",
+      "paths": [
+        "drivers/hid/Kconfig",
+        "drivers/hid/Makefile",
+        "drivers/hid/hid-xpadneo.c"
+      ],
+      "provenance": {
+        "adaptation": "Exact accepted donor blobs for i8042/HID context drift; exact force-output condition; other patches applied unchanged.",
+        "kind": "selected-distribution-patch",
+        "original_source": "b3fdef79fcf04d602849315f70edae9583138b72",
+        "patch": "linux-04-xpadneo.patch",
+        "prior_maintained_base": "05ce3a97cbda3c675d2e23524e322bb8f9a2cb7d",
+        "prior_maintained_head": "302616e3db836de3075adc6e8564ee89d881abcd",
+        "prior_maintained_ref": "fix/xpadneo",
+        "prior_ordered_commits": [
+          "302616e3db836de3075adc6e8564ee89d881abcd"
+        ],
+        "sha256": "e2b236165b286514eb0ecc1ef253848328a6c32a761fb638c7bfa1468ce778da"
+      },
+      "ref": "fix/xpadneo-upstream-20261123",
+      "repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+      "settings_defaults": {},
+      "status": "included",
+      "upstream_equivalence_reason": "Exact accepted topic patch remains absent from live upstream; replayed once, unchanged, on live upstream plus declared dependencies."
+    },
+    {
+      "base": "605cf2407df57a850fc7db29e514c2de41b5ebc7",
+      "commit_repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+      "default": true,
+      "defaults": {},
+      "depends_on": [],
+      "evidence": [
+        {
+          "id": "evidence/parity.json",
+          "sha256": "b0d1a015fc5b6567feb9a7a199da524fb362b31d376267002d54a6b588a96a36"
+        },
+        {
+          "id": "evidence/workflow-tests.json",
+          "sha256": "ed76cce9581d2e496e0d6c6655ae4b720ce11d7870b51811747dbd4e9d475c36"
+        },
+        {
+          "id": "evidence/today-workflow-tests.json",
+          "sha256": "944b51f64dbcc5d7aa217a864d7df550196534dc8f9c1f7f2345f59b4ff4044e"
+        },
+        {
+          "id": "evidence/upstream-20261123-regressions.json",
+          "sha256": "628d9d7ba8fb87cfd8c7d070461d3dc1cef297d542928b87163aa932c2dade85"
+        },
+        {
+          "id": "evidence/upstream-20261123-build-impact.json",
+          "sha256": "c9418cc3e4df02e281d49dd835c6f4316a465f81799938b487c908c28b83c9a7"
+        },
+        {
+          "id": "evidence/upstream-20261123-c2-results.json",
+          "sha256": "0e420dc63b2d8c4af908a50d15fb5c41b0a031f9ab5e4acf998db5b81089d5df"
+        },
+        {
+          "id": "evidence/upstream-20261123-ethernet-results.json",
+          "sha256": "f247bde663f0695cdcf6d169c628d19a3e013bae5b72248ca2a8f68afa7c2ca6"
+        },
+        {
+          "id": "evidence/upstream-20261123-metadata-tests.json",
+          "sha256": "d6dde419cbbdc62069091f098f60c7ba33a6f208cb39756d14bba1a84f0f6490"
+        },
+        {
+          "id": "evidence/upstream-20261123-control-tests.json",
+          "sha256": "4d0cb61315e0e71813d5f7bc2cd5fbc622204275e358d120abd893f3216eb885"
+        },
+        {
+          "id": "evidence/upstream-20261123-workflow-tests.json",
+          "sha256": "58c7099612f13b1b6aa8f59bf6f2ddeb2682a7d29e7a283409201e483276ea71"
+        },
+        {
+          "id": "evidence/upstream-20261123-review.json",
+          "sha256": "75e27e58530bb693ab87506f70d24c74a9b90f9e2a52a08d71c51b9bc37f5adb"
+        }
+      ],
+      "evidence_scope": {
+        "current": [
+          "evidence/upstream-20261123-regressions.json",
+          "evidence/upstream-20261123-build-impact.json",
+          "evidence/upstream-20261123-c2-results.json",
+          "evidence/upstream-20261123-ethernet-results.json",
+          "evidence/upstream-20261123-metadata-tests.json",
+          "evidence/upstream-20261123-control-tests.json",
+          "evidence/upstream-20261123-workflow-tests.json",
+          "evidence/upstream-20261123-review.json"
+        ],
+        "historical": [
+          "evidence/parity.json",
+          "evidence/workflow-tests.json",
+          "evidence/today-workflow-tests.json"
+        ]
+      },
+      "experimental": false,
+      "head": "635f683d58b2a45c191abf1d66c24a798d4aca62",
+      "id": "input-event-compat",
+      "ordered_commits": [
+        "635f683d58b2a45c191abf1d66c24a798d4aca62"
+      ],
+      "patch_sha256": "18092ed589677f1a3149be0703d4c93c48f11c864558e2eec0dfc3e50c268f50",
+      "paths": [
+        "include/uapi/linux/input.h"
+      ],
+      "provenance": {
+        "adaptation": "Exact accepted donor blobs for i8042/HID context drift; exact force-output condition; other patches applied unchanged.",
+        "kind": "selected-distribution-patch",
+        "original_source": "b3fdef79fcf04d602849315f70edae9583138b72",
+        "patch": "linux-10-add-compatibility-macro-for-input_event_sec.patch",
+        "prior_maintained_base": "58c06bb03fba0d4136115b828a3924394130c15d",
+        "prior_maintained_head": "c7a2233ceb0598f34180bec2e96cd27e18df598a",
+        "prior_maintained_ref": "fix/input-event-compat",
+        "prior_ordered_commits": [
+          "c7a2233ceb0598f34180bec2e96cd27e18df598a"
+        ],
+        "sha256": "587241c0af2c460c5baf2ea550e89f9647c4ba21b3cab19cc5f5da9c49eb738c"
+      },
+      "ref": "fix/input-event-compat-upstream-20261123",
+      "repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+      "settings_defaults": {},
+      "status": "included",
+      "upstream_equivalence_reason": "Exact accepted topic patch remains absent from live upstream; replayed once, unchanged, on live upstream plus declared dependencies."
+    },
+    {
+      "base": "605cf2407df57a850fc7db29e514c2de41b5ebc7",
+      "commit_repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+      "default": true,
+      "defaults": {},
+      "depends_on": [],
+      "evidence": [
+        {
+          "id": "evidence/parity.json",
+          "sha256": "b0d1a015fc5b6567feb9a7a199da524fb362b31d376267002d54a6b588a96a36"
+        },
+        {
+          "id": "evidence/workflow-tests.json",
+          "sha256": "ed76cce9581d2e496e0d6c6655ae4b720ce11d7870b51811747dbd4e9d475c36"
+        },
+        {
+          "id": "evidence/today-workflow-tests.json",
+          "sha256": "944b51f64dbcc5d7aa217a864d7df550196534dc8f9c1f7f2345f59b4ff4044e"
+        },
+        {
+          "id": "evidence/upstream-20261123-regressions.json",
+          "sha256": "628d9d7ba8fb87cfd8c7d070461d3dc1cef297d542928b87163aa932c2dade85"
+        },
+        {
+          "id": "evidence/upstream-20261123-build-impact.json",
+          "sha256": "c9418cc3e4df02e281d49dd835c6f4316a465f81799938b487c908c28b83c9a7"
+        },
+        {
+          "id": "evidence/upstream-20261123-c2-results.json",
+          "sha256": "0e420dc63b2d8c4af908a50d15fb5c41b0a031f9ab5e4acf998db5b81089d5df"
+        },
+        {
+          "id": "evidence/upstream-20261123-ethernet-results.json",
+          "sha256": "f247bde663f0695cdcf6d169c628d19a3e013bae5b72248ca2a8f68afa7c2ca6"
+        },
+        {
+          "id": "evidence/upstream-20261123-metadata-tests.json",
+          "sha256": "d6dde419cbbdc62069091f098f60c7ba33a6f208cb39756d14bba1a84f0f6490"
+        },
+        {
+          "id": "evidence/upstream-20261123-control-tests.json",
+          "sha256": "4d0cb61315e0e71813d5f7bc2cd5fbc622204275e358d120abd893f3216eb885"
+        },
+        {
+          "id": "evidence/upstream-20261123-workflow-tests.json",
+          "sha256": "58c7099612f13b1b6aa8f59bf6f2ddeb2682a7d29e7a283409201e483276ea71"
+        },
+        {
+          "id": "evidence/upstream-20261123-review.json",
+          "sha256": "75e27e58530bb693ab87506f70d24c74a9b90f9e2a52a08d71c51b9bc37f5adb"
+        }
+      ],
+      "evidence_scope": {
+        "current": [
+          "evidence/upstream-20261123-regressions.json",
+          "evidence/upstream-20261123-build-impact.json",
+          "evidence/upstream-20261123-c2-results.json",
+          "evidence/upstream-20261123-ethernet-results.json",
+          "evidence/upstream-20261123-metadata-tests.json",
+          "evidence/upstream-20261123-control-tests.json",
+          "evidence/upstream-20261123-workflow-tests.json",
+          "evidence/upstream-20261123-review.json"
+        ],
+        "historical": [
+          "evidence/parity.json",
+          "evidence/workflow-tests.json",
+          "evidence/today-workflow-tests.json"
+        ]
+      },
+      "experimental": false,
+      "head": "19cbda3c8b1251c5a7f764cad88c3609b8516d3d",
+      "id": "ax88179-rx-bounds",
+      "ordered_commits": [
+        "19cbda3c8b1251c5a7f764cad88c3609b8516d3d"
+      ],
+      "patch_sha256": "36c4a6b0dc347e69baab856efc2493dc7c05947ee407970d1ed389569bb703f2",
+      "paths": [
+        "drivers/net/usb/ax88179_178a.c"
+      ],
+      "provenance": {
+        "adaptation": "Exact accepted donor blobs for i8042/HID context drift; exact force-output condition; other patches applied unchanged.",
+        "kind": "selected-distribution-patch",
+        "original_source": "b3fdef79fcf04d602849315f70edae9583138b72",
+        "patch": "linux-11-ax88179-fix-rx-bounds.patch",
+        "prior_maintained_base": "58c06bb03fba0d4136115b828a3924394130c15d",
+        "prior_maintained_head": "23fa829590b1b51c5d908e0f69772f58221254cf",
+        "prior_maintained_ref": "fix/ax88179-rx-bounds",
+        "prior_ordered_commits": [
+          "23fa829590b1b51c5d908e0f69772f58221254cf"
+        ],
+        "sha256": "7076077560a67db8dcd6976a041884dc565872d957844ecfeb377d7079f404a6"
+      },
+      "ref": "fix/ax88179-rx-bounds-upstream-20261123",
+      "repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+      "settings_defaults": {},
+      "status": "included",
+      "upstream_equivalence_reason": "Exact accepted topic patch remains absent from live upstream; replayed once, unchanged, on live upstream plus declared dependencies."
+    },
+    {
+      "base": "19cbda3c8b1251c5a7f764cad88c3609b8516d3d",
+      "commit_repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+      "default": true,
+      "defaults": {},
+      "depends_on": [
+        "ax88179-rx-bounds"
+      ],
+      "evidence": [
+        {
+          "id": "evidence/parity.json",
+          "sha256": "b0d1a015fc5b6567feb9a7a199da524fb362b31d376267002d54a6b588a96a36"
+        },
+        {
+          "id": "evidence/workflow-tests.json",
+          "sha256": "ed76cce9581d2e496e0d6c6655ae4b720ce11d7870b51811747dbd4e9d475c36"
+        },
+        {
+          "id": "evidence/today-workflow-tests.json",
+          "sha256": "944b51f64dbcc5d7aa217a864d7df550196534dc8f9c1f7f2345f59b4ff4044e"
+        },
+        {
+          "id": "evidence/upstream-20261123-regressions.json",
+          "sha256": "628d9d7ba8fb87cfd8c7d070461d3dc1cef297d542928b87163aa932c2dade85"
+        },
+        {
+          "id": "evidence/upstream-20261123-build-impact.json",
+          "sha256": "c9418cc3e4df02e281d49dd835c6f4316a465f81799938b487c908c28b83c9a7"
+        },
+        {
+          "id": "evidence/upstream-20261123-c2-results.json",
+          "sha256": "0e420dc63b2d8c4af908a50d15fb5c41b0a031f9ab5e4acf998db5b81089d5df"
+        },
+        {
+          "id": "evidence/upstream-20261123-ethernet-results.json",
+          "sha256": "f247bde663f0695cdcf6d169c628d19a3e013bae5b72248ca2a8f68afa7c2ca6"
+        },
+        {
+          "id": "evidence/upstream-20261123-metadata-tests.json",
+          "sha256": "d6dde419cbbdc62069091f098f60c7ba33a6f208cb39756d14bba1a84f0f6490"
+        },
+        {
+          "id": "evidence/upstream-20261123-control-tests.json",
+          "sha256": "4d0cb61315e0e71813d5f7bc2cd5fbc622204275e358d120abd893f3216eb885"
+        },
+        {
+          "id": "evidence/upstream-20261123-workflow-tests.json",
+          "sha256": "58c7099612f13b1b6aa8f59bf6f2ddeb2682a7d29e7a283409201e483276ea71"
+        },
+        {
+          "id": "evidence/upstream-20261123-review.json",
+          "sha256": "75e27e58530bb693ab87506f70d24c74a9b90f9e2a52a08d71c51b9bc37f5adb"
+        }
+      ],
+      "evidence_scope": {
+        "current": [
+          "evidence/upstream-20261123-regressions.json",
+          "evidence/upstream-20261123-build-impact.json",
+          "evidence/upstream-20261123-c2-results.json",
+          "evidence/upstream-20261123-ethernet-results.json",
+          "evidence/upstream-20261123-metadata-tests.json",
+          "evidence/upstream-20261123-control-tests.json",
+          "evidence/upstream-20261123-workflow-tests.json",
+          "evidence/upstream-20261123-review.json"
+        ],
+        "historical": [
+          "evidence/parity.json",
+          "evidence/workflow-tests.json",
+          "evidence/today-workflow-tests.json"
+        ]
+      },
+      "experimental": false,
+      "head": "e1c699a825da570a9f044540c2e97573d6080560",
+      "id": "ax88179-rx-packets",
+      "ordered_commits": [
+        "e1c699a825da570a9f044540c2e97573d6080560"
+      ],
+      "patch_sha256": "625d3f9c31f27027f553663181b046f2256eb0b78f5d27c827f1402172cd3ee4",
+      "paths": [
+        "drivers/net/usb/ax88179_178a.c"
+      ],
+      "provenance": {
+        "adaptation": "Exact accepted donor blobs for i8042/HID context drift; exact force-output condition; other patches applied unchanged.",
+        "kind": "selected-distribution-patch",
+        "original_source": "b3fdef79fcf04d602849315f70edae9583138b72",
+        "patch": "linux-12-ax88179-fix-packet-receiving.patch",
+        "prior_maintained_base": "23fa829590b1b51c5d908e0f69772f58221254cf",
+        "prior_maintained_head": "0991b31902b2b4eddb10bfc8762232c51af1388e",
+        "prior_maintained_ref": "fix/ax88179-rx-packets",
+        "prior_ordered_commits": [
+          "0991b31902b2b4eddb10bfc8762232c51af1388e"
+        ],
+        "sha256": "4b064efbbe91d898ca729a9890e3cf2449d436bd943a97be2d9c06bc614174f6"
+      },
+      "ref": "fix/ax88179-rx-packets-upstream-20261123",
+      "repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+      "settings_defaults": {},
+      "status": "included",
+      "upstream_equivalence_reason": "Exact accepted topic patch remains absent from live upstream; replayed once, unchanged, on live upstream plus declared dependencies."
+    },
+    {
+      "base": "605cf2407df57a850fc7db29e514c2de41b5ebc7",
+      "commit_repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+      "default": true,
+      "defaults": {},
+      "depends_on": [],
+      "evidence": [
+        {
+          "id": "evidence/parity.json",
+          "sha256": "b0d1a015fc5b6567feb9a7a199da524fb362b31d376267002d54a6b588a96a36"
+        },
+        {
+          "id": "evidence/workflow-tests.json",
+          "sha256": "ed76cce9581d2e496e0d6c6655ae4b720ce11d7870b51811747dbd4e9d475c36"
+        },
+        {
+          "id": "evidence/today-workflow-tests.json",
+          "sha256": "944b51f64dbcc5d7aa217a864d7df550196534dc8f9c1f7f2345f59b4ff4044e"
+        },
+        {
+          "id": "evidence/upstream-20261123-regressions.json",
+          "sha256": "628d9d7ba8fb87cfd8c7d070461d3dc1cef297d542928b87163aa932c2dade85"
+        },
+        {
+          "id": "evidence/upstream-20261123-build-impact.json",
+          "sha256": "c9418cc3e4df02e281d49dd835c6f4316a465f81799938b487c908c28b83c9a7"
+        },
+        {
+          "id": "evidence/upstream-20261123-c2-results.json",
+          "sha256": "0e420dc63b2d8c4af908a50d15fb5c41b0a031f9ab5e4acf998db5b81089d5df"
+        },
+        {
+          "id": "evidence/upstream-20261123-ethernet-results.json",
+          "sha256": "f247bde663f0695cdcf6d169c628d19a3e013bae5b72248ca2a8f68afa7c2ca6"
+        },
+        {
+          "id": "evidence/upstream-20261123-metadata-tests.json",
+          "sha256": "d6dde419cbbdc62069091f098f60c7ba33a6f208cb39756d14bba1a84f0f6490"
+        },
+        {
+          "id": "evidence/upstream-20261123-control-tests.json",
+          "sha256": "4d0cb61315e0e71813d5f7bc2cd5fbc622204275e358d120abd893f3216eb885"
+        },
+        {
+          "id": "evidence/upstream-20261123-workflow-tests.json",
+          "sha256": "58c7099612f13b1b6aa8f59bf6f2ddeb2682a7d29e7a283409201e483276ea71"
+        },
+        {
+          "id": "evidence/upstream-20261123-review.json",
+          "sha256": "75e27e58530bb693ab87506f70d24c74a9b90f9e2a52a08d71c51b9bc37f5adb"
+        }
+      ],
+      "evidence_scope": {
+        "current": [
+          "evidence/upstream-20261123-regressions.json",
+          "evidence/upstream-20261123-build-impact.json",
+          "evidence/upstream-20261123-c2-results.json",
+          "evidence/upstream-20261123-ethernet-results.json",
+          "evidence/upstream-20261123-metadata-tests.json",
+          "evidence/upstream-20261123-control-tests.json",
+          "evidence/upstream-20261123-workflow-tests.json",
+          "evidence/upstream-20261123-review.json"
+        ],
+        "historical": [
+          "evidence/parity.json",
+          "evidence/workflow-tests.json",
+          "evidence/today-workflow-tests.json"
+        ]
+      },
+      "experimental": false,
+      "head": "9ff37f88191c39e127809d4c24b4a512262899ea",
+      "id": "usb-nested-reset",
+      "ordered_commits": [
+        "9ff37f88191c39e127809d4c24b4a512262899ea"
+      ],
+      "patch_sha256": "8d265c1d640393527c79d248c322d4002b40af2da97086b919396677dc68889c",
+      "paths": [
+        "drivers/usb/core/hub.c",
+        "include/linux/usb.h"
+      ],
+      "provenance": {
+        "adaptation": "Exact accepted donor blobs for i8042/HID context drift; exact force-output condition; other patches applied unchanged.",
+        "kind": "selected-distribution-patch",
+        "original_source": "b3fdef79fcf04d602849315f70edae9583138b72",
+        "patch": "linux-13-usb-prevent-nested-device-resets.patch",
+        "prior_maintained_base": "58c06bb03fba0d4136115b828a3924394130c15d",
+        "prior_maintained_head": "fd2d00fa3ff4e0a2c10f86d37f87c7de1fa3087f",
+        "prior_maintained_ref": "fix/usb-nested-reset",
+        "prior_ordered_commits": [
+          "fd2d00fa3ff4e0a2c10f86d37f87c7de1fa3087f"
+        ],
+        "sha256": "3d06531a83ab56ef173e39bbc88fb642130f542e5cff7ff26614cdfbc8a193ec"
+      },
+      "ref": "fix/usb-nested-reset-upstream-20261123",
+      "repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+      "settings_defaults": {},
+      "status": "included",
+      "upstream_equivalence_reason": "Exact accepted topic patch remains absent from live upstream; replayed once, unchanged, on live upstream plus declared dependencies."
+    },
+    {
+      "base": "605cf2407df57a850fc7db29e514c2de41b5ebc7",
+      "commit_repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+      "default": true,
+      "defaults": {},
+      "depends_on": [],
+      "evidence": [
+        {
+          "id": "evidence/parity.json",
+          "sha256": "b0d1a015fc5b6567feb9a7a199da524fb362b31d376267002d54a6b588a96a36"
+        },
+        {
+          "id": "evidence/workflow-tests.json",
+          "sha256": "ed76cce9581d2e496e0d6c6655ae4b720ce11d7870b51811747dbd4e9d475c36"
+        },
+        {
+          "id": "evidence/today-workflow-tests.json",
+          "sha256": "944b51f64dbcc5d7aa217a864d7df550196534dc8f9c1f7f2345f59b4ff4044e"
+        },
+        {
+          "id": "evidence/upstream-20261123-regressions.json",
+          "sha256": "628d9d7ba8fb87cfd8c7d070461d3dc1cef297d542928b87163aa932c2dade85"
+        },
+        {
+          "id": "evidence/upstream-20261123-build-impact.json",
+          "sha256": "c9418cc3e4df02e281d49dd835c6f4316a465f81799938b487c908c28b83c9a7"
+        },
+        {
+          "id": "evidence/upstream-20261123-c2-results.json",
+          "sha256": "0e420dc63b2d8c4af908a50d15fb5c41b0a031f9ab5e4acf998db5b81089d5df"
+        },
+        {
+          "id": "evidence/upstream-20261123-ethernet-results.json",
+          "sha256": "f247bde663f0695cdcf6d169c628d19a3e013bae5b72248ca2a8f68afa7c2ca6"
+        },
+        {
+          "id": "evidence/upstream-20261123-metadata-tests.json",
+          "sha256": "d6dde419cbbdc62069091f098f60c7ba33a6f208cb39756d14bba1a84f0f6490"
+        },
+        {
+          "id": "evidence/upstream-20261123-control-tests.json",
+          "sha256": "4d0cb61315e0e71813d5f7bc2cd5fbc622204275e358d120abd893f3216eb885"
+        },
+        {
+          "id": "evidence/upstream-20261123-workflow-tests.json",
+          "sha256": "58c7099612f13b1b6aa8f59bf6f2ddeb2682a7d29e7a283409201e483276ea71"
+        },
+        {
+          "id": "evidence/upstream-20261123-review.json",
+          "sha256": "75e27e58530bb693ab87506f70d24c74a9b90f9e2a52a08d71c51b9bc37f5adb"
+        }
+      ],
+      "evidence_scope": {
+        "current": [
+          "evidence/upstream-20261123-regressions.json",
+          "evidence/upstream-20261123-build-impact.json",
+          "evidence/upstream-20261123-c2-results.json",
+          "evidence/upstream-20261123-ethernet-results.json",
+          "evidence/upstream-20261123-metadata-tests.json",
+          "evidence/upstream-20261123-control-tests.json",
+          "evidence/upstream-20261123-workflow-tests.json",
+          "evidence/upstream-20261123-review.json"
+        ],
+        "historical": [
+          "evidence/parity.json",
+          "evidence/workflow-tests.json",
+          "evidence/today-workflow-tests.json"
+        ]
+      },
+      "experimental": false,
+      "head": "79fc50e1f2f3c7a4831645a2818bab4e84ca1551",
+      "id": "usb-boot-uas-policy",
+      "ordered_commits": [
+        "79fc50e1f2f3c7a4831645a2818bab4e84ca1551"
+      ],
+      "patch_sha256": "53a8a76c7f9a4420747d1c3ce77f7b9f4b002e1e59217c5811838e024c636986",
+      "paths": [
+        "drivers/usb/storage/Makefile",
+        "drivers/usb/storage/uas.c",
+        "drivers/usb/storage/unusual_devs.h",
+        "drivers/usb/storage/unusual_uas.h",
+        "drivers/usb/storage/usb.c",
+        "drivers/usb/storage/usb.h"
+      ],
+      "provenance": {
+        "adaptation": "Exact accepted donor blobs for i8042/HID context drift; exact force-output condition; other patches applied unchanged.",
+        "kind": "selected-distribution-patch",
+        "original_source": "b3fdef79fcf04d602849315f70edae9583138b72",
+        "patch": "linux-14-usb-storage-add-boot-uas-policy.patch",
+        "prior_maintained_base": "58c06bb03fba0d4136115b828a3924394130c15d",
+        "prior_maintained_head": "80061fe5429002d60bac11fe263a8769e8f6683c",
+        "prior_maintained_ref": "fix/usb-boot-uas-policy",
+        "prior_ordered_commits": [
+          "80061fe5429002d60bac11fe263a8769e8f6683c"
+        ],
+        "sha256": "051592f38a0e81a5bc339e48ced682b1b80803263c5dc3032b8d42ce651804ef"
+      },
+      "ref": "fix/usb-boot-uas-policy-upstream-20261123",
+      "repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+      "settings_defaults": {},
+      "status": "included",
+      "upstream_equivalence_reason": "Exact accepted topic patch remains absent from live upstream; replayed once, unchanged, on live upstream plus declared dependencies."
+    },
+    {
+      "base": "79fc50e1f2f3c7a4831645a2818bab4e84ca1551",
+      "commit_repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+      "default": true,
+      "defaults": {},
+      "depends_on": [
+        "usb-boot-uas-policy"
+      ],
+      "evidence": [
+        {
+          "id": "evidence/parity.json",
+          "sha256": "b0d1a015fc5b6567feb9a7a199da524fb362b31d376267002d54a6b588a96a36"
+        },
+        {
+          "id": "evidence/workflow-tests.json",
+          "sha256": "ed76cce9581d2e496e0d6c6655ae4b720ce11d7870b51811747dbd4e9d475c36"
+        },
+        {
+          "id": "evidence/today-workflow-tests.json",
+          "sha256": "944b51f64dbcc5d7aa217a864d7df550196534dc8f9c1f7f2345f59b4ff4044e"
+        },
+        {
+          "id": "evidence/upstream-20261123-regressions.json",
+          "sha256": "628d9d7ba8fb87cfd8c7d070461d3dc1cef297d542928b87163aa932c2dade85"
+        },
+        {
+          "id": "evidence/upstream-20261123-build-impact.json",
+          "sha256": "c9418cc3e4df02e281d49dd835c6f4316a465f81799938b487c908c28b83c9a7"
+        },
+        {
+          "id": "evidence/upstream-20261123-c2-results.json",
+          "sha256": "0e420dc63b2d8c4af908a50d15fb5c41b0a031f9ab5e4acf998db5b81089d5df"
+        },
+        {
+          "id": "evidence/upstream-20261123-ethernet-results.json",
+          "sha256": "f247bde663f0695cdcf6d169c628d19a3e013bae5b72248ca2a8f68afa7c2ca6"
+        },
+        {
+          "id": "evidence/upstream-20261123-metadata-tests.json",
+          "sha256": "d6dde419cbbdc62069091f098f60c7ba33a6f208cb39756d14bba1a84f0f6490"
+        },
+        {
+          "id": "evidence/upstream-20261123-control-tests.json",
+          "sha256": "4d0cb61315e0e71813d5f7bc2cd5fbc622204275e358d120abd893f3216eb885"
+        },
+        {
+          "id": "evidence/upstream-20261123-workflow-tests.json",
+          "sha256": "58c7099612f13b1b6aa8f59bf6f2ddeb2682a7d29e7a283409201e483276ea71"
+        },
+        {
+          "id": "evidence/upstream-20261123-review.json",
+          "sha256": "75e27e58530bb693ab87506f70d24c74a9b90f9e2a52a08d71c51b9bc37f5adb"
+        }
+      ],
+      "evidence_scope": {
+        "current": [
+          "evidence/upstream-20261123-regressions.json",
+          "evidence/upstream-20261123-build-impact.json",
+          "evidence/upstream-20261123-c2-results.json",
+          "evidence/upstream-20261123-ethernet-results.json",
+          "evidence/upstream-20261123-metadata-tests.json",
+          "evidence/upstream-20261123-control-tests.json",
+          "evidence/upstream-20261123-workflow-tests.json",
+          "evidence/upstream-20261123-review.json"
+        ],
+        "historical": [
+          "evidence/parity.json",
+          "evidence/workflow-tests.json",
+          "evidence/today-workflow-tests.json"
+        ]
+      },
+      "experimental": false,
+      "head": "4e615210047ad2bd868df04950bd8c731475e832",
+      "id": "vl817-disable-uas",
+      "ordered_commits": [
+        "4e615210047ad2bd868df04950bd8c731475e832"
+      ],
+      "patch_sha256": "56c88d750c6b5c5e0a19003d60551b3552b20291de91cfa4bdc84f279f617d65",
+      "paths": [
+        "drivers/usb/storage/unusual_uas.h"
+      ],
+      "provenance": {
+        "adaptation": "Exact accepted donor blobs for i8042/HID context drift; exact force-output condition; other patches applied unchanged.",
+        "kind": "selected-distribution-patch",
+        "original_source": "b3fdef79fcf04d602849315f70edae9583138b72",
+        "patch": "linux-15-usb-storage-disable-uas-for-vl817.patch",
+        "prior_maintained_base": "80061fe5429002d60bac11fe263a8769e8f6683c",
+        "prior_maintained_head": "7b35e23c35bdcb3865d591737578695c8920c8a4",
+        "prior_maintained_ref": "fix/vl817-disable-uas",
+        "prior_ordered_commits": [
+          "7b35e23c35bdcb3865d591737578695c8920c8a4"
+        ],
+        "sha256": "7cab56ca50dc7b97fdd83a025fe0756f2a91c9500abe12f8a8f3ba17348a72eb"
+      },
+      "ref": "fix/vl817-disable-uas-upstream-20261123",
+      "repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+      "settings_defaults": {},
+      "status": "included",
+      "upstream_equivalence_reason": "Exact accepted topic patch remains absent from live upstream; replayed once, unchanged, on live upstream plus declared dependencies."
+    },
+    {
+      "base": "605cf2407df57a850fc7db29e514c2de41b5ebc7",
+      "commit_repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+      "default": true,
+      "defaults": {},
+      "depends_on": [],
+      "evidence": [
+        {
+          "id": "evidence/parity.json",
+          "sha256": "b0d1a015fc5b6567feb9a7a199da524fb362b31d376267002d54a6b588a96a36"
+        },
+        {
+          "id": "evidence/workflow-tests.json",
+          "sha256": "ed76cce9581d2e496e0d6c6655ae4b720ce11d7870b51811747dbd4e9d475c36"
+        },
+        {
+          "id": "evidence/today-workflow-tests.json",
+          "sha256": "944b51f64dbcc5d7aa217a864d7df550196534dc8f9c1f7f2345f59b4ff4044e"
+        },
+        {
+          "id": "evidence/upstream-20261123-regressions.json",
+          "sha256": "628d9d7ba8fb87cfd8c7d070461d3dc1cef297d542928b87163aa932c2dade85"
+        },
+        {
+          "id": "evidence/upstream-20261123-build-impact.json",
+          "sha256": "c9418cc3e4df02e281d49dd835c6f4316a465f81799938b487c908c28b83c9a7"
+        },
+        {
+          "id": "evidence/upstream-20261123-c2-results.json",
+          "sha256": "0e420dc63b2d8c4af908a50d15fb5c41b0a031f9ab5e4acf998db5b81089d5df"
+        },
+        {
+          "id": "evidence/upstream-20261123-ethernet-results.json",
+          "sha256": "f247bde663f0695cdcf6d169c628d19a3e013bae5b72248ca2a8f68afa7c2ca6"
+        },
+        {
+          "id": "evidence/upstream-20261123-metadata-tests.json",
+          "sha256": "d6dde419cbbdc62069091f098f60c7ba33a6f208cb39756d14bba1a84f0f6490"
+        },
+        {
+          "id": "evidence/upstream-20261123-control-tests.json",
+          "sha256": "4d0cb61315e0e71813d5f7bc2cd5fbc622204275e358d120abd893f3216eb885"
+        },
+        {
+          "id": "evidence/upstream-20261123-workflow-tests.json",
+          "sha256": "58c7099612f13b1b6aa8f59bf6f2ddeb2682a7d29e7a283409201e483276ea71"
+        },
+        {
+          "id": "evidence/upstream-20261123-review.json",
+          "sha256": "75e27e58530bb693ab87506f70d24c74a9b90f9e2a52a08d71c51b9bc37f5adb"
+        }
+      ],
+      "evidence_scope": {
+        "current": [
+          "evidence/upstream-20261123-regressions.json",
+          "evidence/upstream-20261123-build-impact.json",
+          "evidence/upstream-20261123-c2-results.json",
+          "evidence/upstream-20261123-ethernet-results.json",
+          "evidence/upstream-20261123-metadata-tests.json",
+          "evidence/upstream-20261123-control-tests.json",
+          "evidence/upstream-20261123-workflow-tests.json",
+          "evidence/upstream-20261123-review.json"
+        ],
+        "historical": [
+          "evidence/parity.json",
+          "evidence/workflow-tests.json",
+          "evidence/today-workflow-tests.json"
+        ]
+      },
+      "experimental": false,
+      "head": "69a525190d77c46660e55d85a0ad8cb2a9b8a5c9",
+      "id": "force-output-source-policy",
+      "ordered_commits": [
+        "69a525190d77c46660e55d85a0ad8cb2a9b8a5c9"
+      ],
+      "patch_sha256": "07fa480d29e40cab588cdbc1824e022dfa379e7d1f4c077644745264b7916318",
+      "paths": [
+        "drivers/amlogic/media/enhancement/amvecm/amcsc.c"
+      ],
+      "provenance": {
+        "adaptation": "Exact accepted donor blobs for i8042/HID context drift; exact force-output condition; other patches applied unchanged.",
+        "kind": "selected-distribution-patch",
+        "original_source": "b3fdef79fcf04d602849315f70edae9583138b72",
+        "patch": "linux-temp-02-fo_on_source.patch",
+        "prior_maintained_base": "58c06bb03fba0d4136115b828a3924394130c15d",
+        "prior_maintained_head": "c1aedcc3fefd4e7608fa8683be6dcc9f5afca71a",
+        "prior_maintained_ref": "fix/force-output-source-policy",
+        "prior_ordered_commits": [
+          "c1aedcc3fefd4e7608fa8683be6dcc9f5afca71a"
+        ],
+        "sha256": "c07599c5b51e1d240a1719a6e81d2544fa6a93a10d70a5c24b7521c1147e9f12"
+      },
+      "ref": "fix/force-output-source-policy-upstream-20261123",
+      "repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+      "settings_defaults": {},
+      "status": "included",
+      "upstream_equivalence_reason": "Exact accepted topic patch remains absent from live upstream; replayed once, unchanged, on live upstream plus declared dependencies."
+    },
+    {
+      "base": "605cf2407df57a850fc7db29e514c2de41b5ebc7",
+      "commit_repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+      "default": true,
+      "defaults": {},
+      "depends_on": [],
+      "evidence": [
+        {
+          "id": "evidence/parity.json",
+          "sha256": "b0d1a015fc5b6567feb9a7a199da524fb362b31d376267002d54a6b588a96a36"
+        },
+        {
+          "id": "evidence/workflow-tests.json",
+          "sha256": "ed76cce9581d2e496e0d6c6655ae4b720ce11d7870b51811747dbd4e9d475c36"
+        },
+        {
+          "id": "evidence/today-workflow-tests.json",
+          "sha256": "944b51f64dbcc5d7aa217a864d7df550196534dc8f9c1f7f2345f59b4ff4044e"
+        },
+        {
+          "id": "evidence/upstream-20261123-regressions.json",
+          "sha256": "628d9d7ba8fb87cfd8c7d070461d3dc1cef297d542928b87163aa932c2dade85"
+        },
+        {
+          "id": "evidence/upstream-20261123-build-impact.json",
+          "sha256": "c9418cc3e4df02e281d49dd835c6f4316a465f81799938b487c908c28b83c9a7"
+        },
+        {
+          "id": "evidence/upstream-20261123-c2-results.json",
+          "sha256": "0e420dc63b2d8c4af908a50d15fb5c41b0a031f9ab5e4acf998db5b81089d5df"
+        },
+        {
+          "id": "evidence/upstream-20261123-ethernet-results.json",
+          "sha256": "f247bde663f0695cdcf6d169c628d19a3e013bae5b72248ca2a8f68afa7c2ca6"
+        },
+        {
+          "id": "evidence/upstream-20261123-metadata-tests.json",
+          "sha256": "d6dde419cbbdc62069091f098f60c7ba33a6f208cb39756d14bba1a84f0f6490"
+        },
+        {
+          "id": "evidence/upstream-20261123-control-tests.json",
+          "sha256": "4d0cb61315e0e71813d5f7bc2cd5fbc622204275e358d120abd893f3216eb885"
+        },
+        {
+          "id": "evidence/upstream-20261123-workflow-tests.json",
+          "sha256": "58c7099612f13b1b6aa8f59bf6f2ddeb2682a7d29e7a283409201e483276ea71"
+        },
+        {
+          "id": "evidence/upstream-20261123-review.json",
+          "sha256": "75e27e58530bb693ab87506f70d24c74a9b90f9e2a52a08d71c51b9bc37f5adb"
+        }
+      ],
+      "evidence_scope": {
+        "current": [
+          "evidence/upstream-20261123-regressions.json",
+          "evidence/upstream-20261123-build-impact.json",
+          "evidence/upstream-20261123-c2-results.json",
+          "evidence/upstream-20261123-ethernet-results.json",
+          "evidence/upstream-20261123-metadata-tests.json",
+          "evidence/upstream-20261123-control-tests.json",
+          "evidence/upstream-20261123-workflow-tests.json",
+          "evidence/upstream-20261123-review.json"
+        ],
+        "historical": [
+          "evidence/parity.json",
+          "evidence/workflow-tests.json",
+          "evidence/today-workflow-tests.json"
+        ]
+      },
+      "experimental": false,
+      "head": "40a1e4ccb2c6ba095eb1c8ef0c62d425cdf86d98",
+      "id": "network-uapi-compat",
+      "ordered_commits": [
+        "40a1e4ccb2c6ba095eb1c8ef0c62d425cdf86d98"
+      ],
+      "patch_sha256": "6a3c795591c723ada142e38e883b3a812e9149fb3e0ccb9c263108059fd86b1b",
+      "paths": [
+        "include/uapi/linux/if.h"
+      ],
+      "provenance": {
+        "adaptation": "Exact accepted donor blobs for i8042/HID context drift; exact force-output condition; other patches applied unchanged.",
+        "kind": "selected-distribution-patch",
+        "original_source": "b3fdef79fcf04d602849315f70edae9583138b72",
+        "patch": "linux-uapi-fix_linux-if.h-userspace-compilation-errors.patch",
+        "prior_maintained_base": "58c06bb03fba0d4136115b828a3924394130c15d",
+        "prior_maintained_head": "bcd093047049599f696fd20b8b9267861a2a95db",
+        "prior_maintained_ref": "fix/network-uapi-compat",
+        "prior_ordered_commits": [
+          "bcd093047049599f696fd20b8b9267861a2a95db"
+        ],
+        "sha256": "920c84771dc6167f843e3046698148df7e91dc228fce0be05e582807688fc9f4"
+      },
+      "ref": "fix/network-uapi-compat-upstream-20261123",
+      "repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+      "settings_defaults": {},
+      "status": "included",
+      "upstream_equivalence_reason": "Exact accepted topic patch remains absent from live upstream; replayed once, unchanged, on live upstream plus declared dependencies."
+    },
+    {
+      "base": "605cf2407df57a850fc7db29e514c2de41b5ebc7",
+      "commit_repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+      "default": true,
+      "defaults": {},
+      "depends_on": [],
+      "evidence": [
+        {
+          "id": "evidence/parity.json",
+          "sha256": "b0d1a015fc5b6567feb9a7a199da524fb362b31d376267002d54a6b588a96a36"
+        },
+        {
+          "id": "evidence/workflow-tests.json",
+          "sha256": "ed76cce9581d2e496e0d6c6655ae4b720ce11d7870b51811747dbd4e9d475c36"
+        },
+        {
+          "id": "evidence/today-workflow-tests.json",
+          "sha256": "944b51f64dbcc5d7aa217a864d7df550196534dc8f9c1f7f2345f59b4ff4044e"
+        },
+        {
+          "id": "evidence/upstream-20261123-regressions.json",
+          "sha256": "628d9d7ba8fb87cfd8c7d070461d3dc1cef297d542928b87163aa932c2dade85"
+        },
+        {
+          "id": "evidence/upstream-20261123-build-impact.json",
+          "sha256": "c9418cc3e4df02e281d49dd835c6f4316a465f81799938b487c908c28b83c9a7"
+        },
+        {
+          "id": "evidence/upstream-20261123-c2-results.json",
+          "sha256": "0e420dc63b2d8c4af908a50d15fb5c41b0a031f9ab5e4acf998db5b81089d5df"
+        },
+        {
+          "id": "evidence/upstream-20261123-ethernet-results.json",
+          "sha256": "f247bde663f0695cdcf6d169c628d19a3e013bae5b72248ca2a8f68afa7c2ca6"
+        },
+        {
+          "id": "evidence/upstream-20261123-metadata-tests.json",
+          "sha256": "d6dde419cbbdc62069091f098f60c7ba33a6f208cb39756d14bba1a84f0f6490"
+        },
+        {
+          "id": "evidence/upstream-20261123-control-tests.json",
+          "sha256": "4d0cb61315e0e71813d5f7bc2cd5fbc622204275e358d120abd893f3216eb885"
+        },
+        {
+          "id": "evidence/upstream-20261123-workflow-tests.json",
+          "sha256": "58c7099612f13b1b6aa8f59bf6f2ddeb2682a7d29e7a283409201e483276ea71"
+        },
+        {
+          "id": "evidence/upstream-20261123-review.json",
+          "sha256": "75e27e58530bb693ab87506f70d24c74a9b90f9e2a52a08d71c51b9bc37f5adb"
+        }
+      ],
+      "evidence_scope": {
+        "current": [
+          "evidence/upstream-20261123-regressions.json",
+          "evidence/upstream-20261123-build-impact.json",
+          "evidence/upstream-20261123-c2-results.json",
+          "evidence/upstream-20261123-ethernet-results.json",
+          "evidence/upstream-20261123-metadata-tests.json",
+          "evidence/upstream-20261123-control-tests.json",
+          "evidence/upstream-20261123-workflow-tests.json",
+          "evidence/upstream-20261123-review.json"
+        ],
+        "historical": [
+          "evidence/parity.json",
+          "evidence/workflow-tests.json",
+          "evidence/today-workflow-tests.json"
+        ]
+      },
+      "experimental": false,
+      "head": "de47b10264fe99d433fca95757413fbb463ab9c7",
+      "id": "powerpc-test-symlink",
+      "ordered_commits": [
+        "de47b10264fe99d433fca95757413fbb463ab9c7"
+      ],
+      "patch_sha256": "53479e3937b75d979e057a82df29f17942c9115c1fb01a3261850602edd5f733",
+      "paths": [
+        "tools/testing/selftests/powerpc/primitives/asm/asm-compat.h"
+      ],
+      "provenance": {
+        "kind": "inherited-source-test-normalization",
+        "original_source": "b3fdef79fcf04d602849315f70edae9583138b72",
+        "prior_maintained_base": "58c06bb03fba0d4136115b828a3924394130c15d",
+        "prior_maintained_head": "8d03b6639e0c3c22c22362a383ae8b07831dde71",
+        "prior_maintained_ref": "fix/powerpc-test-symlink",
+        "prior_ordered_commits": [
+          "8d03b6639e0c3c22c22362a383ae8b07831dde71"
+        ],
+        "reason": "Remove redundant ./ in symlink while preserving identical target resolution."
+      },
+      "ref": "fix/powerpc-test-symlink-upstream-20261123",
+      "repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+      "settings_defaults": {},
+      "status": "included",
+      "upstream_equivalence_reason": "Exact accepted topic patch remains absent from live upstream; replayed once, unchanged, on live upstream plus declared dependencies."
+    },
+    {
+      "base": "605cf2407df57a850fc7db29e514c2de41b5ebc7",
+      "commit_repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+      "default": true,
+      "defaults": {},
+      "depends_on": [],
+      "evidence": [
+        {
+          "id": "evidence/parity.json",
+          "sha256": "b0d1a015fc5b6567feb9a7a199da524fb362b31d376267002d54a6b588a96a36"
+        },
+        {
+          "id": "evidence/workflow-tests.json",
+          "sha256": "ed76cce9581d2e496e0d6c6655ae4b720ce11d7870b51811747dbd4e9d475c36"
+        },
+        {
+          "id": "evidence/focused-tests.json",
+          "sha256": "01b32fbf1bfe8d2457cbd8217fc250ebcaff41f66bebe565d842c46b349b76d6"
+        },
+        {
+          "id": "evidence/today-workflow-tests.json",
+          "sha256": "944b51f64dbcc5d7aa217a864d7df550196534dc8f9c1f7f2345f59b4ff4044e"
+        },
+        {
+          "id": "evidence/upstream-20261123-regressions.json",
+          "sha256": "628d9d7ba8fb87cfd8c7d070461d3dc1cef297d542928b87163aa932c2dade85"
+        },
+        {
+          "id": "evidence/upstream-20261123-build-impact.json",
+          "sha256": "c9418cc3e4df02e281d49dd835c6f4316a465f81799938b487c908c28b83c9a7"
+        },
+        {
+          "id": "evidence/upstream-20261123-c2-results.json",
+          "sha256": "0e420dc63b2d8c4af908a50d15fb5c41b0a031f9ab5e4acf998db5b81089d5df"
+        },
+        {
+          "id": "evidence/upstream-20261123-ethernet-results.json",
+          "sha256": "f247bde663f0695cdcf6d169c628d19a3e013bae5b72248ca2a8f68afa7c2ca6"
+        },
+        {
+          "id": "evidence/upstream-20261123-metadata-tests.json",
+          "sha256": "d6dde419cbbdc62069091f098f60c7ba33a6f208cb39756d14bba1a84f0f6490"
+        },
+        {
+          "id": "evidence/upstream-20261123-control-tests.json",
+          "sha256": "4d0cb61315e0e71813d5f7bc2cd5fbc622204275e358d120abd893f3216eb885"
+        },
+        {
+          "id": "evidence/upstream-20261123-workflow-tests.json",
+          "sha256": "58c7099612f13b1b6aa8f59bf6f2ddeb2682a7d29e7a283409201e483276ea71"
+        },
+        {
+          "id": "evidence/upstream-20261123-review.json",
+          "sha256": "75e27e58530bb693ab87506f70d24c74a9b90f9e2a52a08d71c51b9bc37f5adb"
+        }
+      ],
+      "evidence_scope": {
+        "current": [
+          "evidence/upstream-20261123-regressions.json",
+          "evidence/upstream-20261123-build-impact.json",
+          "evidence/upstream-20261123-c2-results.json",
+          "evidence/upstream-20261123-ethernet-results.json",
+          "evidence/upstream-20261123-metadata-tests.json",
+          "evidence/upstream-20261123-control-tests.json",
+          "evidence/upstream-20261123-workflow-tests.json",
+          "evidence/upstream-20261123-review.json"
+        ],
+        "historical": [
+          "evidence/parity.json",
+          "evidence/workflow-tests.json",
+          "evidence/focused-tests.json",
+          "evidence/today-workflow-tests.json"
+        ]
+      },
+      "experimental": false,
+      "head": "4ce853654370aeb49477b85daa9bc9c9159cc26f",
+      "id": "afbc-scanout-retention",
+      "ordered_commits": [
+        "4ce853654370aeb49477b85daa9bc9c9159cc26f"
+      ],
+      "patch_sha256": "d709ee97c3812230b427bc905207a3930365cc355f6143a776844d97889262d5",
+      "paths": [
+        "drivers/amlogic/media/video_sink/video.c",
+        "tools/testing/amlogic/README",
+        "tools/testing/amlogic/afbc_scanout.c",
+        "tools/testing/amlogic/test_afbc_scanout.py"
+      ],
+      "provenance": {
+        "accepted_source": "b3fdef79fcf04d602849315f70edae9583138b72",
+        "archive_ref": "refs/archive/published/pr-29",
+        "original_commits": [
+          "116209acd7f5d651b52a56b4a5f2e1ae73c09b01",
+          "a2ed27d5ba51f79ba386eae9281e588cfd9c5fa9"
+        ],
+        "original_patch_ids": {
+          "116209acd7f5d651b52a56b4a5f2e1ae73c09b01": "e587500260533c82cfe99bbfb9b02a54248b945b",
+          "a2ed27d5ba51f79ba386eae9281e588cfd9c5fa9": "2d01628138588dd8c5696494fc4984be61f8fa33"
+        },
+        "pr": 29,
+        "prior_maintained_base": "58c06bb03fba0d4136115b828a3924394130c15d",
+        "prior_maintained_head": "fb8df55d68c91d98049ce977dc3c942ff7900b8d",
+        "prior_maintained_ref": "fix/afbc-scanout-retention",
+        "prior_ordered_commits": [
+          "fb8df55d68c91d98049ce977dc3c942ff7900b8d"
+        ],
+        "repository": "https://github.com/pannal/linux-amlogic"
+      },
+      "ref": "fix/afbc-scanout-retention-upstream-20261123",
+      "repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+      "settings_defaults": {},
+      "status": "included",
+      "upstream_equivalence_reason": "Exact accepted topic patch remains absent from live upstream; replayed once, unchanged, on live upstream plus declared dependencies."
+    },
+    {
+      "base": "69a525190d77c46660e55d85a0ad8cb2a9b8a5c9",
+      "commit_repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+      "default": true,
+      "defaults": {
+        "dv_seamless_refresh": false,
+        "manual_off_supported": true
+      },
+      "depends_on": [
+        "force-output-source-policy"
+      ],
+      "evidence": [
+        {
+          "id": "evidence/parity.json",
+          "sha256": "b0d1a015fc5b6567feb9a7a199da524fb362b31d376267002d54a6b588a96a36"
+        },
+        {
+          "id": "evidence/workflow-tests.json",
+          "sha256": "ed76cce9581d2e496e0d6c6655ae4b720ce11d7870b51811747dbd4e9d475c36"
+        },
+        {
+          "id": "evidence/focused-tests.json",
+          "sha256": "01b32fbf1bfe8d2457cbd8217fc250ebcaff41f66bebe565d842c46b349b76d6"
+        },
+        {
+          "id": "evidence/today-workflow-tests.json",
+          "sha256": "944b51f64dbcc5d7aa217a864d7df550196534dc8f9c1f7f2345f59b4ff4044e"
+        },
+        {
+          "id": "evidence/upstream-20261123-regressions.json",
+          "sha256": "628d9d7ba8fb87cfd8c7d070461d3dc1cef297d542928b87163aa932c2dade85"
+        },
+        {
+          "id": "evidence/upstream-20261123-build-impact.json",
+          "sha256": "c9418cc3e4df02e281d49dd835c6f4316a465f81799938b487c908c28b83c9a7"
+        },
+        {
+          "id": "evidence/upstream-20261123-c2-results.json",
+          "sha256": "0e420dc63b2d8c4af908a50d15fb5c41b0a031f9ab5e4acf998db5b81089d5df"
+        },
+        {
+          "id": "evidence/upstream-20261123-ethernet-results.json",
+          "sha256": "f247bde663f0695cdcf6d169c628d19a3e013bae5b72248ca2a8f68afa7c2ca6"
+        },
+        {
+          "id": "evidence/upstream-20261123-metadata-tests.json",
+          "sha256": "d6dde419cbbdc62069091f098f60c7ba33a6f208cb39756d14bba1a84f0f6490"
+        },
+        {
+          "id": "evidence/upstream-20261123-control-tests.json",
+          "sha256": "4d0cb61315e0e71813d5f7bc2cd5fbc622204275e358d120abd893f3216eb885"
+        },
+        {
+          "id": "evidence/upstream-20261123-workflow-tests.json",
+          "sha256": "58c7099612f13b1b6aa8f59bf6f2ddeb2682a7d29e7a283409201e483276ea71"
+        },
+        {
+          "id": "evidence/upstream-20261123-review.json",
+          "sha256": "75e27e58530bb693ab87506f70d24c74a9b90f9e2a52a08d71c51b9bc37f5adb"
+        }
+      ],
+      "evidence_scope": {
+        "current": [
+          "evidence/upstream-20261123-regressions.json",
+          "evidence/upstream-20261123-build-impact.json",
+          "evidence/upstream-20261123-c2-results.json",
+          "evidence/upstream-20261123-ethernet-results.json",
+          "evidence/upstream-20261123-metadata-tests.json",
+          "evidence/upstream-20261123-control-tests.json",
+          "evidence/upstream-20261123-workflow-tests.json",
+          "evidence/upstream-20261123-review.json"
+        ],
+        "historical": [
+          "evidence/parity.json",
+          "evidence/workflow-tests.json",
+          "evidence/focused-tests.json",
+          "evidence/today-workflow-tests.json"
+        ]
+      },
+      "experimental": false,
+      "head": "1f4e6889628a1cc0a2a3090f4f22a08edf63f7cc",
+      "id": "seamless-hdr-v20",
+      "ordered_commits": [
+        "1f4e6889628a1cc0a2a3090f4f22a08edf63f7cc"
+      ],
+      "patch_sha256": "246c63521115ef8b3be1b84ba1b6a8d248aa876f87732e675984e4979686fa68",
+      "paths": [
+        "Documentation/ABI/testing/sysfs-class-amhdmitx-native-hdr-mute-bypass",
+        "drivers/amlogic/media/enhancement/amvecm/amcsc.c",
+        "drivers/amlogic/media/enhancement/amvecm/amcsc.h",
+        "drivers/amlogic/media/enhancement/amvecm/amcsc_pip.c",
+        "drivers/amlogic/media/enhancement/amvecm/amcsc_pip.h",
+        "drivers/amlogic/media/enhancement/amvecm/set_hdr2_v0.c",
+        "drivers/amlogic/media/enhancement/amvecm/set_hdr2_v0.h",
+        "drivers/amlogic/media/vout/hdmitx/hdmi_tx_20/hdmi_tx_main.c",
+        "drivers/amlogic/media/vout/hdmitx/hdmi_tx_20/hdmi_tx_video.c",
+        "drivers/amlogic/media/vout/hdmitx/hdmi_tx_20/hdmi_tx_video_mute.h",
+        "drivers/amlogic/media/vout/hdmitx/hdmi_tx_20/hw/hdmi_tx_hw.c",
+        "include/linux/amlogic/media/vout/hdmi_tx/hdmi_tx_module.h",
+        "tools/test-dv-seamless-refresh.py",
+        "tools/test-hdr-prearm.py",
+        "tools/test-native-hdr-mute-bypass.py",
+        "tools/test-sdr-bt2020-out.py"
+      ],
+      "provenance": {
+        "accepted_correction": "Preserve exact corrected SDR-BT2020 regression fixture and distribution force-output policy.",
+        "accepted_source": "b3fdef79fcf04d602849315f70edae9583138b72",
+        "archive_ref": "refs/archive/published/pr-32",
+        "original_commits": [
+          "703a6c140f4644f8695d8d94b1e944b48f6693e8"
+        ],
+        "original_patch_ids": {
+          "703a6c140f4644f8695d8d94b1e944b48f6693e8": "ec5b9e8a2936cb2f4349b7086f00940a5efdbc18"
+        },
+        "pr": 32,
+        "prior_maintained_base": "c1aedcc3fefd4e7608fa8683be6dcc9f5afca71a",
+        "prior_maintained_head": "5a4eaf46237b12a6c1c5c951262fa2d5cbcbdfbb",
+        "prior_maintained_ref": "feature/seamless-hdr-v20",
+        "prior_ordered_commits": [
+          "5a4eaf46237b12a6c1c5c951262fa2d5cbcbdfbb"
+        ],
+        "repository": "https://github.com/pannal/linux-amlogic",
+        "scope": "Complete accepted v20: BT2020 output, guarded mute bypass, pre-arm, packet/transport trust and gated same-mode policy; not only recent default changes."
+      },
+      "ref": "feature/seamless-hdr-v20-upstream-20261123",
+      "repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+      "settings_defaults": {
+        "dv_seamless_refresh": false,
+        "manual_off_supported": true
+      },
+      "status": "included",
+      "upstream_equivalence_reason": "Exact accepted topic patch remains absent from live upstream; replayed once, unchanged, on live upstream plus declared dependencies."
+    },
+    {
+      "base": "1f4e6889628a1cc0a2a3090f4f22a08edf63f7cc",
+      "commit_repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+      "default": true,
+      "defaults": {},
+      "depends_on": [
+        "seamless-hdr-v20"
+      ],
+      "evidence": [
+        {
+          "id": "evidence/parity.json",
+          "sha256": "b0d1a015fc5b6567feb9a7a199da524fb362b31d376267002d54a6b588a96a36"
+        },
+        {
+          "id": "evidence/workflow-tests.json",
+          "sha256": "ed76cce9581d2e496e0d6c6655ae4b720ce11d7870b51811747dbd4e9d475c36"
+        },
+        {
+          "id": "evidence/c2-results.json",
+          "sha256": "0e420dc63b2d8c4af908a50d15fb5c41b0a031f9ab5e4acf998db5b81089d5df"
+        },
+        {
+          "id": "evidence/today-workflow-tests.json",
+          "sha256": "944b51f64dbcc5d7aa217a864d7df550196534dc8f9c1f7f2345f59b4ff4044e"
+        },
+        {
+          "id": "evidence/today-c2-results.json",
+          "sha256": "0e420dc63b2d8c4af908a50d15fb5c41b0a031f9ab5e4acf998db5b81089d5df"
+        },
+        {
+          "id": "evidence/upstream-20261123-regressions.json",
+          "sha256": "628d9d7ba8fb87cfd8c7d070461d3dc1cef297d542928b87163aa932c2dade85"
+        },
+        {
+          "id": "evidence/upstream-20261123-build-impact.json",
+          "sha256": "c9418cc3e4df02e281d49dd835c6f4316a465f81799938b487c908c28b83c9a7"
+        },
+        {
+          "id": "evidence/upstream-20261123-c2-results.json",
+          "sha256": "0e420dc63b2d8c4af908a50d15fb5c41b0a031f9ab5e4acf998db5b81089d5df"
+        },
+        {
+          "id": "evidence/upstream-20261123-ethernet-results.json",
+          "sha256": "f247bde663f0695cdcf6d169c628d19a3e013bae5b72248ca2a8f68afa7c2ca6"
+        },
+        {
+          "id": "evidence/upstream-20261123-metadata-tests.json",
+          "sha256": "d6dde419cbbdc62069091f098f60c7ba33a6f208cb39756d14bba1a84f0f6490"
+        },
+        {
+          "id": "evidence/upstream-20261123-control-tests.json",
+          "sha256": "4d0cb61315e0e71813d5f7bc2cd5fbc622204275e358d120abd893f3216eb885"
+        },
+        {
+          "id": "evidence/upstream-20261123-workflow-tests.json",
+          "sha256": "58c7099612f13b1b6aa8f59bf6f2ddeb2682a7d29e7a283409201e483276ea71"
+        },
+        {
+          "id": "evidence/upstream-20261123-review.json",
+          "sha256": "75e27e58530bb693ab87506f70d24c74a9b90f9e2a52a08d71c51b9bc37f5adb"
+        }
+      ],
+      "evidence_scope": {
+        "current": [
+          "evidence/upstream-20261123-regressions.json",
+          "evidence/upstream-20261123-build-impact.json",
+          "evidence/upstream-20261123-c2-results.json",
+          "evidence/upstream-20261123-ethernet-results.json",
+          "evidence/upstream-20261123-metadata-tests.json",
+          "evidence/upstream-20261123-control-tests.json",
+          "evidence/upstream-20261123-workflow-tests.json",
+          "evidence/upstream-20261123-review.json"
+        ],
+        "historical": [
+          "evidence/parity.json",
+          "evidence/workflow-tests.json",
+          "evidence/c2-results.json",
+          "evidence/today-workflow-tests.json",
+          "evidence/today-c2-results.json"
+        ]
+      },
+      "experimental": false,
+      "head": "99200a078979f45b028a228d8d5d14ba90651711",
+      "id": "hdmi-c2-clock-serialization",
+      "ordered_commits": [
+        "99200a078979f45b028a228d8d5d14ba90651711"
+      ],
+      "patch_sha256": "f8690d703d833e7b822164d6e20a743a033f8ae224d084270e4fc69607c062d2",
+      "paths": [
+        "drivers/amlogic/media/vout/hdmitx/hdmi_tx_20/hdmi_tx_main.c",
+        "drivers/amlogic/media/vout/hdmitx/hdmi_tx_20/hdmi_tx_main_drm.c",
+        "drivers/amlogic/media/vout/hdmitx/hdmi_tx_20/hw/hdmi_tx_hw.c",
+        "drivers/amlogic/media/vout/hdmitx/hdmi_tx_20/hw/reg_ops.c",
+        "include/linux/amlogic/media/vout/hdmi_tx/hdmi_tx_module.h"
+      ],
+      "provenance": {
+        "accepted_integration_commit": "3fcd63294c322c3102f281454095f26de5e7411a",
+        "accepted_patch_sha256": "bedea2b5bdb28dddf9800d3ad9a6383e512f57884a2260f94d2644ed1ebe8660",
+        "archive_refs": [
+          "refs/archive/published/pr-32",
+          "refs/archive/published/pr-34"
+        ],
+        "original_commits": [
+          "1b4b6c1546f0d0da55dcc78d1341f9e521807aea"
+        ],
+        "original_patch_ids": {
+          "1b4b6c1546f0d0da55dcc78d1341f9e521807aea": "ebce9363198ff462526a78e786bec98a0d1d3659"
+        },
+        "prior_maintained_base": "8d43fe6e9edc0a178709470c4d7fbc432cf78f20",
+        "prior_maintained_head": "56298eb1cb81e270876b454dcbd7290b1dfea25f",
+        "prior_maintained_ref": "fix/hdmi-c2-clock-serialization",
+        "prior_ordered_commits": [
+          "56298eb1cb81e270876b454dcbd7290b1dfea25f"
+        ],
+        "scope": "Counted sampler-clock borrow plus independently valid mute/config/register serialization; folded PR34 into PR32."
+      },
+      "ref": "fix/hdmi-c2-clock-serialization-upstream-20261123",
+      "repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+      "settings_defaults": {},
+      "status": "included",
+      "upstream_equivalence_reason": "Exact accepted topic patch remains absent from live upstream; replayed once, unchanged, on live upstream plus declared dependencies."
+    },
+    {
+      "base": "605cf2407df57a850fc7db29e514c2de41b5ebc7",
+      "commit_repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+      "default": true,
+      "defaults": {
+        "calibration": "Explicitly initiated; bounded lease restores original timing."
+      },
+      "depends_on": [],
+      "evidence": [
+        {
+          "id": "evidence/parity.json",
+          "sha256": "b0d1a015fc5b6567feb9a7a199da524fb362b31d376267002d54a6b588a96a36"
+        },
+        {
+          "id": "evidence/workflow-tests.json",
+          "sha256": "ed76cce9581d2e496e0d6c6655ae4b720ce11d7870b51811747dbd4e9d475c36"
+        },
+        {
+          "id": "evidence/ethernet-lease.json",
+          "sha256": "f247bde663f0695cdcf6d169c628d19a3e013bae5b72248ca2a8f68afa7c2ca6"
+        },
+        {
+          "id": "evidence/today-workflow-tests.json",
+          "sha256": "944b51f64dbcc5d7aa217a864d7df550196534dc8f9c1f7f2345f59b4ff4044e"
+        },
+        {
+          "id": "evidence/today-ethernet-source-reconciliation.json",
+          "sha256": "53b2d11e09fd5769fa0095fedb17fb74a6b356c452f7ecc8ec8b08e315fb2d56"
+        },
+        {
+          "id": "evidence/today-ethernet-build-cohort-provenance.json",
+          "sha256": "9984ace5b718479c92e5a55062795e84fe6f8ca135682f43ac8cf60b37c1c4ee"
+        },
+        {
+          "id": "evidence/upstream-20261123-regressions.json",
+          "sha256": "628d9d7ba8fb87cfd8c7d070461d3dc1cef297d542928b87163aa932c2dade85"
+        },
+        {
+          "id": "evidence/upstream-20261123-build-impact.json",
+          "sha256": "c9418cc3e4df02e281d49dd835c6f4316a465f81799938b487c908c28b83c9a7"
+        },
+        {
+          "id": "evidence/upstream-20261123-c2-results.json",
+          "sha256": "0e420dc63b2d8c4af908a50d15fb5c41b0a031f9ab5e4acf998db5b81089d5df"
+        },
+        {
+          "id": "evidence/upstream-20261123-ethernet-results.json",
+          "sha256": "f247bde663f0695cdcf6d169c628d19a3e013bae5b72248ca2a8f68afa7c2ca6"
+        },
+        {
+          "id": "evidence/upstream-20261123-metadata-tests.json",
+          "sha256": "d6dde419cbbdc62069091f098f60c7ba33a6f208cb39756d14bba1a84f0f6490"
+        },
+        {
+          "id": "evidence/upstream-20261123-control-tests.json",
+          "sha256": "4d0cb61315e0e71813d5f7bc2cd5fbc622204275e358d120abd893f3216eb885"
+        },
+        {
+          "id": "evidence/upstream-20261123-workflow-tests.json",
+          "sha256": "58c7099612f13b1b6aa8f59bf6f2ddeb2682a7d29e7a283409201e483276ea71"
+        },
+        {
+          "id": "evidence/upstream-20261123-review.json",
+          "sha256": "75e27e58530bb693ab87506f70d24c74a9b90f9e2a52a08d71c51b9bc37f5adb"
+        }
+      ],
+      "evidence_scope": {
+        "current": [
+          "evidence/upstream-20261123-regressions.json",
+          "evidence/upstream-20261123-build-impact.json",
+          "evidence/upstream-20261123-c2-results.json",
+          "evidence/upstream-20261123-ethernet-results.json",
+          "evidence/upstream-20261123-metadata-tests.json",
+          "evidence/upstream-20261123-control-tests.json",
+          "evidence/upstream-20261123-workflow-tests.json",
+          "evidence/upstream-20261123-review.json"
+        ],
+        "historical": [
+          "evidence/parity.json",
+          "evidence/workflow-tests.json",
+          "evidence/ethernet-lease.json",
+          "evidence/today-workflow-tests.json",
+          "evidence/today-ethernet-source-reconciliation.json",
+          "evidence/today-ethernet-build-cohort-provenance.json"
+        ]
+      },
+      "experimental": false,
+      "external_dependencies": [
+        "framework/native-ethernet-8a",
+        "settings/native-ethernet-8a"
+      ],
+      "head": "dd454ce39f989c065fd1410a7d7f14f9002cd9d9",
+      "id": "ethernet-calibration-8a",
+      "ordered_commits": [
+        "dd454ce39f989c065fd1410a7d7f14f9002cd9d9"
+      ],
+      "patch_sha256": "4491ac43730e6059a97c1c4645c3ea72b8913d053456ec958c4ba6ecaadc84ad",
+      "paths": [
+        "drivers/net/ethernet/stmicro/stmmac/dwmac-meson.c",
+        "drivers/net/ethernet/stmicro/stmmac/stmmac_main.c",
+        "include/linux/stmmac.h"
+      ],
+      "provenance": {
+        "accepted_integration_commit": "23b6d82fd3dd543cea89ebb2ec197549b30497a2",
+        "manual_timing_9": "excluded",
+        "prior_maintained_base": "58c06bb03fba0d4136115b828a3924394130c15d",
+        "prior_maintained_head": "7793a9acfeafd6185de0076142ca1775182eda30",
+        "prior_maintained_ref": "feature/ethernet-calibration-8a",
+        "prior_ordered_commits": [
+          "7793a9acfeafd6185de0076142ca1775182eda30"
+        ],
+        "scope": "Guarded native RTL8211F backend; no hardware calibration or generic vendor ABI certification.",
+        "source_abi": 1,
+        "source_zip_sha256": "3b70387a27dc33c820020794d01ad3f5c81f1e30c732add1c36f51e354ae0168"
+      },
+      "ref": "feature/ethernet-calibration-8a-upstream-20261123",
+      "repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+      "settings_defaults": {
+        "calibration": "Explicitly initiated; bounded lease restores original timing."
+      },
+      "status": "included",
+      "upstream_equivalence_reason": "Exact accepted topic patch remains absent from live upstream; replayed once, unchanged, on live upstream plus declared dependencies."
+    },
+    {
+      "base": "1f4e6889628a1cc0a2a3090f4f22a08edf63f7cc",
+      "commit_repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+      "default": true,
+      "defaults": {
+        "dv_seamless_refresh": true,
+        "manual_off_supported": true
+      },
+      "depends_on": [
+        "seamless-hdr-v20"
+      ],
+      "evidence": [
+        {
+          "id": "evidence/parity.json",
+          "sha256": "b0d1a015fc5b6567feb9a7a199da524fb362b31d376267002d54a6b588a96a36"
+        },
+        {
+          "id": "evidence/workflow-tests.json",
+          "sha256": "ed76cce9581d2e496e0d6c6655ae4b720ce11d7870b51811747dbd4e9d475c36"
+        },
+        {
+          "id": "evidence/focused-tests.json",
+          "sha256": "01b32fbf1bfe8d2457cbd8217fc250ebcaff41f66bebe565d842c46b349b76d6"
+        },
+        {
+          "id": "evidence/today-workflow-tests.json",
+          "sha256": "944b51f64dbcc5d7aa217a864d7df550196534dc8f9c1f7f2345f59b4ff4044e"
+        },
+        {
+          "id": "evidence/upstream-20261123-regressions.json",
+          "sha256": "628d9d7ba8fb87cfd8c7d070461d3dc1cef297d542928b87163aa932c2dade85"
+        },
+        {
+          "id": "evidence/upstream-20261123-build-impact.json",
+          "sha256": "c9418cc3e4df02e281d49dd835c6f4316a465f81799938b487c908c28b83c9a7"
+        },
+        {
+          "id": "evidence/upstream-20261123-c2-results.json",
+          "sha256": "0e420dc63b2d8c4af908a50d15fb5c41b0a031f9ab5e4acf998db5b81089d5df"
+        },
+        {
+          "id": "evidence/upstream-20261123-ethernet-results.json",
+          "sha256": "f247bde663f0695cdcf6d169c628d19a3e013bae5b72248ca2a8f68afa7c2ca6"
+        },
+        {
+          "id": "evidence/upstream-20261123-metadata-tests.json",
+          "sha256": "d6dde419cbbdc62069091f098f60c7ba33a6f208cb39756d14bba1a84f0f6490"
+        },
+        {
+          "id": "evidence/upstream-20261123-control-tests.json",
+          "sha256": "4d0cb61315e0e71813d5f7bc2cd5fbc622204275e358d120abd893f3216eb885"
+        },
+        {
+          "id": "evidence/upstream-20261123-workflow-tests.json",
+          "sha256": "58c7099612f13b1b6aa8f59bf6f2ddeb2682a7d29e7a283409201e483276ea71"
+        },
+        {
+          "id": "evidence/upstream-20261123-review.json",
+          "sha256": "75e27e58530bb693ab87506f70d24c74a9b90f9e2a52a08d71c51b9bc37f5adb"
+        }
+      ],
+      "evidence_scope": {
+        "current": [
+          "evidence/upstream-20261123-regressions.json",
+          "evidence/upstream-20261123-build-impact.json",
+          "evidence/upstream-20261123-c2-results.json",
+          "evidence/upstream-20261123-ethernet-results.json",
+          "evidence/upstream-20261123-metadata-tests.json",
+          "evidence/upstream-20261123-control-tests.json",
+          "evidence/upstream-20261123-workflow-tests.json",
+          "evidence/upstream-20261123-review.json"
+        ],
+        "historical": [
+          "evidence/parity.json",
+          "evidence/workflow-tests.json",
+          "evidence/focused-tests.json",
+          "evidence/today-workflow-tests.json"
+        ]
+      },
+      "experimental": false,
+      "external_dependencies": [
+        "kodi/seamless-setting-kernel-gate-coupling"
+      ],
+      "head": "1ba3323aea0af04ba1b6fc93e74ece6031a72e78",
+      "id": "seamless-default-on",
+      "ordered_commits": [
+        "1ba3323aea0af04ba1b6fc93e74ece6031a72e78"
+      ],
+      "patch_sha256": "edcc87759feea77b009b94a90ba7616588f972d4de5d412d3495da514b6e8a07",
+      "paths": [
+        "Documentation/ABI/testing/sysfs-class-amhdmitx-native-hdr-mute-bypass",
+        "drivers/amlogic/media/vout/hdmitx/hdmi_tx_20/hdmi_tx_main.c",
+        "tools/test-dv-seamless-refresh.py"
+      ],
+      "provenance": {
+        "accepted_integration_commit": "1286593daf858bdb9a73490ddf6437eaf22006a9",
+        "coupled_component": "kodi",
+        "prior_maintained_base": "e217316ec07f519b9b9545a45b04efb345fdc9e0",
+        "prior_maintained_head": "3fa59259ae206111b6ec8b24d2e94068e44fbd32",
+        "prior_maintained_ref": "feature/seamless-default-on",
+        "prior_ordered_commits": [
+          "3fa59259ae206111b6ec8b24d2e94068e44fbd32"
+        ],
+        "scope": "Compiled default on; later manual Off remains authoritative through Kodi.",
+        "user_directed": true
+      },
+      "ref": "feature/seamless-default-on-upstream-20261123",
+      "repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+      "settings_defaults": {
+        "dv_seamless_refresh": true,
+        "manual_off_supported": true
+      },
+      "status": "included",
+      "upstream_equivalence_reason": "Exact accepted topic patch remains absent from live upstream; replayed once, unchanged, on live upstream plus declared dependencies."
+    },
+    {
+      "base": "605cf2407df57a850fc7db29e514c2de41b5ebc7",
+      "commit_repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+      "default": true,
+      "defaults": {},
+      "depends_on": [],
+      "evidence": [
+        {
+          "id": "evidence/osd-afbc-queued-flips-upstream-review.json",
+          "sha256": "d626a0ce4358a21dcddcc8f7e65e4d672d3a92206bcdf4b2385bd758656c4f90"
+        },
+        {
+          "id": "evidence/parity.json",
+          "sha256": "b0d1a015fc5b6567feb9a7a199da524fb362b31d376267002d54a6b588a96a36"
+        },
+        {
+          "id": "evidence/workflow-tests.json",
+          "sha256": "ed76cce9581d2e496e0d6c6655ae4b720ce11d7870b51811747dbd4e9d475c36"
+        },
+        {
+          "id": "evidence/focused-tests.json",
+          "sha256": "01b32fbf1bfe8d2457cbd8217fc250ebcaff41f66bebe565d842c46b349b76d6"
+        },
+        {
+          "id": "evidence/today-workflow-tests.json",
+          "sha256": "944b51f64dbcc5d7aa217a864d7df550196534dc8f9c1f7f2345f59b4ff4044e"
+        },
+        {
+          "id": "evidence/upstream-20261123-regressions.json",
+          "sha256": "628d9d7ba8fb87cfd8c7d070461d3dc1cef297d542928b87163aa932c2dade85"
+        },
+        {
+          "id": "evidence/upstream-20261123-build-impact.json",
+          "sha256": "c9418cc3e4df02e281d49dd835c6f4316a465f81799938b487c908c28b83c9a7"
+        },
+        {
+          "id": "evidence/upstream-20261123-c2-results.json",
+          "sha256": "0e420dc63b2d8c4af908a50d15fb5c41b0a031f9ab5e4acf998db5b81089d5df"
+        },
+        {
+          "id": "evidence/upstream-20261123-ethernet-results.json",
+          "sha256": "f247bde663f0695cdcf6d169c628d19a3e013bae5b72248ca2a8f68afa7c2ca6"
+        },
+        {
+          "id": "evidence/upstream-20261123-metadata-tests.json",
+          "sha256": "d6dde419cbbdc62069091f098f60c7ba33a6f208cb39756d14bba1a84f0f6490"
+        },
+        {
+          "id": "evidence/upstream-20261123-control-tests.json",
+          "sha256": "4d0cb61315e0e71813d5f7bc2cd5fbc622204275e358d120abd893f3216eb885"
+        },
+        {
+          "id": "evidence/upstream-20261123-workflow-tests.json",
+          "sha256": "58c7099612f13b1b6aa8f59bf6f2ddeb2682a7d29e7a283409201e483276ea71"
+        },
+        {
+          "id": "evidence/upstream-20261123-review.json",
+          "sha256": "75e27e58530bb693ab87506f70d24c74a9b90f9e2a52a08d71c51b9bc37f5adb"
+        }
+      ],
+      "evidence_scope": {
+        "current": [
+          "evidence/upstream-20261123-regressions.json",
+          "evidence/upstream-20261123-build-impact.json",
+          "evidence/upstream-20261123-c2-results.json",
+          "evidence/upstream-20261123-ethernet-results.json",
+          "evidence/upstream-20261123-metadata-tests.json",
+          "evidence/upstream-20261123-control-tests.json",
+          "evidence/upstream-20261123-workflow-tests.json",
+          "evidence/upstream-20261123-review.json"
+        ],
+        "historical": [
+          "evidence/osd-afbc-queued-flips-upstream-review.json",
+          "evidence/parity.json",
+          "evidence/workflow-tests.json",
+          "evidence/focused-tests.json",
+          "evidence/today-workflow-tests.json"
+        ]
+      },
+      "experimental": false,
+      "head": "605cf2407df57a850fc7db29e514c2de41b5ebc7",
+      "id": "osd-afbc-queued-flips",
+      "ordered_commits": [],
+      "paths": [
+        "drivers/amlogic/media/osd/osd_afbc_scanout.h",
+        "drivers/amlogic/media/osd/osd_hw.c",
+        "drivers/amlogic/media/osd/osd_rdma.c",
+        "drivers/amlogic/media/osd/osd_rdma.h",
+        "tools/test-osd-afbc-queued-flips.py"
+      ],
+      "provenance": {
+        "archive_ref": "refs/archive/published/pr-30",
+        "original_commits": [
+          "0855e6aa6b41f5207959f48c5bc78c683af15c46",
+          "eebe87aede345899623f576ce5bf65d6d75774d6"
+        ],
+        "original_patch_ids": {
+          "0855e6aa6b41f5207959f48c5bc78c683af15c46": "b3ca054eafda5354738bce0d00a5afdfb2d84093",
+          "eebe87aede345899623f576ce5bf65d6d75774d6": "e184a6caed7926af99bf3081215ce19a9e4ea322"
+        },
+        "prior_maintained_base": "58c06bb03fba0d4136115b828a3924394130c15d",
+        "prior_maintained_head": "58c06bb03fba0d4136115b828a3924394130c15d",
+        "prior_maintained_ref": "fix/osd-afbc-upstream-integrated",
+        "prior_ordered_commits": []
+      },
+      "ref": "fix/osd-afbc-queued-flips-upstream-20261123",
+      "repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+      "settings_defaults": {},
+      "status": "upstream-integrated",
+      "upstream_equivalence_reason": "Already integrated in previous validated upstream, which is a verified ancestor of live upstream. All archived original commits/patch IDs remain recorded. All topic path blobs/modes are unchanged.",
+      "upstream_review": {
+        "evidence_sha256": "75e27e58530bb693ab87506f70d24c74a9b90f9e2a52a08d71c51b9bc37f5adb",
+        "reason": "Already integrated in previous validated upstream, which is a verified ancestor of live upstream. All archived original commits/patch IDs remain recorded. All topic path blobs/modes are unchanged.",
+        "upstream_commit": "605cf2407df57a850fc7db29e514c2de41b5ebc7"
+      }
+    },
+    {
+      "base": "605cf2407df57a850fc7db29e514c2de41b5ebc7",
+      "commit_repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+      "default": true,
+      "defaults": {},
+      "depends_on": [],
+      "evidence": [
+        {
+          "id": "evidence/vfm-vdin-routing-safeguards-upstream-review.json",
+          "sha256": "454e5e5f9b8428988b0eedf5c21cd3fb5f17850ef3aa4e417978dce98e38074a"
+        },
+        {
+          "id": "evidence/parity.json",
+          "sha256": "b0d1a015fc5b6567feb9a7a199da524fb362b31d376267002d54a6b588a96a36"
+        },
+        {
+          "id": "evidence/workflow-tests.json",
+          "sha256": "ed76cce9581d2e496e0d6c6655ae4b720ce11d7870b51811747dbd4e9d475c36"
+        },
+        {
+          "id": "evidence/today-workflow-tests.json",
+          "sha256": "944b51f64dbcc5d7aa217a864d7df550196534dc8f9c1f7f2345f59b4ff4044e"
+        },
+        {
+          "id": "evidence/upstream-20261123-regressions.json",
+          "sha256": "628d9d7ba8fb87cfd8c7d070461d3dc1cef297d542928b87163aa932c2dade85"
+        },
+        {
+          "id": "evidence/upstream-20261123-build-impact.json",
+          "sha256": "c9418cc3e4df02e281d49dd835c6f4316a465f81799938b487c908c28b83c9a7"
+        },
+        {
+          "id": "evidence/upstream-20261123-c2-results.json",
+          "sha256": "0e420dc63b2d8c4af908a50d15fb5c41b0a031f9ab5e4acf998db5b81089d5df"
+        },
+        {
+          "id": "evidence/upstream-20261123-ethernet-results.json",
+          "sha256": "f247bde663f0695cdcf6d169c628d19a3e013bae5b72248ca2a8f68afa7c2ca6"
+        },
+        {
+          "id": "evidence/upstream-20261123-metadata-tests.json",
+          "sha256": "d6dde419cbbdc62069091f098f60c7ba33a6f208cb39756d14bba1a84f0f6490"
+        },
+        {
+          "id": "evidence/upstream-20261123-control-tests.json",
+          "sha256": "4d0cb61315e0e71813d5f7bc2cd5fbc622204275e358d120abd893f3216eb885"
+        },
+        {
+          "id": "evidence/upstream-20261123-workflow-tests.json",
+          "sha256": "58c7099612f13b1b6aa8f59bf6f2ddeb2682a7d29e7a283409201e483276ea71"
+        },
+        {
+          "id": "evidence/upstream-20261123-review.json",
+          "sha256": "75e27e58530bb693ab87506f70d24c74a9b90f9e2a52a08d71c51b9bc37f5adb"
+        }
+      ],
+      "evidence_scope": {
+        "current": [
+          "evidence/upstream-20261123-regressions.json",
+          "evidence/upstream-20261123-build-impact.json",
+          "evidence/upstream-20261123-c2-results.json",
+          "evidence/upstream-20261123-ethernet-results.json",
+          "evidence/upstream-20261123-metadata-tests.json",
+          "evidence/upstream-20261123-control-tests.json",
+          "evidence/upstream-20261123-workflow-tests.json",
+          "evidence/upstream-20261123-review.json"
+        ],
+        "historical": [
+          "evidence/vfm-vdin-routing-safeguards-upstream-review.json",
+          "evidence/parity.json",
+          "evidence/workflow-tests.json",
+          "evidence/today-workflow-tests.json"
+        ]
+      },
+      "experimental": false,
+      "head": "605cf2407df57a850fc7db29e514c2de41b5ebc7",
+      "id": "vfm-vdin-routing-safeguards",
+      "ordered_commits": [],
+      "paths": [
+        "drivers/amlogic/media/common/codec_mm/configs/configs.c",
+        "drivers/amlogic/media/common/vfm/vfm.c",
+        "drivers/amlogic/media/common/vfm/vfm.h",
+        "drivers/amlogic/media/common/vfm/vframe_provider.c",
+        "drivers/amlogic/media/common/vfm/vframe_receiver.c",
+        "drivers/amlogic/media/deinterlace/deinterlace.c",
+        "drivers/amlogic/media/vin/tvin/vdin/vdin_ctl.c"
+      ],
+      "provenance": {
+        "archive_ref": "refs/archive/published/pr-33",
+        "original_commits": [
+          "4d182eabe7eaee0e287027c91e2de1ae127a6a26"
+        ],
+        "original_patch_ids": {
+          "4d182eabe7eaee0e287027c91e2de1ae127a6a26": "5973e593d064a0c4b1bdb9deea0b5734ab2fdb8c"
+        },
+        "prior_maintained_base": "58c06bb03fba0d4136115b828a3924394130c15d",
+        "prior_maintained_head": "58c06bb03fba0d4136115b828a3924394130c15d",
+        "prior_maintained_ref": "fix/vfm-vdin-upstream-integrated",
+        "prior_ordered_commits": []
+      },
+      "ref": "fix/vfm-vdin-routing-safeguards-upstream-20261123",
+      "repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+      "settings_defaults": {},
+      "status": "upstream-integrated",
+      "upstream_equivalence_reason": "Already integrated in previous validated upstream, which is a verified ancestor of live upstream. All archived original commits/patch IDs remain recorded. All topic path blobs/modes are unchanged.",
+      "upstream_review": {
+        "evidence_sha256": "75e27e58530bb693ab87506f70d24c74a9b90f9e2a52a08d71c51b9bc37f5adb",
+        "reason": "Already integrated in previous validated upstream, which is a verified ancestor of live upstream. All archived original commits/patch IDs remain recorded. All topic path blobs/modes are unchanged.",
+        "upstream_commit": "605cf2407df57a850fc7db29e514c2de41b5ebc7"
+      }
+    },
+    {
+      "base": "605cf2407df57a850fc7db29e514c2de41b5ebc7",
+      "commit_repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+      "default": true,
+      "defaults": {},
+      "depends_on": [],
+      "evidence": [
+        {
+          "id": "evidence/raven-vdin-writeback-upstream-review.json",
+          "sha256": "086dd63d9d36fb8ce8c27148c30b99d4e167f8425560e2be6fd82dd6ca9c2c70"
+        },
+        {
+          "id": "evidence/parity.json",
+          "sha256": "b0d1a015fc5b6567feb9a7a199da524fb362b31d376267002d54a6b588a96a36"
+        },
+        {
+          "id": "evidence/workflow-tests.json",
+          "sha256": "ed76cce9581d2e496e0d6c6655ae4b720ce11d7870b51811747dbd4e9d475c36"
+        },
+        {
+          "id": "evidence/today-workflow-tests.json",
+          "sha256": "944b51f64dbcc5d7aa217a864d7df550196534dc8f9c1f7f2345f59b4ff4044e"
+        },
+        {
+          "id": "evidence/upstream-20261123-regressions.json",
+          "sha256": "628d9d7ba8fb87cfd8c7d070461d3dc1cef297d542928b87163aa932c2dade85"
+        },
+        {
+          "id": "evidence/upstream-20261123-build-impact.json",
+          "sha256": "c9418cc3e4df02e281d49dd835c6f4316a465f81799938b487c908c28b83c9a7"
+        },
+        {
+          "id": "evidence/upstream-20261123-c2-results.json",
+          "sha256": "0e420dc63b2d8c4af908a50d15fb5c41b0a031f9ab5e4acf998db5b81089d5df"
+        },
+        {
+          "id": "evidence/upstream-20261123-ethernet-results.json",
+          "sha256": "f247bde663f0695cdcf6d169c628d19a3e013bae5b72248ca2a8f68afa7c2ca6"
+        },
+        {
+          "id": "evidence/upstream-20261123-metadata-tests.json",
+          "sha256": "d6dde419cbbdc62069091f098f60c7ba33a6f208cb39756d14bba1a84f0f6490"
+        },
+        {
+          "id": "evidence/upstream-20261123-control-tests.json",
+          "sha256": "4d0cb61315e0e71813d5f7bc2cd5fbc622204275e358d120abd893f3216eb885"
+        },
+        {
+          "id": "evidence/upstream-20261123-workflow-tests.json",
+          "sha256": "58c7099612f13b1b6aa8f59bf6f2ddeb2682a7d29e7a283409201e483276ea71"
+        },
+        {
+          "id": "evidence/upstream-20261123-review.json",
+          "sha256": "75e27e58530bb693ab87506f70d24c74a9b90f9e2a52a08d71c51b9bc37f5adb"
+        }
+      ],
+      "evidence_scope": {
+        "current": [
+          "evidence/upstream-20261123-regressions.json",
+          "evidence/upstream-20261123-build-impact.json",
+          "evidence/upstream-20261123-c2-results.json",
+          "evidence/upstream-20261123-ethernet-results.json",
+          "evidence/upstream-20261123-metadata-tests.json",
+          "evidence/upstream-20261123-control-tests.json",
+          "evidence/upstream-20261123-workflow-tests.json",
+          "evidence/upstream-20261123-review.json"
+        ],
+        "historical": [
+          "evidence/raven-vdin-writeback-upstream-review.json",
+          "evidence/parity.json",
+          "evidence/workflow-tests.json",
+          "evidence/today-workflow-tests.json"
+        ]
+      },
+      "experimental": false,
+      "head": "605cf2407df57a850fc7db29e514c2de41b5ebc7",
+      "id": "raven-vdin-writeback",
+      "ordered_commits": [],
+      "paths": [
+        "arch/arm64/boot/dts/amlogic/g12b_s922z_amazon_2nd_gen_cube.dts"
+      ],
+      "provenance": {
+        "archive_ref": "refs/archive/published/pr-31",
+        "original_commits": [
+          "1f9baf7026d8fb0e8fc578bf337e0b23166e67e6"
+        ],
+        "original_patch_ids": {
+          "1f9baf7026d8fb0e8fc578bf337e0b23166e67e6": "12a8b87542ebbfd9d5aa46f42b182784fd629c6b"
+        },
+        "prior_maintained_base": "58c06bb03fba0d4136115b828a3924394130c15d",
+        "prior_maintained_head": "58c06bb03fba0d4136115b828a3924394130c15d",
+        "prior_maintained_ref": "feature/raven-vdin-upstream-integrated",
+        "prior_ordered_commits": []
+      },
+      "ref": "feature/raven-vdin-writeback-upstream-20261123",
+      "repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+      "settings_defaults": {},
+      "status": "upstream-integrated",
+      "upstream_equivalence_reason": "Already integrated in previous validated upstream, which is a verified ancestor of live upstream. All archived original commits/patch IDs remain recorded. All topic path blobs/modes are unchanged.",
+      "upstream_review": {
+        "evidence_sha256": "75e27e58530bb693ab87506f70d24c74a9b90f9e2a52a08d71c51b9bc37f5adb",
+        "reason": "Already integrated in previous validated upstream, which is a verified ancestor of live upstream. All archived original commits/patch IDs remain recorded. All topic path blobs/modes are unchanged.",
+        "upstream_commit": "605cf2407df57a850fc7db29e514c2de41b5ebc7"
+      }
+    },
+    {
+      "base": "605cf2407df57a850fc7db29e514c2de41b5ebc7",
+      "commit_repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+      "default": true,
+      "defaults": {},
+      "depends_on": [],
+      "evidence": [
+        {
+          "id": "evidence/hdr-sink-vsvdb-recovery-upstream-review.json",
+          "sha256": "c00d814607b35446072569ad2ca9f4cab0813ac7529923a856aec43da16141e2"
+        },
+        {
+          "id": "evidence/parity.json",
+          "sha256": "b0d1a015fc5b6567feb9a7a199da524fb362b31d376267002d54a6b588a96a36"
+        },
+        {
+          "id": "evidence/workflow-tests.json",
+          "sha256": "ed76cce9581d2e496e0d6c6655ae4b720ce11d7870b51811747dbd4e9d475c36"
+        },
+        {
+          "id": "evidence/focused-tests.json",
+          "sha256": "01b32fbf1bfe8d2457cbd8217fc250ebcaff41f66bebe565d842c46b349b76d6"
+        },
+        {
+          "id": "evidence/today-workflow-tests.json",
+          "sha256": "944b51f64dbcc5d7aa217a864d7df550196534dc8f9c1f7f2345f59b4ff4044e"
+        },
+        {
+          "id": "evidence/upstream-20261123-regressions.json",
+          "sha256": "628d9d7ba8fb87cfd8c7d070461d3dc1cef297d542928b87163aa932c2dade85"
+        },
+        {
+          "id": "evidence/upstream-20261123-build-impact.json",
+          "sha256": "c9418cc3e4df02e281d49dd835c6f4316a465f81799938b487c908c28b83c9a7"
+        },
+        {
+          "id": "evidence/upstream-20261123-c2-results.json",
+          "sha256": "0e420dc63b2d8c4af908a50d15fb5c41b0a031f9ab5e4acf998db5b81089d5df"
+        },
+        {
+          "id": "evidence/upstream-20261123-ethernet-results.json",
+          "sha256": "f247bde663f0695cdcf6d169c628d19a3e013bae5b72248ca2a8f68afa7c2ca6"
+        },
+        {
+          "id": "evidence/upstream-20261123-metadata-tests.json",
+          "sha256": "d6dde419cbbdc62069091f098f60c7ba33a6f208cb39756d14bba1a84f0f6490"
+        },
+        {
+          "id": "evidence/upstream-20261123-control-tests.json",
+          "sha256": "4d0cb61315e0e71813d5f7bc2cd5fbc622204275e358d120abd893f3216eb885"
+        },
+        {
+          "id": "evidence/upstream-20261123-workflow-tests.json",
+          "sha256": "58c7099612f13b1b6aa8f59bf6f2ddeb2682a7d29e7a283409201e483276ea71"
+        },
+        {
+          "id": "evidence/upstream-20261123-review.json",
+          "sha256": "75e27e58530bb693ab87506f70d24c74a9b90f9e2a52a08d71c51b9bc37f5adb"
+        }
+      ],
+      "evidence_scope": {
+        "current": [
+          "evidence/upstream-20261123-regressions.json",
+          "evidence/upstream-20261123-build-impact.json",
+          "evidence/upstream-20261123-c2-results.json",
+          "evidence/upstream-20261123-ethernet-results.json",
+          "evidence/upstream-20261123-metadata-tests.json",
+          "evidence/upstream-20261123-control-tests.json",
+          "evidence/upstream-20261123-workflow-tests.json",
+          "evidence/upstream-20261123-review.json"
+        ],
+        "historical": [
+          "evidence/hdr-sink-vsvdb-recovery-upstream-review.json",
+          "evidence/parity.json",
+          "evidence/workflow-tests.json",
+          "evidence/focused-tests.json",
+          "evidence/today-workflow-tests.json"
+        ]
+      },
+      "experimental": false,
+      "head": "605cf2407df57a850fc7db29e514c2de41b5ebc7",
+      "id": "hdr-sink-vsvdb-recovery",
+      "ordered_commits": [],
+      "paths": [
+        "drivers/amlogic/media/enhancement/amdolby_vision/amdolby_vision.c",
+        "tools/test-dv-sink-modeset.py"
+      ],
+      "provenance": {
+        "archive_ref": "refs/archive/published/hdr-sink-modeset",
+        "original_commits": [
+          "3a5991353f33e67bf9ddfe2735b3d3133b042974"
+        ],
+        "original_patch_ids": {
+          "3a5991353f33e67bf9ddfe2735b3d3133b042974": "0671fe98ea43df6bc030e1c8ec1c21e284dac72a"
+        },
+        "prior_maintained_base": "58c06bb03fba0d4136115b828a3924394130c15d",
+        "prior_maintained_head": "58c06bb03fba0d4136115b828a3924394130c15d",
+        "prior_maintained_ref": "fix/hdr-sink-vsvdb-upstream-integrated",
+        "prior_ordered_commits": []
+      },
+      "ref": "fix/hdr-sink-vsvdb-recovery-upstream-20261123",
+      "repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+      "settings_defaults": {},
+      "status": "upstream-integrated",
+      "upstream_equivalence_reason": "Already integrated in previous validated upstream, which is a verified ancestor of live upstream. All archived original commits/patch IDs remain recorded. Dolby file has unrelated published bounds/parser changes; accepted sink/VSVDB functions and native P8.1 policy are checked separately, not asserted whole-file identical.",
+      "upstream_review": {
+        "evidence_sha256": "75e27e58530bb693ab87506f70d24c74a9b90f9e2a52a08d71c51b9bc37f5adb",
+        "reason": "Already integrated in previous validated upstream, which is a verified ancestor of live upstream. All archived original commits/patch IDs remain recorded. Dolby file has unrelated published bounds/parser changes; accepted sink/VSVDB functions and native P8.1 policy are checked separately, not asserted whole-file identical.",
+        "upstream_commit": "605cf2407df57a850fc7db29e514c2de41b5ebc7"
+      }
+    },
+    {
+      "base": "605cf2407df57a850fc7db29e514c2de41b5ebc7",
+      "commit_repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+      "default": true,
+      "defaults": {
+        "xbmc_live_frame_l5": true
+      },
+      "depends_on": [],
+      "evidence": [
+        {
+          "id": "evidence/native-p81-live-l5-default-upstream-review.json",
+          "sha256": "a49414f956da63c0e31c6aa0c11df8e625318ce95bc5f4bd745578a0ff2460e5"
+        },
+        {
+          "id": "evidence/parity.json",
+          "sha256": "b0d1a015fc5b6567feb9a7a199da524fb362b31d376267002d54a6b588a96a36"
+        },
+        {
+          "id": "evidence/workflow-tests.json",
+          "sha256": "ed76cce9581d2e496e0d6c6655ae4b720ce11d7870b51811747dbd4e9d475c36"
+        },
+        {
+          "id": "evidence/today-workflow-tests.json",
+          "sha256": "944b51f64dbcc5d7aa217a864d7df550196534dc8f9c1f7f2345f59b4ff4044e"
+        },
+        {
+          "id": "evidence/upstream-20261123-regressions.json",
+          "sha256": "628d9d7ba8fb87cfd8c7d070461d3dc1cef297d542928b87163aa932c2dade85"
+        },
+        {
+          "id": "evidence/upstream-20261123-build-impact.json",
+          "sha256": "c9418cc3e4df02e281d49dd835c6f4316a465f81799938b487c908c28b83c9a7"
+        },
+        {
+          "id": "evidence/upstream-20261123-c2-results.json",
+          "sha256": "0e420dc63b2d8c4af908a50d15fb5c41b0a031f9ab5e4acf998db5b81089d5df"
+        },
+        {
+          "id": "evidence/upstream-20261123-ethernet-results.json",
+          "sha256": "f247bde663f0695cdcf6d169c628d19a3e013bae5b72248ca2a8f68afa7c2ca6"
+        },
+        {
+          "id": "evidence/upstream-20261123-metadata-tests.json",
+          "sha256": "d6dde419cbbdc62069091f098f60c7ba33a6f208cb39756d14bba1a84f0f6490"
+        },
+        {
+          "id": "evidence/upstream-20261123-control-tests.json",
+          "sha256": "4d0cb61315e0e71813d5f7bc2cd5fbc622204275e358d120abd893f3216eb885"
+        },
+        {
+          "id": "evidence/upstream-20261123-workflow-tests.json",
+          "sha256": "58c7099612f13b1b6aa8f59bf6f2ddeb2682a7d29e7a283409201e483276ea71"
+        },
+        {
+          "id": "evidence/upstream-20261123-review.json",
+          "sha256": "75e27e58530bb693ab87506f70d24c74a9b90f9e2a52a08d71c51b9bc37f5adb"
+        }
+      ],
+      "evidence_scope": {
+        "current": [
+          "evidence/upstream-20261123-regressions.json",
+          "evidence/upstream-20261123-build-impact.json",
+          "evidence/upstream-20261123-c2-results.json",
+          "evidence/upstream-20261123-ethernet-results.json",
+          "evidence/upstream-20261123-metadata-tests.json",
+          "evidence/upstream-20261123-control-tests.json",
+          "evidence/upstream-20261123-workflow-tests.json",
+          "evidence/upstream-20261123-review.json"
+        ],
+        "historical": [
+          "evidence/native-p81-live-l5-default-upstream-review.json",
+          "evidence/parity.json",
+          "evidence/workflow-tests.json",
+          "evidence/today-workflow-tests.json"
+        ]
+      },
+      "experimental": false,
+      "head": "605cf2407df57a850fc7db29e514c2de41b5ebc7",
+      "id": "native-p81-live-l5-default",
+      "ordered_commits": [],
+      "paths": [
+        "drivers/amlogic/media/enhancement/amdolby_vision/amdolby_vision.c"
+      ],
+      "provenance": {
+        "archive_ref": "refs/archive/published/hdr-sink-modeset",
+        "original_commits": [
+          "5710229b488aae905e14ecb386c77eceda552500"
+        ],
+        "original_patch_ids": {
+          "5710229b488aae905e14ecb386c77eceda552500": "0886f6685a6e210b34b78fb53920115d49821364"
+        },
+        "prior_maintained_base": "58c06bb03fba0d4136115b828a3924394130c15d",
+        "prior_maintained_head": "58c06bb03fba0d4136115b828a3924394130c15d",
+        "prior_maintained_ref": "feature/native-p81-upstream-integrated",
+        "prior_ordered_commits": []
+      },
+      "ref": "feature/native-p81-live-l5-default-upstream-20261123",
+      "repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+      "settings_defaults": {
+        "xbmc_live_frame_l5": true
+      },
+      "status": "upstream-integrated",
+      "upstream_equivalence_reason": "Already integrated in previous validated upstream, which is a verified ancestor of live upstream. All archived original commits/patch IDs remain recorded. Dolby file has unrelated published bounds/parser changes; accepted sink/VSVDB functions and native P8.1 policy are checked separately, not asserted whole-file identical.",
+      "upstream_review": {
+        "evidence_sha256": "75e27e58530bb693ab87506f70d24c74a9b90f9e2a52a08d71c51b9bc37f5adb",
+        "reason": "Already integrated in previous validated upstream, which is a verified ancestor of live upstream. All archived original commits/patch IDs remain recorded. Dolby file has unrelated published bounds/parser changes; accepted sink/VSVDB functions and native P8.1 policy are checked separately, not asserted whole-file identical.",
+        "upstream_commit": "605cf2407df57a850fc7db29e514c2de41b5ebc7"
+      }
+    },
+    {
+      "base": "99200a078979f45b028a228d8d5d14ba90651711",
+      "commit_repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+      "default": true,
+      "defaults": {
+        "lldv_vsif_suppress": false
+      },
+      "depends_on": [
+        "hdmi-c2-clock-serialization"
+      ],
+      "evidence": [
+        {
+          "id": "evidence/today-jvc-source-reconciliation.json",
+          "sha256": "b7bc74daf67e15ac8fb444d625f31d5321f668659f88868bcfeacd100ac59e53"
+        },
+        {
+          "id": "evidence/today-regressions.json",
+          "sha256": "57f567b246bcd06dbba0f835411b50a40182f7a7437c49d4922c6f9a83dfceb1"
+        },
+        {
+          "id": "evidence/today-workflow-tests.json",
+          "sha256": "944b51f64dbcc5d7aa217a864d7df550196534dc8f9c1f7f2345f59b4ff4044e"
+        },
+        {
+          "id": "evidence/upstream-20261123-regressions.json",
+          "sha256": "628d9d7ba8fb87cfd8c7d070461d3dc1cef297d542928b87163aa932c2dade85"
+        },
+        {
+          "id": "evidence/upstream-20261123-build-impact.json",
+          "sha256": "c9418cc3e4df02e281d49dd835c6f4316a465f81799938b487c908c28b83c9a7"
+        },
+        {
+          "id": "evidence/upstream-20261123-c2-results.json",
+          "sha256": "0e420dc63b2d8c4af908a50d15fb5c41b0a031f9ab5e4acf998db5b81089d5df"
+        },
+        {
+          "id": "evidence/upstream-20261123-ethernet-results.json",
+          "sha256": "f247bde663f0695cdcf6d169c628d19a3e013bae5b72248ca2a8f68afa7c2ca6"
+        },
+        {
+          "id": "evidence/upstream-20261123-metadata-tests.json",
+          "sha256": "d6dde419cbbdc62069091f098f60c7ba33a6f208cb39756d14bba1a84f0f6490"
+        },
+        {
+          "id": "evidence/upstream-20261123-control-tests.json",
+          "sha256": "4d0cb61315e0e71813d5f7bc2cd5fbc622204275e358d120abd893f3216eb885"
+        },
+        {
+          "id": "evidence/upstream-20261123-workflow-tests.json",
+          "sha256": "58c7099612f13b1b6aa8f59bf6f2ddeb2682a7d29e7a283409201e483276ea71"
+        },
+        {
+          "id": "evidence/upstream-20261123-review.json",
+          "sha256": "75e27e58530bb693ab87506f70d24c74a9b90f9e2a52a08d71c51b9bc37f5adb"
+        }
+      ],
+      "evidence_scope": {
+        "current": [
+          "evidence/upstream-20261123-regressions.json",
+          "evidence/upstream-20261123-build-impact.json",
+          "evidence/upstream-20261123-c2-results.json",
+          "evidence/upstream-20261123-ethernet-results.json",
+          "evidence/upstream-20261123-metadata-tests.json",
+          "evidence/upstream-20261123-control-tests.json",
+          "evidence/upstream-20261123-workflow-tests.json",
+          "evidence/upstream-20261123-review.json"
+        ],
+        "historical": [
+          "evidence/today-jvc-source-reconciliation.json",
+          "evidence/today-regressions.json",
+          "evidence/today-workflow-tests.json"
+        ]
+      },
+      "experimental": false,
+      "external_dependencies": [
+        "kodi/lldv-vsif-suppression-setting"
+      ],
+      "head": "afdd14d17cd7d866c44639da6cf5afe6d8fa0359",
+      "id": "lldv-vsif-suppression-v3",
+      "limits": [
+        "Hardware acceptance applies only to the earlier custom defaultOn projector-chain image.",
+        "Generic defaultOff, generic suppressionOn, previous combined sources, this upstream refresh and Dolby-signaled sinks with suppressionOn have not been hardware-tested.",
+        "LLDV video processing is preserved. Keep suppressionOff for displays requiring Dolby VSIF signaling.",
+        "Only published upstream updates plus existing accepted topics are included; no private parser/stress or pending visibility experiments."
+      ],
+      "ordered_commits": [
+        "afdd14d17cd7d866c44639da6cf5afe6d8fa0359"
+      ],
+      "patch_sha256": "afdd4408addf31ed21ce12441cbd5edc4756f903c73f69b93b4c063bcedc1c80",
+      "paths": [
+        "drivers/amlogic/media/vout/hdmitx/hdmi_tx_20/hdmi_tx_main.c",
+        "drivers/amlogic/media/vout/hdmitx/hdmi_tx_20/hdmi_tx_video.c",
+        "drivers/amlogic/media/vout/hdmitx/hdmi_tx_20/hw/hdmi_tx_hw.c",
+        "include/linux/amlogic/media/vout/hdmi_tx/hdmi_tx_module.h",
+        "tools/test-lldv-vsif-suppress.py"
+      ],
+      "provenance": {
+        "accepted_generic_commit": "cae054dbed345e6479ce48a7099a138608b7d369",
+        "accepted_generic_tree": "899982f9fb701e8493472fec7c115671d70ac34a",
+        "adaptation": "Use exact public generic defaultOff gating, getter and regressions; enabled packet/AVI behavior retained from accepted v3, not copied custom defaultY.",
+        "custom_deployed_image_sha256": "8837666164ab2630aa4074fba4c8217b83a88c20718ca1800cbedd635a9cebc2",
+        "custom_source_baseline": "3c223629c5f7ff87151b696161cf99bc7c857b94",
+        "immutable_custom_exports": {
+          "lldv-modern-avi-v2-candidate.patch": "b8a95b1aaa8e8dd3cb795e6f90c5e889c13a456dc457b93e1399bec45cbd1959",
+          "lldv-vsif-suppress-v3-candidate.patch": "48e04b8b3ea16abb5eeb540d2afdd2fcd39a88bf33b5f1d6927a965e0576b8eb"
+        },
+        "immutable_generic_mbox_sha256": "19c0bc40ec5094a98863a5f661d42c11ce9be91be2bb593b2b451bd98e47324a",
+        "original_pr": 32,
+        "original_repository": "https://github.com/pannal/linux-amlogic",
+        "prior_maintained_base": "56298eb1cb81e270876b454dcbd7290b1dfea25f",
+        "prior_maintained_head": "5b9376a38cf4b0e4fb39aca74e2c1e889cf32281",
+        "prior_maintained_ref": "feature/lldv-vsif-suppression-v3-20261122",
+        "prior_ordered_commits": [
+          "5b9376a38cf4b0e4fb39aca74e2c1e889cf32281"
+        ]
+      },
+      "ref": "feature/lldv-vsif-suppression-v3-upstream-20261123",
+      "repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+      "settings_defaults": {
+        "lldv_vsif_suppress": false,
+        "seamless_refresh_preserved": true
+      },
+      "status": "included",
+      "upstream_equivalence_reason": "Exact accepted topic patch remains absent from live upstream; replayed once, unchanged, on live upstream plus declared dependencies."
+    }
+  ],
+  "immutable_refs": {
+    "source/original-pr-29-20261122": "a2ed27d5ba51f79ba386eae9281e588cfd9c5fa9",
+    "source/original-pr-30-20261122": "eebe87aede345899623f576ce5bf65d6d75774d6",
+    "source/original-pr-31-20261122": "1f9baf7026d8fb0e8fc578bf337e0b23166e67e6",
+    "source/original-pr-32-20261122": "1b4b6c1546f0d0da55dcc78d1341f9e521807aea",
+    "source/original-pr-33-20261122": "4d182eabe7eaee0e287027c91e2de1ae127a6a26",
+    "source/original-pr-34-20261122": "7f412a9bfb8b9f02ed703025631c18a80b93a01e",
+    "source/reconstructed-equivalent-20261122": "f7061e5ca4f174c28614bfc29eed368e7cefafd0",
+    "source/release-original-20261122": "2b17ade58f733854821be8b18cf66f5d249bc727",
+    "source/upstream-validated-20261122": "58c06bb03fba0d4136115b828a3924394130c15d"
+  },
+  "integration": {
+    "head": "087830e1a90a3a62e82339e23793f5d630df9168",
+    "ref": "integration/all-fixes-upstream-20261123",
+    "repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+    "tree": "eaaadfa0a70a4a5e5487a607549b9c2167bcaf53"
+  },
+  "limits": [
+    "Source and host checks only: no firmware build, deployment, push, merge, PR or hardware testing in this component task.",
+    "Old binary/config/export hashes remain attached to their original source/cohort. This source refresh is not byte-equivalent to the prior release.",
+    "Native DOVI/module version policy is unchanged. Earlier 12-provider/two-exception and 18 DOVI5/28 shim audit results are historical, not certification for this source refresh.",
+    "Public internal HDR/OOTF interfaces change together; matching coherent target rebuild and fresh module/symbol audits are mandatory.",
+    "No private/proprietary binary, source snapshot ancestry or source/evidence location is added to allowed public history."
+  ],
+  "original_binary_policy": "Original sealed release build IDs/hashes remain attached to original source; reconstructed IDs are source-equivalent only. No binary relabel or rebuild claimed.",
+  "original_release": {
+    "commit": "2b17ade58f733854821be8b18cf66f5d249bc727",
+    "tag": "source/release-original-20261122",
+    "tree": "2de60b436acf0c6289449c53eee6f842d176d4d2"
+  },
+  "prior_catalog": {
+    "commit": "f8cb588037fe71f5b7dde91b6ea2939e03b5ebd2",
+    "ref": "workflow/catalog-today-20261122-v2",
+    "sha256": "ee60f85cff4c6e1103faae4c1497a58113586559c41cbf5c4d58cc64df24d888",
+    "source": {
+      "head": "d49892898952cc48768f9faf25b3d095650e3438",
+      "ref": "integration/all-fixes-today-20261122",
+      "repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+      "tree": "a2921b265a9ea43517b6036cc2dde95418545af0"
+    }
+  },
+  "prior_release": {
+    "head": "d49892898952cc48768f9faf25b3d095650e3438",
+    "ref": "integration/all-fixes-today-20261122",
+    "repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+    "tree": "a2921b265a9ea43517b6036cc2dde95418545af0"
+  },
+  "reconstructed_baseline": {
+    "commit": "087830e1a90a3a62e82339e23793f5d630df9168",
+    "repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+    "status": "Source candidate only; not a new binary release, build or hardware validation.",
+    "tag": "source/candidate-upstream-20261123",
+    "tree": "eaaadfa0a70a4a5e5487a607549b9c2167bcaf53"
+  },
+  "repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+  "runtime_defaults": {
+    "lldv_vsif_suppress": false,
+    "seamless_mode_refresh": true
+  },
+  "schema_version": 1,
+  "upstream": {
+    "commit": "605cf2407df57a850fc7db29e514c2de41b5ebc7",
+    "previous_validated_commit": "58c06bb03fba0d4136115b828a3924394130c15d",
+    "published_ref": "amlogic-4.9-20",
+    "ref": "upstream-dev-20261123",
+    "ref_repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+    "refresh": {
+      "commit": "605cf2407df57a850fc7db29e514c2de41b5ebc7",
+      "observation": "Live head independently fetched; identical to previously tracked head. Not yet built or hardware-validated.",
+      "status": "source-reconciled-offline-only"
+    },
+    "repository": "https://github.com/pannal/linux-amlogic"
+  },
+  "validations": [
+    {
+      "id": "evidence/upstream-20261123-regressions.json",
+      "sha256": "628d9d7ba8fb87cfd8c7d070461d3dc1cef297d542928b87163aa932c2dade85"
+    },
+    {
+      "id": "evidence/upstream-20261123-build-impact.json",
+      "sha256": "c9418cc3e4df02e281d49dd835c6f4316a465f81799938b487c908c28b83c9a7"
+    },
+    {
+      "id": "evidence/upstream-20261123-c2-results.json",
+      "sha256": "0e420dc63b2d8c4af908a50d15fb5c41b0a031f9ab5e4acf998db5b81089d5df"
+    },
+    {
+      "id": "evidence/upstream-20261123-ethernet-results.json",
+      "sha256": "f247bde663f0695cdcf6d169c628d19a3e013bae5b72248ca2a8f68afa7c2ca6"
+    },
+    {
+      "id": "evidence/upstream-20261123-metadata-tests.json",
+      "sha256": "d6dde419cbbdc62069091f098f60c7ba33a6f208cb39756d14bba1a84f0f6490"
+    },
+    {
+      "id": "evidence/upstream-20261123-control-tests.json",
+      "sha256": "4d0cb61315e0e71813d5f7bc2cd5fbc622204275e358d120abd893f3216eb885"
+    },
+    {
+      "id": "evidence/upstream-20261123-workflow-tests.json",
+      "sha256": "58c7099612f13b1b6aa8f59bf6f2ddeb2682a7d29e7a283409201e483276ea71"
+    },
+    {
+      "id": "evidence/upstream-20261123-review.json",
+      "sha256": "75e27e58530bb693ab87506f70d24c74a9b90f9e2a52a08d71c51b9bc37f5adb"
+    }
+  ],
+  "workflow_ref": "workflow/catalog-upstream-20261123",
+  "workflow_repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic"
+}

@@ -1,0 +1,11 @@
+{
+  "byte_identical_original_negative_control_files": {
+    "drivers/amlogic/media/vout/hdmitx/hdmi_tx_20/hdmi_tx_main.c": "39004821a3825a9fd7f6fa41340571f37a66198c25fbfce82a45de0598d8cc8f",
+    "drivers/amlogic/media/vout/hdmitx/hdmi_tx_20/hdmi_tx_main_drm.c": "b7f03b5c16cc8a76437aff409efb2f09dd48081e79bd655194d47cf6e5c16873",
+    "drivers/amlogic/media/vout/hdmitx/hdmi_tx_20/hw/hdmi_tx_hw.c": "fa39a4f660f3a0139007c3dcf6a3ce4cfa7268c66efb6ad9e73bbdbc76250bc3",
+    "drivers/amlogic/media/vout/hdmitx/hdmi_tx_20/hw/reg_ops.c": "f364ecf84ceb4b5d827f4b7f890fff020aee2a121d0646962e594dd09e69dd25",
+    "include/linux/amlogic/media/vout/hdmi_tx/hdmi_tx_module.h": "8b2a30036779a82c752e32a1891e077df5d2ad8dd8018d30c9c8fa7375da9696"
+  },
+  "public_pre_c2_commit": "5a4eaf46237b12a6c1c5c951262fa2d5cbcbdfbb",
+  "unpublished_frozen_commit_required": false
+}

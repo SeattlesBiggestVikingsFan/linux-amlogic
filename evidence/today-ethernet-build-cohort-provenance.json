@@ -1,0 +1,116 @@
+{
+  "actual_a3_Module_symvers_sha256": "e230cb3938692ff685143064a54cc3c40bcc42126fecc6e83c5237123868e47b",
+  "actual_a3_config_sha256": "a2ad46a61fe51d913dcc06a4b8c250f42acc3c5a8fd703c4526b6a8121defc9a",
+  "actual_a3_kernel_sha256": "a3a463735093550b371a1eac0db3b8f49f67144e4ee6a4aee823bcc3626051ac",
+  "actual_a3_package_reference_commit_not_complete_source": "1f2292a39cec1e881d18ff77614cc663bc2dd760",
+  "actual_a3_source_delta_patch_sha256": "7cfea4f427629995cb730873dc796e76da2d86e957d70f71177b5e95a547d012",
+  "actual_a3_source_is_git_commit": false,
+  "actual_a3_source_manifests": {
+    "baseline-v20-source": {
+      "entries": 59129,
+      "identity": "all regular files/symlink targets; .git excluded",
+      "manifest_sha256": "26edfcf862102ec3d869d2558d73ad54a67962a93201a635c0d1c5b51bcbd037"
+    },
+    "review8a-source": {
+      "entries": 59129,
+      "identity": "all regular files/symlink targets; .git excluded",
+      "manifest_sha256": "34c1c8cd3b9eb536a212b55dac8e1b5f54cbfcd559ee0bcd229ad97b8c774d1c"
+    }
+  },
+  "combined_prior_Module_symvers_sha256": "ccf2a5df09a260e641e4ceb878722fdf025b15681cee5cfa2f5d0b8df802cba8",
+  "combined_prior_config_sha256": "f9681e51a088f79e5868142da4cd20232820d355d037100e4305355bab8c70d0",
+  "combined_prior_kernel_sha256": "3b3a0180cba8d510247752a1fee18438f19204c7ad7e4b0df8ced69f89dfebbd",
+  "combined_prior_source": {
+    "commit": "2b17ade58f733854821be8b18cf66f5d249bc727",
+    "tag": "source/release-original-20261122",
+    "tree": "2de60b436acf0c6289449c53eee6f842d176d4d2"
+  },
+  "config_or_exports_equal": false,
+  "ethernet_abi_files_byte_mode_equal": {
+    "drivers/net/ethernet/stmicro/stmmac/dwmac-meson.c": {
+      "accepted_git_mode": "100644",
+      "byte_mode_identical": true,
+      "combined_git_mode": "100644",
+      "sha256": "e57c4cac7a1a8dd59deedc6be91afb267506a82ec61fa4c3580a6b95c387c521"
+    },
+    "drivers/net/ethernet/stmicro/stmmac/stmmac_main.c": {
+      "accepted_git_mode": "100644",
+      "byte_mode_identical": true,
+      "combined_git_mode": "100644",
+      "sha256": "d11af416b717e7100f8c172f5c5a48f19322881f6900ef0c31dfb0bf1100818c"
+    },
+    "include/linux/stmmac.h": {
+      "accepted_git_mode": "100644",
+      "byte_mode_identical": true,
+      "combined_git_mode": "100644",
+      "sha256": "3f9b69ed609a34216a1b4f37bb9c800766602d61aaa3b6d79abdac270bbcb32b"
+    }
+  },
+  "no_binary_wide_or_new_candidate_abi_certification": true,
+  "no_private_paths_history_or_binaries_imported": true,
+  "owner_build_review_evidence_sha256": {
+    "driver-regressions.json": "3c36bd3ffdf161a1d23620d94cadcf1b50d18697b156dbf93cfe80631c2721a5",
+    "kernel-audits.json": "a340cf78c22b921ee846a4eb767638ddbca5300b8e5cae16e0d46d187bbba35f",
+    "kernel-build-environment.json": "cfd24fa4817ebb03cb30f7b53f93ce1422bdeb9baaedfe5567a9cd461db45171",
+    "kernel-package.json": "b93918360d55b7a6286713b86c68708fbd3ced8593fb06fbe54de82d5da87065",
+    "kernel-source.json": "676db937c1cd8ffc632798c8037b67a3d584c57d6c217894431e03b0e451c823",
+    "module-audit.json": "adf3b5aca138cfce7e3380b9f3c6af542ed1596f7cf2ee26acba6d466a283ad2",
+    "object-audit.json": "68aeb6cf624b917b6eb537b38be498fe717ee54c173c481f0b2796138a5a9147",
+    "review-delta-object-audit.json": "0983a1208c31cdc21ee39f5c095fc5f342e6b76d983c41d35dcb6cc517cffc58"
+  },
+  "owner_combined_reconciliation_sha256": "c3d7863ee8bc9680ac64b19f530e48d83a1e705057cf4d6ae0a9ceb23e586e7c",
+  "owner_inventory_sha256": "6d36c557e556d968a5a7a455c24e8cef139f46042d8084acfabda1a57107427f",
+  "owner_prior_cohort_abi": {
+    "callback_layout": "plat_stmmacenet_data gains calibration_init",
+    "changed_gpl_exports": {
+      "stmmac_dvr_probe": {
+        "new": {
+          "crc": 687815931,
+          "kind": "EXPORT_SYMBOL_GPL",
+          "module": "vmlinux"
+        },
+        "old": {
+          "crc": 1830738719,
+          "kind": "EXPORT_SYMBOL_GPL",
+          "module": "vmlinux"
+        }
+      },
+      "stmmac_probe_config_dt": {
+        "new": {
+          "crc": 1287320828,
+          "kind": "EXPORT_SYMBOL_GPL",
+          "module": "vmlinux"
+        },
+        "old": {
+          "crc": 1983824767,
+          "kind": "EXPORT_SYMBOL_GPL",
+          "module": "vmlinux"
+        }
+      },
+      "stmmac_remove_config_dt": {
+        "new": {
+          "crc": 159888406,
+          "kind": "EXPORT_SYMBOL_GPL",
+          "module": "vmlinux"
+        },
+        "old": {
+          "crc": 1500156381,
+          "kind": "EXPORT_SYMBOL_GPL",
+          "module": "vmlinux"
+        }
+      }
+    },
+    "inherited_dovi_crc_mismatches": {
+      "module_layout": {
+        "kernel": 434193837,
+        "required": 2291701365
+      },
+      "register_dv_functions": {
+        "kernel": 3134087549,
+        "required": 3872703687
+      }
+    },
+    "no_introduced_preserved_module_import_mismatches_in_owner_cohort": true
+  },
+  "owner_public_component_catalog_sha256": "77635d830d26eda36d2473d3089dae2579dbb2e95b440997da67a3ccf0fe1c2c"
+}

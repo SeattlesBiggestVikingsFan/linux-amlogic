@@ -1,0 +1,31 @@
+{
+  "cases": [
+    {
+      "actual_body_sha256": "155ddbb059187bc57c75d20791ae9629537ab419fa3abf91c2a8f7d492aaddeb",
+      "exit": 0,
+      "expected_pass": true,
+      "id": "accepted",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "met_expectation": true
+    },
+    {
+      "actual_body_sha256": "1f4e4d235fb5557c536427ccf5ac7660db60dd3b0e67da28e3668c3c895dd090",
+      "exit": 1,
+      "expected_pass": false,
+      "id": "unbounded-tokens",
+      "log_sha256": "775f44abb9059585690281c5bae1fc37a9c87adc73a3f32724b69fbe68bd2b8a",
+      "met_expectation": true
+    },
+    {
+      "actual_body_sha256": "dbcc04148011ca01f3cf871667a95472072bb5e0ca984b55b3bcb07b8b56d060",
+      "exit": 1,
+      "expected_pass": false,
+      "id": "freed-lut-path",
+      "log_sha256": "fa69a46dd4f9fa02714dca03ae6c2c3474940d33e892f52e7901700137d14baa",
+      "met_expectation": true
+    }
+  ],
+  "passed": true,
+  "pq_descriptor_zeroes_pointer": true,
+  "scope": "Actual extracted host bodies with mocked register writes; no device/PQ programming or firmware compilation."
+}
