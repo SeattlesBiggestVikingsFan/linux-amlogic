@@ -1,0 +1,9 @@
+{
+  "exact_path_mode_content_parity": true,
+  "original_commit": "2b17ade58f733854821be8b18cf66f5d249bc727",
+  "path_count": 59130,
+  "path_mode_blob_listing_sha256": "ffdbf79fc0aba3f13a3595ab1352b4725937909c6e055bd6709b01ceba9faf07",
+  "production_and_source_tests_included": true,
+  "reconstructed_commit": "f7061e5ca4f174c28614bfc29eed368e7cefafd0",
+  "tree": "2de60b436acf0c6289449c53eee6f842d176d4d2"
+}

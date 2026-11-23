@@ -1,0 +1,88 @@
+{
+  "cases": [
+    {
+      "command": [
+        "python3",
+        "tools/test-native-hdr-mute-bypass.py",
+        "--negative-controls"
+      ],
+      "exit": 0,
+      "id": "tools/test-native-hdr-mute-bypass.py",
+      "log": "focused-00.log",
+      "passed": true,
+      "sha256": "cb486cf5caee390a5eafac21c3a8d7aad9cd53a02a54d5fcd03ab79b1cc036bb"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/test-sdr-bt2020-out.py",
+        "--negative-controls"
+      ],
+      "exit": 0,
+      "id": "tools/test-sdr-bt2020-out.py",
+      "log": "focused-01.log",
+      "passed": true,
+      "sha256": "d189fa13e12e7308562d01e21106e954d1b5591278e0382c21bdcf5fc18f2a98"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/test-hdr-prearm.py",
+        "--negative-controls"
+      ],
+      "exit": 0,
+      "id": "tools/test-hdr-prearm.py",
+      "log": "focused-02.log",
+      "passed": true,
+      "sha256": "1d3e668fbc1c595d90116600b6d59fa2eef3a60ad47bdc305e9c963f4cbc461e"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/test-dv-seamless-refresh.py",
+        "--negative-controls"
+      ],
+      "exit": 0,
+      "id": "tools/test-dv-seamless-refresh.py",
+      "log": "focused-03.log",
+      "passed": true,
+      "sha256": "0a9cf3516053f51bb6cfcdc3ead1e3863d0bf3fcd67635f9ae445d21c9232a84"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/test-dv-sink-modeset.py"
+      ],
+      "exit": 0,
+      "id": "tools/test-dv-sink-modeset.py",
+      "log": "focused-04.log",
+      "passed": true,
+      "sha256": "0be995ae14fe980fb7be5a7706b75d6f746492694743894549706d7c986f9135"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/test-osd-afbc-queued-flips.py"
+      ],
+      "exit": 0,
+      "id": "tools/test-osd-afbc-queued-flips.py",
+      "log": "focused-05.log",
+      "passed": true,
+      "sha256": "981821ca748ab683db9fb557aa920e4306d46eee8b9b90bb15975b81d017fbfe"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/testing/amlogic/test_afbc_scanout.py",
+        "--negative-controls"
+      ],
+      "exit": 0,
+      "id": "tools/testing/amlogic/test_afbc_scanout.py",
+      "log": "focused-06.log",
+      "passed": true,
+      "sha256": "b8691b22793dfda9ced8657e0e7cf0ed48b1b255bbeeff678a1d5d6e545e9477"
+    }
+  ],
+  "passed": true,
+  "scope": "Existing offline source/compiled host regressions and negative controls, not firmware or hardware acceptance."
+}

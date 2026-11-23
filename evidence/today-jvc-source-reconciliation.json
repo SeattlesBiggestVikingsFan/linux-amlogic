@@ -1,0 +1,82 @@
+{
+  "candidate": {
+    "head": "d49892898952cc48768f9faf25b3d095650e3438",
+    "ref": "integration/all-fixes-today-20261122",
+    "repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+    "tree": "a2921b265a9ea43517b6036cc2dde95418545af0"
+  },
+  "candidate_binary_claim": "None; parent owns new build/publication.",
+  "changed_paths_vs_prior": [
+    "drivers/amlogic/media/vout/hdmitx/hdmi_tx_20/hdmi_tx_main.c",
+    "drivers/amlogic/media/vout/hdmitx/hdmi_tx_20/hdmi_tx_video.c",
+    "drivers/amlogic/media/vout/hdmitx/hdmi_tx_20/hw/hdmi_tx_hw.c",
+    "include/linux/amlogic/media/vout/hdmi_tx/hdmi_tx_module.h",
+    "tools/test-lldv-vsif-suppress.py"
+  ],
+  "exact_default_candidate_replay": true,
+  "feature": {
+    "base": "56298eb1cb81e270876b454dcbd7290b1dfea25f",
+    "commit_repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+    "default": true,
+    "defaults": {
+      "lldv_vsif_suppress": false
+    },
+    "depends_on": [
+      "hdmi-c2-clock-serialization"
+    ],
+    "evidence": [],
+    "experimental": false,
+    "external_dependencies": [
+      "kodi/lldv-vsif-suppression-setting"
+    ],
+    "head": "5b9376a38cf4b0e4fb39aca74e2c1e889cf32281",
+    "id": "lldv-vsif-suppression-v3",
+    "limits": [
+      "Single manually configured sink-chain hardware acceptance applies to custom suppressionOn v3.",
+      "Generic defaultOff/Dolby-signaling display behavior has source/host checks, not new hardware acceptance.",
+      "LLDV pixel processing remains active; suppression must stay Off for displays requiring Dolby VSIF signaling.",
+      "No VFM/parser/decoder experiment or pending visibility diagnosis is introduced."
+    ],
+    "ordered_commits": [
+      "5b9376a38cf4b0e4fb39aca74e2c1e889cf32281"
+    ],
+    "patch_sha256": "afdd4408addf31ed21ce12441cbd5edc4756f903c73f69b93b4c063bcedc1c80",
+    "paths": [
+      "drivers/amlogic/media/vout/hdmitx/hdmi_tx_20/hdmi_tx_main.c",
+      "drivers/amlogic/media/vout/hdmitx/hdmi_tx_20/hdmi_tx_video.c",
+      "drivers/amlogic/media/vout/hdmitx/hdmi_tx_20/hw/hdmi_tx_hw.c",
+      "include/linux/amlogic/media/vout/hdmi_tx/hdmi_tx_module.h",
+      "tools/test-lldv-vsif-suppress.py"
+    ],
+    "provenance": {
+      "accepted_generic_commit": "cae054dbed345e6479ce48a7099a138608b7d369",
+      "adaptation": "Use exact public generic defaultOff gating, getter and regressions; enabled packet/AVI behavior retained from accepted v3, not copied custom defaultY.",
+      "custom_deployed_image_sha256": "8837666164ab2630aa4074fba4c8217b83a88c20718ca1800cbedd635a9cebc2",
+      "custom_source_baseline": "3c223629c5f7ff87151b696161cf99bc7c857b94",
+      "immutable_custom_exports": {
+        "lldv-modern-avi-v2-candidate.patch": "b8a95b1aaa8e8dd3cb795e6f90c5e889c13a456dc457b93e1399bec45cbd1959",
+        "lldv-vsif-suppress-v3-candidate.patch": "48e04b8b3ea16abb5eeb540d2afdd2fcd39a88bf33b5f1d6927a965e0576b8eb"
+      },
+      "original_pr": 32,
+      "original_repository": "https://github.com/pannal/linux-amlogic"
+    },
+    "ref": "feature/lldv-vsif-suppression-v3-20261122",
+    "repository": "https://github.com/SeattlesBiggestVikingsFan/linux-amlogic",
+    "settings_defaults": {
+      "lldv_vsif_suppress": false,
+      "seamless_refresh_preserved": true
+    },
+    "status": "included",
+    "upstream_equivalence_reason": "Accepted generic PR32 delta absent from frozen f706/2b17; replay exactly once without replacing C2/HDR/defaultOn policy."
+  },
+  "generic_commit": "cae054dbed345e6479ce48a7099a138608b7d369",
+  "generic_patch_sha256": "afdd4408addf31ed21ce12441cbd5edc4756f903c73f69b93b4c063bcedc1c80",
+  "immutable_custom_exports": {
+    "lldv-modern-avi-v2-candidate.patch": "b8a95b1aaa8e8dd3cb795e6f90c5e889c13a456dc457b93e1399bec45cbd1959",
+    "lldv-vsif-suppress-v3-candidate.patch": "48e04b8b3ea16abb5eeb540d2afdd2fcd39a88bf33b5f1d6927a965e0576b8eb"
+  },
+  "new_candidate_paths": 59131,
+  "original_frozen_source_unchanged": "2b17ade58f733854821be8b18cf66f5d249bc727",
+  "prior_binary_sha256": "3b3a0180cba8d510247752a1fee18438f19204c7ad7e4b0df8ced69f89dfebbd",
+  "prior_published_integration_unchanged": "f7061e5ca4f174c28614bfc29eed368e7cefafd0"
+}

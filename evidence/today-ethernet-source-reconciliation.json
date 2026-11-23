@@ -1,0 +1,22 @@
+{
+  "accepted_source_note": "Actual review8a source is an immutable private reconstructed source tree, not a new Git commit; exact three ABI files match original release and this candidate.",
+  "actual_accepted_review8a_kernel_sha256": "a3a463735093550b371a1eac0db3b8f49f67144e4ee6a4aee823bcc3626051ac",
+  "binary_cohort_equivalence": false,
+  "candidate_commit": "d49892898952cc48768f9faf25b3d095650e3438",
+  "https10_ux11_kernel_changes": false,
+  "independently_verified_candidate_files_equal": true,
+  "limits": [
+    "Older accepted a3a and newer combined 3b3 differ in config/export/build cohort; no binary-wide ABI equality is claimed.",
+    "Do not substitute a3a or replay review8a twice; HTTPS10/UX11 are separate runtime/UI topics.",
+    "Lease/reopen/expiry hardware acceptance is inherited; physical resume-fault injection remains unperformed."
+  ],
+  "new_ethernet_kernel_delta": false,
+  "original_source_commit": "2b17ade58f733854821be8b18cf66f5d249bc727",
+  "owner_verified_ethernet_abi_files_sha256": {
+    "drivers/net/ethernet/stmicro/stmmac/dwmac-meson.c": "e57c4cac7a1a8dd59deedc6be91afb267506a82ec61fa4c3580a6b95c387c521",
+    "drivers/net/ethernet/stmicro/stmmac/stmmac_main.c": "d11af416b717e7100f8c172f5c5a48f19322881f6900ef0c31dfb0bf1100818c",
+    "include/linux/stmmac.h": "3f9b69ed609a34216a1b4f37bb9c800766602d61aaa3b6d79abdac270bbcb32b"
+  },
+  "prior_combined_kernel_sha256": "3b3a0180cba8d510247752a1fee18438f19204c7ad7e4b0df8ced69f89dfebbd",
+  "prior_maintained_commit": "f7061e5ca4f174c28614bfc29eed368e7cefafd0"
+}
