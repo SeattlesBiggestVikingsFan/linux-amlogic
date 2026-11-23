@@ -948,7 +948,7 @@ struct hdmitx_same_mode {
  * Default-off: let an attr "now" refresh skip the modeset when the last
  * modeset's transport is provably unchanged. All protected by setclk_mutex.
  */
-static bool seamless_mode_refresh;
+static bool seamless_mode_refresh = true;
 static struct hdmitx_same_mode hdmitx_same_mode;
 static unsigned int same_mode_last, same_mode_refreshes, same_mode_modesets;
 /* Plugin work publishes hpd_state after its modeset, under setclk_mutex. */
